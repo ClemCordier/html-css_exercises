@@ -1,0 +1,82 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |+
+    L'élément vide ``img`` permet d'ajouter des images à son site web.
+
+    Il est nécessairement accompagné de l'attribut ``src`` qui va renseigner l'emplacement du fichier image en question.
+
+    La syntaxe est la suivante:
+
+    .. code:: html
+
+        <img src="path_to_your_image">
+
+    Cette section aborde les attributs les plus communs utilisés avec l'élément ``img``, en plus de l'attribut ``src`` indispensable.
+
+    Répondez aux questions suivantes sur base de l'arborescence de fichier suivante, votre but étant d'insérer l'image ``inginious_logo.png`` à votre page ``index.html``:
+
+    ::
+
+        D:/
+        └── projects/
+            └── web_project/
+                │
+                ├── src/                    <-- ceci est le dossier courant
+                │   └── index.html          <-- ceci est le document auquel on va ajouter l'image
+                └── img/
+                    └── inginious_logo.png
+
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '200'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Élément image
+network_grading: false
+problems:
+    path:
+        type: code_single_line
+        name: Chemin vers l'image
+        header: Écrivez ci-dessous le chemin à renseigner à l'attribut ``src`` qui
+            redirige vers l'image ``inginious_logo.png``.
+        default: ''
+    alt:
+        type: code_single_line
+        name: Description alternative
+        header: |-
+            Il est d'usage d'accompagner l'élément ``img`` de l'attribut ``alt`` afin de rendre son site plus accessible en affichant un texte alternatif à la place de l'image, au cas où celle-ci ne pourrait pas être affichée.
+
+            Ajoutez la description "Logo du site INGInious" au logo ``inginious_logo.png``.
+
+            Répondez en insérant l'élément ``img`` accompagné des attributs ``src`` et ``alt``.
+
+            .. note::
+
+                | **Note:** Les zones bac à sable ne permettent pas d'utiliser des chemins relatifs pour les images (vos fichiers locaux ne seront pas reconnus).
+                | Vous pouvez toutefois utiliser le chemin absolu déjà présent dans le 2e exemple pour faire vos tests et afficher le logo.
+                |
+                | Pensez donc bien à modifier le chemin absolu par le chemin relatif qui vous est demandé dans la question si vous copiez-collez le code depuis la zone bac à sable.
+
+            .. raw:: html
+
+                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="ExeBVpx" data-editable="true" data-user="clem09" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            |
+        optional: 'on'
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

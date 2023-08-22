@@ -1,0 +1,213 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    |
+
+    Plusieurs règles peuvent concerner un même élément HTML. De fait, une même propriété peut être définie une première fois dans une règle, et redéfinie dans une autre.
+
+    L'une des propriétés va donc prendre le pas sur l'autre.
+
+    Afin de savoir comment le CSS décide de quelle règle la propriété sera interprétée dans une telle situation, il faut comprendre les concepts fondamentaux de *cascade* et de *spécificité*.
+
+    ----
+
+    Vous vous souvenez des attributs ``class`` et ``id`` mentionnés dans la section HTML ?
+
+    Afin d'affiner la sélection d'une règle CSS, le sélecteur peut référencer le(s) élément(s) d'une classe (en précédant le nom de la classe d'un point, ``.class``) ou d'un identifiant (en précédant le nom de l'identifiant d'un dièse, ``#id``) [#]_.
+
+    Une même classe peut être assignée à plusieurs éléments HTML, tandis que l'attribut d'ID sert à identifier de manière unique un élément.
+
+    De plus, un élément ne peut se voir attribuer qu'un seul ``id``, mais peut être associé à plusieurs ``class``.
+
+    Celles-ci sont alors renseignée l'une à la suite de l'autre, séparée par un espace:
+
+    .. code:: html
+
+        <p class="first-class second-class" id="p1">Un premier paragraphe</p>
+        <p class="first-class second-class" id="p2">Un second paragraphe</p>
+
+    |
+
+    Voici un extrait de code utilisé dans la section HTML du cours, auquel des attributs ``class`` et ``id`` ont été ajoutés:
+
+    .. code:: html
+
+        <p class="intro" id="description">
+            La plateforme INGInious est créée et maintenue par le département d'ingénierie informatique de l'UCLouvain.
+            Entièrement libre d'accès, son code-source est disponible sous licence open-source.
+        </p>
+        <p class="intro middle-paragraph">
+            Quand un étudiant soumet une réponse à un exercice de programmation, INGInious exécute automatiquement le programme écrit par l'étudiant.
+            Grâce à ces tests, l'étudiant peut rapidement vérifier si sa réponse est correcte et sinon il corrige son programme jusqu'à ce qu'il réussisse les différents tests.
+        </p>
+        <p class="intro">
+            Au fil des années, INGInious a accumulé des centaines d'exercices liés à différents cours d'informatique.
+            Nous y retrouvons de nombreux cours d'introduction à divers languages de programmation, notamment:
+        </p>
+
+    Nous allons nous baser sur ce bout de code HTML afin de se familiariser avec ces concepts.
+
+    Commençons par une définition de la *spécificité* selon la documentation `MDN Web Docs <https://developer.mozilla.org/fr/docs/Web/CSS/Specificity>`_,
+
+    .. raw:: html
+
+        <blockquote style="padding: 10px; background: #eee; border-radius: 5px;">
+        <p style="margin-bottom: 0;"><i>"La spécificité est le moyen par lequel les navigateurs décident quelles valeurs de propriété CSS d'un élément sont les plus pertinentes et seront appliquées. (...)"</i></p>
+        </blockquote>
+
+    Cette spécificité est déterminée selon un *score* calculé pour chaque règle sur base de leur sélecteur. Le sélecteur avec le meilleur score l'emporte.
+
+    Prenons comme premier cas de figure deux règles CSS avec des sélecteurs différents mais qui concernent des éléments communs, ici les 3 paragraphes.
+
+    .. code:: css
+
+        .intro {
+            color: blue;
+        }
+
+        p {
+            color: red;
+        }
+
+    Ici, le sélecteur de classe ``.intro`` est plus spécifique que le sélecteur d'élément ``p``. Un sélecteur d'élément équivaut à 1 point de score, tandis qu'un sélecteur de classe équivaut à 10 points de score.
+
+    De ce fait, les paragraphes dotés de l'attribut ``class="intro"`` se retrouvent de couleur bleue:
+
+    +-------------------------------------------------------------+
+    | .. image:: theory_cascade-specificity/class_specificity.png |
+    +-------------------------------------------------------------+
+
+    |
+
+    Complexifions un peu les choses dans ce deuxième cas de figure, faisant intervenir à la fois classe et ID:
+
+    .. code:: css
+
+        .intro {
+            color: blue;
+        }
+
+        p {
+            color: red;
+        }
+
+        #description {
+            color: green;
+        }
+
+    Le sélecteur d'ID possède une spécificité encore plus importante que le sélecteur de classe, il équivaut à 100 points de score.
+
+    Le premier paragraphe associé à l'ID ``description`` sera donc vert:
+
+    +----------------------------------------------------------+
+    | .. image:: theory_cascade-specificity/id_specificity.png |
+    +----------------------------------------------------------+
+
+    |
+
+    Dans les deux cas de figure précédent, nous pouvions compter sur la spécificité pour déterminer la règle d'application.
+
+    Mais que se passe-t'il lorsque deux règles possèdent des sélecteurs équivalent en terme de spécificité ?
+
+    Prenons le cas de figure suivant:
+
+    .. code:: css
+
+        p {
+            color: blue;
+        }
+
+        p {
+            color: red;
+        }
+
+    Ici, les sélecteurs des deux règles ont un score de 1. Le principe de spécificité ne permet donc plus de les départager.
+
+    C'est là que le principe de *cascade* intervient.
+
+    En voici une définition, toujours selon la documentation `MDN <https://developer.mozilla.org/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#la_cascade>`_,
+
+    .. raw:: html
+
+        <blockquote style="padding: 10px; background: #eee; border-radius: 5px;">
+        <p style="margin-bottom: 0;"><i>"À un niveau élémentaire, la cascade des styles signifie que l'ordre d'apparition des règles dans le CSS a une importance ; quand deux règles applicables ont la même spécificité, c'est la dernière déclarée qui sera utilisée pour la mise en forme."</i></p>
+        </blockquote>
+
+    Etant donné le parcours en cascade de haut en bas, la dernière règle est retenue et nos paragraphes se retrouvent donc de couleur rouge:
+
+    +--------------------------------------------------------------+
+    | .. image:: theory_cascade-specificity/redefined_selector.png |
+    +--------------------------------------------------------------+
+
+    |
+
+    Différents types de sélecteurs peuvent être assemblés afin de former un sélecteur toujours plus spécifique:
+
+    .. code:: css
+
+        /* score: 1 */
+        p {
+            color: yellow;
+        }
+
+        /* score: 1 + 10 = 11 */
+        p.intro {
+            color: red;
+        }
+
+        /* score: 10 + 10 = 20 */
+        .intro.middle-paragraph {
+            color: green;
+        }
+
+        /* score: 1 + 10 + 100 = 111 */
+        p.intro#description {
+            color: blue;
+        }
+
+    Selon le principe de la cascade, les règles sont évaluées dans l'ordre d'apparition de celles-ci (autrement dit, de haut en bas).
+
+    1) La première règle indique que tous les éléments ``p`` doivent être de couleur jaune.
+    2) Le sélecteur de la deuxième règle ayant une spécificité plus élevée que la première, elle prend le pas sur la première pour les éléments quelle concerne (les 3 paragraphes possédant la classe ``intro``).
+    3) La troisième règle prend à son tour le pas sur les deux précédentes pour les éléments ``p`` possédant les classes ``intro`` et ``middle-paragraph`` (uniquement le second paragraphe).
+    4) La quatrième règle prend le pas sur les trois précédentes  pour les éléments ``p`` possédant la classe ``intro`` et l'ID ``description`` (uniquement le premier paragraphe).
+
+
+    +--------------------------------------------------------------+
+    | .. image:: theory_cascade-specificity/combined_selector.png  |
+    +--------------------------------------------------------------+
+
+    Il existe des types de sélecteurs autre que les sélecteurs d'élément, de classe et d'ID mentionnés jusqu'à maintenant, certains seront abordés plus tard dans le cours.
+
+    L'essentiel ici est de s'être familiarisé avec les concepts fondamentaux du CSS, à savoir la *cascade* et la *spécificité*.
+
+    N'hésitez pas à effectuer une relecture en cas de doute ou d'incompréhension avant de passer à la suite.
+
+    .. note::
+
+        .. [#] Cette catégorie de sélecteur porte le nom de **sélecteur de classe** et **sélecteur d'identifiant**.
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: '[Théorie] Cascade & spécificité'
+network_grading: false
+problems:
+    validation_check:
+        type: multiple_choice
+        name: ''
+        header: Une fois la théorie parcourue, validez pour passer à la suite du cours.
+        limit: 0
+        choices:
+        -   text: Je confirme avoir pourcourue la théorie
+            valid: true
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

@@ -1,0 +1,87 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Tout comme en HTML, le langage CSS possède une syntaxe qui lui est propre et que tout développeur se doit de respecter.
+
+    Sur base de cette illustration,
+
+        .. image:: qcm_basics/css-syntax.png
+
+    Répondez au QCM suivant:
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: '[QCM] Syntaxe CSS'
+network_grading: false
+problems:
+    css_syntax1:
+        type: multiple_choice
+        name: A quoi correspond (1) ?
+        header: ''
+        limit: 0
+        choices:
+        -   text: Un sélecteur
+            valid: true
+        -   text: Une propriété
+        -   text: Une valeur
+        -   text: Une déclaration
+        -   text: Une règle
+    css_syntax2:
+        type: multiple_choice
+        name: A quoi correspond (2) ?
+        header: ''
+        limit: 0
+        choices:
+        -   text: Un sélecteur
+        -   text: Une propriété
+            valid: true
+        -   text: Une valeur
+        -   text: Une déclaration
+        -   text: Une règle
+    css_syntax3:
+        type: multiple_choice
+        name: A quoi correspond (3) ?
+        header: ''
+        limit: 0
+        choices:
+        -   text: Un sélecteur
+        -   text: Une propriété
+        -   text: Une valeur
+            valid: true
+        -   text: Une déclaration
+        -   text: Une règle
+    css_syntax4:
+        type: multiple_choice
+        name: A quoi correspond (4) ?
+        header: ''
+        limit: 0
+        choices:
+        -   text: Un sélecteur
+        -   text: Une propriété
+        -   text: Une valeur
+        -   text: Une déclaration
+            valid: true
+        -   text: Une règle
+    css_syntax5:
+        type: multiple_choice
+        name: A quoi correspond (5) ?
+        header: ''
+        limit: 0
+        choices:
+        -   text: Un sélecteur
+        -   text: Une propriété
+        -   text: Une valeur
+        -   text: Une déclaration
+        -   text: Une règle
+            valid: true
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

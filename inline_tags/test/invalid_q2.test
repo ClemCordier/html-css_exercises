@@ -1,0 +1,61 @@
+_id: 64e23f52054821c46a6193ba
+archive: 64e23f59054821c46a6193bb
+courseid: html_css_clement
+custom: {}
+grade: 50.0
+input:
+    '@attempts': '83'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-08-20 18:29:06.609227'
+    '@username': Clem
+    em: |-
+        <p>
+            La plateforme INGInious est créée et maintenue par le département d'ingénierie informatique de l'UCLouvain.
+            <em>Entièrement </em> libre d'accès, son code-source est disponible sous licence open-source.
+        </p>
+    strong: |-
+        <p>
+            Au fil des années, INGInious a accumulé <strong>des <em>centaines</em> d'exercices</strong> liés à différents cours d'informatique. Nous y retrouvons de nombreux cours d'introduction à divers langages de programmation, notamment:
+        </p>
+problems:
+    em:
+    - success
+    - |-
+        **Correct !**
+
+
+
+        .. note::
+            :title: Encadré ci-dessous, le résultat de votre soumission:
+
+
+
+            .. raw:: html
+
+                <p>
+                    La plateforme INGInious est créée et maintenue par le département d'ingénierie informatique de l'UCLouvain.
+                    <em>Entièrement </em> libre d'accès, son code-source est disponible sous licence open-source.
+                </p>
+    strong:
+    - failed
+    - |
+        Voici des pistes qui pourraient vous aider:
+
+        - Les 2 premiers éléments (``p`` , ``strong``) sont corrects.
+        - Vous n'avez pas renseigné le bon nombre d'éléments: attendu 2 - reçu 3
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-20 18:29:06.609000
+taskid: inline_tags
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:a803:cac:ce53:ea9d
+username:
+- Clem

@@ -1,0 +1,69 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    HTML est un langage dont le rôle principal est la **structure** [#]_ du document.
+
+    Nous allons voir des éléments nous permettant de préciser davantage cette dernière.
+
+    Ces éléments ne vont donc pas apporter du nouveau contenu en tant que tel, mais venir compléter le contenu existant.
+
+    Ils font partie d'une catégorie d'éléments appelée **contenu de flux**.
+
+    Une fois n'est pas coutume - nous allons repartir de notre recette de tarte Tatin.
+
+    **Attention:** Les sous-questions de cet exercice ne contiennent pas de template pré-rempli; à vous de copier-coller les parties de la zone bac à sable adéquate pour chacune d'entre elles.
+
+    .. note::
+
+      .. [#] Si l'information vous semble redondante: tant mieux ! Cela indique que vous l'avez bien retenue.
+
+    .. raw:: html
+
+        <p class="codepen" data-height="800" data-default-tab="html,result" data-slug-hash="eYPmOXz" data-editable="true" data-user="clem09" style="height: 800px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Structure avancée
+network_grading: false
+problems:
+    header:
+        type: code
+        name: Contenu introductif
+        header: 'Ajoutez l''élément ``header``. Il va venir englober nos éléments
+            introductifs, à savoir: titre principal et logo.'
+        language: html
+        default: ''
+    main:
+        type: code
+        name: Contenu principal
+        header: Ajoutez l'élément ``main`` afin de grouper les différentes sections
+            qui suivent notre ``header``.
+        language: html
+        default: ''
+    footer:
+        type: code
+        name: Contenu de bas de page
+        header: |-
+            Enfin, indiquez le pied de page contenant les informations relatives à l'auteur du document.
+
+            Pour cela, englobez la partie concernée à l'intérieur de l'élément ``footer``.
+        language: html
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

@@ -1,0 +1,51 @@
+_id: 6424bcf7fb6b25edf258e847
+archive: 6424bcfafb6b25edf258e848
+courseid: html_css_clement
+custom: {}
+grade: 0.0
+input:
+    '@attempts': '18'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-30 00:34:30.998183'
+    '@username': Clem
+    comment: |-
+        <!DOCTYPE html>
+        <html>
+
+            <head>
+                <!-- contient l'ensemble des métadonnées du document -->
+                <meta charset="UTF-8">
+                <title>Titre de l'onglet au niveau du navigateur</title>
+            </head>
+            <body>
+                <!-- contient l'ensemble des données visibles du document -->
+                <h1>Bienvenue sur mon site !</h1>
+            </body>
+        </html>
+problems:
+    comment:
+    - failed
+    - |
+        Voici des pistes qui pourraient vous aider:
+
+        - Le premier élément (``html``) est correct.
+        - Ligne 4: L'élément ``head`` ne correspond pas à l'élément attendu en position n°2 dans la hiérarchie.
+        - Ligne 5: L'élément ``comment`` ne correspond pas à l'élément attendu en position n°3 dans la hiérarchie.
+        - Ligne 9: L'élément ``body`` ne correspond pas à l'élément attendu en position n°6 dans la hiérarchie.
+        - Ligne 10: L'élément ``comment`` ne correspond pas à l'élément attendu en position n°7 dans la hiérarchie.
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-03-30 00:34:30.998000
+taskid: comment
+tests: {}
+text: ''
+user_ip: 2a02:a03f:a8ac:3900:60b1:5612:8dd1:12a5
+username:
+- Clem

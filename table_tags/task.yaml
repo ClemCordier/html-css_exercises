@@ -1,0 +1,300 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    L'élément ``table`` est l'élément parent qui va nous permettre de créer des tableaux en HTML.
+
+    .. code:: html
+
+        <table>
+
+        </table>
+
+    Nous allons voir différents éléments enfant qui l'accompagne.
+
+    Notre tableau consistera en un listing de différents jeux vidéo, reprenant pour chacun sa catégorie et son nom.
+
+    .. note::
+
+        | **Note:** Étant donné le style par défaut assez limité des tableaux en HTML pur, les exemples fournis ci-dessous ont été légèrement modifié à l'aide du *CSS* afin d'obtenir quelque chose de plus parlant visuellement.
+        | Nous verrons dans la section CSS du cours comment parvenir à un tel résulat.
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Éléments de tableau
+network_grading: false
+problems:
+    tr_td_tags:
+        type: code
+        name: Lignes et cellules d'un tableau
+        header: |
+            Les éléments essentiels afin de créer un tableau en HTML sont les suivants:
+
+            - ``tr`` : cet élément représente une ligne du tableau
+            - ``td`` : cet élément représente une cellule du tableau
+
+            Avec le code suivante:
+
+            .. code:: html
+
+                <table>
+                  <tr>
+                    <td>Cellule 1</td>
+                    <td>Cellule 2</td>
+                  </tr>
+                  <tr>
+                    <td>Cellule 3</td>
+                    <td>Cellule 4</td>
+                  </tr>
+                </table>
+
+            Nous obtenons le tableau ci-dessous:
+
+            +--------------------------------------------------------------------------+
+            |                                                                          |
+            | .. raw:: html                                                            |
+            |                                                                          |
+            |     <head>                                                               |
+            |         <style>                                                          |
+            |             #example-table-q1 {border-collapse: collapse;}               |
+            |             .example-td-q1 {                                             |
+            |                 border: 1px solid black !important;                      |
+            |              }                                                           |
+            |         </style>                                                         |
+            |     </head>                                                              |
+            |     <body>                                                               |
+            |         <table id="example-table-q1">                                    |
+            |           <tr>                                                           |
+            |             <td class="example-td-q1">Cellule 1</td>                     |
+            |             <td class="example-td-q1">Cellule 2</td>                     |
+            |           </tr>                                                          |
+            |           <tr>                                                           |
+            |             <td class="example-td-q1">Cellule 3</td>                     |
+            |             <td class="example-td-q1">Cellule 4</td>                     |
+            |           </tr>                                                          |
+            |         </table>                                                         |
+            |     </body>                                                              |
+            +--------------------------------------------------------------------------+
+
+            A vous de faire de même afin d'obtenir un premier aperçu de notre objectif final:
+
+            +------------------------------------------------------------------+
+            |                                                                  |
+            | .. raw:: html                                                    |
+            |                                                                  |
+            |     <head>                                                       |
+            |         <style>                                                  |
+            |             #table-q1 {border-collapse: collapse;}               |
+            |             .td-q1 {                                             |
+            |                 border: 1px solid black !important;              |
+            |              }                                                   |
+            |         </style>                                                 |
+            |     </head>                                                      |
+            |     <body>                                                       |
+            |         <table id="table-q1">                                    |
+            |           <tr>                                                   |
+            |             <td class="td-q1">Jeu de tir (FPS)</td>              |
+            |             <td class="td-q1">Valorant</td>                      |
+            |           </tr>                                                  |
+            |           <tr>                                                   |
+            |             <td class="td-q1">Jeu de tir (Battle Royal)</td>     |
+            |             <td class="td-q1">Fortnite</td>                      |
+            |           </tr>                                                  |
+            |           <tr>                                                   |
+            |             <td class="td-q1">Jeu de sport (Automobile)</td>     |
+            |             <td class="td-q1">Forza Horizon 5</td>               |
+            |           </tr>                                                  |
+            |           <tr>                                                   |
+            |             <td class="td-q1">Jeu de sport (Football)</td>       |
+            |             <td class="td-q1">FIFA22</td>                        |
+            |           </tr>                                                  |
+            |         </table>                                                 |
+            |     </body>                                                      |
+            +------------------------------------------------------------------+
+
+            Contentez-vous de n'utiliser que les 3 éléments suivants: ``table``, ``tr`` et ``td``.
+        language: html
+        default: ''
+    th_tag:
+        type: code
+        name: Cellules d'en-tête
+        header: |
+            Pour représenter une cellule d'en-tête du tableau et non une simple cellule, nous pouvons utiliser l'élément ``th`` à la place de l'élément ``td``.
+
+            Reprenez votre réponse à la question 1, et ajoutez-y une première ligne avec les cellules d'en-tête **Catégorie** et **Jeu**:
+
+            +------------------------------------------------------------------+
+            |                                                                  |
+            | .. raw:: html                                                    |
+            |                                                                  |
+            |     <head>                                                       |
+            |         <style>                                                  |
+            |           #table-q2 {border-collapse: collapse;}                 |
+            |           .th-q2, .td-q2 {border: 1px solid black !important;}   |
+            |           .th-q2 {                                               |
+            |               display: table-cell !important;                    |
+            |               vertical-align: inherit !important;                |
+            |               text-align: center !important;                     |
+            |           }                                                      |
+            |         </style>                                                 |
+            |     </head>                                                      |
+            |     <body>                                                       |
+            |         <table id="table-q2">                                    |
+            |           <tr>                                                   |
+            |             <th class="th-q2">Catégorie</td>                     |
+            |             <th class="th-q2">Jeu</td>                           |
+            |           </tr>                                                  |
+            |           <tr>                                                   |
+            |             <td class="td-q2">Jeu de tir (FPS)</td>              |
+            |             <td class="td-q2">Valorant</td>                      |
+            |           </tr>                                                  |
+            |           <tr>                                                   |
+            |             <td class="td-q2">Jeu de tir (Battle Royal)</td>     |
+            |             <td class="td-q2">Fortnite</td>                      |
+            |           </tr>                                                  |
+            |           <tr>                                                   |
+            |             <td class="td-q2">Jeu de sport (Automobile)</td>     |
+            |             <td class="td-q2">Forza Horizon 5</td>               |
+            |           </tr>                                                  |
+            |           <tr>                                                   |
+            |             <td class="td-q2">Jeu de sport (Football)</td>       |
+            |             <td class="td-q2">FIFA22</td>                        |
+            |           </tr>                                                  |
+            |         </table>                                                 |
+            |     </body>                                                      |
+            +------------------------------------------------------------------+
+        language: html
+        default: ''
+    span:
+        type: code
+        name: Extension des cellules
+        header: |
+            Il est parfois pertinent qu'une même cellule s'étende sur plusieurs lignes et/ou colonnes du tableau.
+
+            Il existe 2 attributs à cet effet:
+
+            - ``rowspan``: désigne sur combien de lignes s'étend la cellule.
+            - ``colspan``: désigne sur combien de colonnes s'étend la cellule.
+
+            .. code:: html
+
+              <table>
+                <tr>
+                  <th colspan="3">Cellule d'en-tête étendue sur 3 colonnes</th>
+                </tr>
+                <tr>
+                  <td rowspan="2">Cellule d'en-tête étendue sur 2 lignes</td>
+                  <td>Une simple cellule (1)</td>
+                  <td>Une simple cellule (2)</td>
+                </tr>
+                  <td>Une simple cellule (3)</td>
+                  <td>Une simple cellule (4)</td>
+              </table>
+
+            +--------------------------------------------------------------------------------------------------+
+            |                                                                                                  |
+            | .. raw:: html                                                                                    |
+            |                                                                                                  |
+            |     <head>                                                                                       |
+            |         <style>                                                                                  |
+            |             #example-table-q3 {border-collapse: collapse;}                                       |
+            |             .example-th-q3 {                                                                     |
+            |                 display: table-cell !important;                                                  |
+            |                 vertical-align: inherit !important;                                              |
+            |                 text-align: center !important;                                                   |
+            |             }                                                                                    |
+            |             .example-td-q3, .example-th-q3 {                                                     |
+            |                 border: 1px solid black !important;                                              |
+            |             }                                                                                    |
+            |         </style>                                                                                 |
+            |     </head>                                                                                      |
+            |     <body>                                                                                       |
+            |         <table id="example-table-q3">                                                            |
+            |         <tr>                                                                                     |
+            |             <th class="example-th-q3" colspan="3">Cellule d'en-tête étendue sur 3 colonnes</th>  |
+            |         </tr>                                                                                    |
+            |         <tr>                                                                                     |
+            |             <th class="example-th-q3" rowspan="2">Cellule d'en-tête étendue sur 2 lignes</th>    |
+            |             <td class="example-td-q3">Une simple cellule (1)</td>                                |
+            |             <td class="example-td-q3">Une simple cellule (2)</td>                                |
+            |         </tr>                                                                                    |
+            |         <tr>                                                                                     |
+            |             <td class="example-td-q3">Une simple cellule (3)</td>                                |
+            |             <td class="example-td-q3">Une simple cellule (4)</td>                                |
+            |         </tr>                                                                                    |
+            |         </table>                                                                                 |
+            |      </body>                                                                                     |
+            +--------------------------------------------------------------------------------------------------+
+
+            |
+
+            Pour revenir à notre listing de jeux vidéo, nous pourrions éviter la redondance dans la colonne **Catégorie** en se limitant à 2 catégories principales: **Jeu de tir** et **Jeu de sport**.
+
+            Modifiez le tableau afin d'obtenir le résultat suivant:
+
+            +------------------------------------------------------------------------------------------+
+            |                                                                                          |
+            | .. raw:: html                                                                            |
+            |                                                                                          |
+            |     <head>                                                                               |
+            |         <style>                                                                          |
+            |             #table-q3 {border-collapse: collapse;}                                       |
+            |             .th-q3 {                                                                     |
+            |                 display: table-cell !important;                                          |
+            |                 vertical-align: inherit !important;                                      |
+            |                 text-align: center !important;                                           |
+            |             }                                                                            |
+            |             .td-q3, .th-q3 {                                                             |
+            |                 padding: 5px !important;                                                 |
+            |                 border: 1px solid black !important;                                      |
+            |             }                                                                            |
+            |         </style>                                                                         |
+            |     </head>                                                                              |
+            |     <body>                                                                               |
+            |         <table id="table-q3">                                                            |
+            |         <tr>                                                                             |
+            |             <th class="th-q3" colspan="2">Catégorie</th>                                 |
+            |             <th class="th-q3">Jeu</th>                                                   |
+            |         </tr>                                                                            |
+            |         <tr>                                                                             |
+            |             <th class="th-q3" rowspan="2">Jeu de tir</th>                                |
+            |             <td class="td-q3">FPS</td>                                                   |
+            |             <td class="td-q3">Valorant</td>                                              |
+            |         </tr>                                                                            |
+            |         <tr>                                                                             |
+            |             <td class="td-q3">Battle Royal</td>                                          |
+            |             <td class="td-q3">Fortnite</td>                                              |
+            |         </tr>                                                                            |
+            |         <tr>                                                                             |
+            |             <th class="th-q3" rowspan="2">Jeu de sport</th>                              |
+            |             <td class="td-q3">Automobile</td>                                            |
+            |             <td class="td-q3">Forza Horizon 5</td>                                       |
+            |         </tr>                                                                            |
+            |         <tr>                                                                             |
+            |             <td class="td-q3">Football</td>                                              |
+            |             <td class="td-q3">FIFA22</td>                                                |
+            |         </tr>                                                                            |
+            |         </table>                                                                         |
+            |      </body>                                                                             |
+            +------------------------------------------------------------------------------------------+
+
+            Cette question requiert de légères adaptations dans la disposition de notre tableau, en plus d'y ajouter les attributs ``colspan`` et ``rowspan`` aux bons endroits.
+
+            Notez que les cellules **Jeu de tir** et **Jeu de sport** sont devenues des cellules d'en-tête, au même titre que **Catégorie** et **Jeu**.
+        language: html
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

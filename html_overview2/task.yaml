@@ -1,0 +1,110 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    Dans ce deuxième exercice récapitulatif, votre objectif va être de reproduire une page HTML.
+
+    Le contenu de la page vous est fourni, à vous de structurer tout ça en ajoutant les balises HTML adéquates aux différentes endroits !
+
+    Vous pouvez partir du principe qu'un en-tête valide est déjà présent:
+
+    .. code:: html
+
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="UTF-8">
+                <title>La tarte Tatin</title>
+            </head>
+            <body>
+                <!-- Votre réponse viendra s'insérer ici -->
+            </body>
+        </html>
+
+    Vous n'avez donc pas à vous préoccuper de ça.
+
+    Pour répondre à cette question, nous nous contenterons des éléments utilisable dans le ``body`` vu jusqu'à maintenant:
+
+    - ``p``
+    - ``em`` / ``strong``
+    - ``ul`` / ``ol`` / ``li``
+    - ``h1-h6``
+    - ``br``
+
+    Tous ne doivent pas forcément être utilisé: veillez à être le plus pertinent possible dans le choix de vos éléments !
+
+    **Note:** Les retours à la ligne sont explicitement indiqués par le symbole "↵".
+
+    Le résultat à obtenir est le suivant:
+
+    +--------------------------------------------------+
+    |                                                  |
+    |    .. image:: html_overview2/expected.png        |
+    |                                                  |
+    +--------------------------------------------------+
+
+    .. raw:: html
+
+        <p class="codepen" data-height="500" data-default-tab="html,result" data-slug-hash="rNZmKGd" data-editable="true" data-user="clem09" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+    |
+
+    **Rappel:** N'hésitez pas à vous simplifier la vie en exploitant la fonctionnalité "curseur multiple" en effectuant un ``CTRL+clic gauche`` là où vous estimez devoir insérer une même balise.
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: '[Récap] Les éléments de base'
+network_grading: false
+problems:
+    recipe:
+        type: code
+        name: Recette
+        header: ''
+        language: html
+        default: |-
+            Recette du jour - Tarte Tatin
+
+
+            Histoire
+
+            La tarte tatin tiendrait son nom des 2 soeurs hôtelières, Caroline et Stéphanie Tatin. Plusieurs alternatives de l'histoire sont proposées. Une première version raconte qu'une des 2 soeurs aurait oublié de mettre la pâte et l'aurait rajoutée par dessus en cours de cuisson. Une seconde version raconte que la tarte aurait été servie à l'envers, après avoir été ramassé suite à une chute en sortie de four. Elles s'accordent toutefois pour dire que sa création est accidentelle.
+
+
+            Ingrédients
+
+                2kg de pommes Granny
+                250g de sucre
+                125g de beurre doux
+                50g de beurre salé
+                cannelle
+                pâte feuilletée
+
+
+            Préparation
+
+            Faire fondre le beurre salé dans un moule et le répartir sur toute la surface. Saupoudrer de sucre et ajouter une pincée de cannelle.
+
+            Eplucher les pommes et les couper en 8. Dans une poêle, faire fondre 25g de beurre doux. Verser ensuite 50g de sucre. Enfin, ajouter les morceaux de pommes afin de les faire blondir.
+
+            Disposer une rangée de pommes dans le moule en les serrant légèrement, dirigées vers le centre. Couvrir de sucre, d'une noisette de beurre et d'une pincée de cannelle. Répétez ces opérations afin d'épuiser votre stock de pommes.
+
+            Enfin, poser votre pâte feuilletée sur le moule. Bien rentrer les bords.
+
+            Cuire au four à 210°C pendant 20 minutes. Après ce délai, sortir le plat du four et laisser refroidir 30 minutes.
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

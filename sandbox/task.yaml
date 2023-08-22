@@ -1,0 +1,130 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    |
+
+    Les outils conventionnels
+    -------------------------
+
+    | En théorie, l'éditeur de texte inclus avec votre système d'exploitation est suffisant pour commencer à programmer.
+    |
+    | En pratique, il existe des outils destinés aux programmeurs, appelés *IDE* (environnement de développement intégré) tel que `Visual Studio Code <https://code.visualstudio.com>`_ pour ne citer que lui.
+    | Ceux-ci sont dédiés à la programmation. Ils offrent un confort d'utilisation et de nombreuses fonctionnalités pour les développeurs.
+    |
+    | Outre votre application bloc-note par défaut et les IDE, des "éditeurs de texte avancé" tels que `Sublime Text <https://www.sublimetext.com>`_ ou encore `Brackets <https://brackets.io>`_ visent à proposer le meilleur des deux mondes.
+    |
+
+    Dans notre cas
+    --------------
+
+    Libre à vous de découvrir les outils susmentionnés.
+
+    Nous allons toutefois nous en passer dans le cadre de ce cours, le but étant de fournir une première expérience aux langages HTML et CSS. Et cela commence en se familiarisant avec la syntaxe qui leur est propre.
+
+    **Plutôt qu'un IDE ou un éditeur de texte, vous aurez à votre disposition une zone "bac à sable" pour coder et obtenir une prévisualisation (quasi-)instantanée de votre code en vis-à-vis:**
+
+    +-----------------------------------------------+
+    | .. raw:: html                                 |
+    |                                               |
+    |     <div style="text-align:center;">          |
+    |         <img src="sandbox/sandbox2.gif">      |
+    |     </div>                                    |
+    +-----------------------------------------------+
+
+    | Servez-vous-en pour tester vos réponses ! Dès que vous pensez avoir le résultat attendu, copiez-collez votre code dans la zone de saisie d'INGInious et soumettez-la pour évaluation.
+    |
+
+    Feedback
+    --------
+
+    .. raw:: html
+
+        <span style="color:#df2d0f">En cas de mauvaise réponse</span>, un feedback vous sera fourni pour vous aider à corriger vos erreurs:
+
+    |
+
+    .. error::
+        :title: Il y a des erreurs dans votre réponse. Votre note est de 50.0%.
+
+        Voici des pistes qui pourraient vous aider:
+
+    |
+
+    .. raw:: html
+
+        <span style="color:#43ac6a">En cas de bonne réponse</span>, <strong>ne passez pas directement à la suite !</strong><br>Un feedback vous sera de temps à autre fourni. Parfois global à l'exercice, parfois spécifique à un sous-problème, parfois les deux !<br> Il contient des informations supplémentaires, éventuellement sous forme de <span style="color:#5bc0de">Tips</span>:
+
+    |
+
+    .. admonition:: success
+        :title: Votre réponse a passé les tests ! Votre note est de 100.0%.
+
+        .. tip::
+            :title: Tips
+
+            Ceci pourrait vous intéresser !
+
+    |
+
+    Fonctionnalité avancée
+    ----------------------
+
+    INGInious propose certaines fonctionnalités similaires à un environnement de développement classique.
+
+    Il est par exemple possible d'écrire simultanément sur plusieurs lignes à la fois.
+
+    Pour ce faire, maintenez enfoncé la touche CTRL de votre clavier, et effectuez un clic gauche là où vous voulez ajouter/supprimer un curseur.
+
+    Cette fonctionnalité est disponible aussi bien dans les zones de réponses INGInious que dans les zones bac à sable:
+
+    +-----------------------------------------------+
+    |    .. raw:: html                              |
+    |                                               |
+    |        <div style="text-align:center;">       |
+    |        <img src="br_tag/multi_cursor.gif">    |
+    |        </div>                                 |
+    +-----------------------------------------------+
+
+    |
+
+    Essayez par vous-même:
+
+    .. raw:: html
+
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="OJBggrG" data-editable="true" data-user="clem09" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Philosophie du cours / Support pour développer
+network_grading: false
+problems:
+    multicursor:
+        type: code
+        name: Curseur multiple
+        header: |-
+            Ajoutez les 3 balises ouvrantes manquantes ci-dessous.
+
+            Servez-vous de la fonctionnalité curseur multiple.
+        language: html
+        default: |-
+            Un premier paragraphe</p>
+            Un second paragraphe</p>
+            Un dernier paragraphe</p>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

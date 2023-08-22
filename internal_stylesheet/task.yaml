@@ -1,0 +1,101 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    Vous souvenez vous de l'élément ``head``, nous permettant de définir un ensemble de métadonnées, notamment d'assigner un ``title`` à notre onglet ?
+
+    Nous pouvons aussi y ajouter l'élément ``style`` afin d'inclure des règles CSS qui s'appliqueront à notre document.
+
+    Reprenons une version simplifiée de notre recette de tarte Tatin:
+
+    .. code:: html
+
+        <!DOCTYPE html>
+        <html lang="fr">
+            <head>
+                <meta charset="utf-8">
+                <title>Recette secrète de la tarte Tatin</title>
+                <style>
+                  <!-- vos réponses seront insérées ici -->
+                  h1 {
+                    color: red;
+                  }
+                  ...
+                </style>
+            </head>
+            <body>
+                <h1>Recette du jour - Tarte Tatin</h1>
+
+                ...
+
+                <h2>Histoire</h2>
+
+                ...
+
+                <h2>Ingrédients</h2>
+
+                ...
+
+                <h2>Préparation</h2>
+
+                ...
+
+            </body>
+        </html>
+
+    .. raw:: html
+
+        <p class="codepen" data-height="500" data-default-tab="html,result" data-slug-hash="MWqZYvX" data-editable="true" data-user="clem09" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Feuille de style interne
+network_grading: false
+problems:
+    main_title:
+        type: code
+        name: Titre principal
+        header: |
+            La propriété CSS ``text-align`` permet de définir l'alignement horizontal du contenu d'un élément de type bloc.
+
+            Pour ce faire, nous allons utiliser un sélecteur d'élément.
+
+            Ajoutez une *déclaration* afin de créer la règle CSS permettant de centrer le titre principal "Vestige de nos ancêtres - Tarte Tatin".
+
+            Pour répondre à cette question, visitez `la page suivante <https://developer.mozilla.org/fr/docs/Web/CSS/text-align>`_ afin d'en savoir plus sur cette propriété et les valeurs qu'elle peut prendre.
+        language: css
+        default: |-
+            h1 {
+
+            }
+    subtitles:
+        type: code
+        name: Titres secondaires
+        header: |
+            La propriété CSS ``text-decoration`` permet de décorer du texte, par exemple en le soulignant avec la valeur ``underline``.
+
+            Pour ce faire, nous allons utiliser un sélecteur d'élément.
+
+            Ajoutez la *déclaration* permettant de souligner les 3 titres de second niveau.
+        language: css
+        default: |-
+            h2 {
+
+            }
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

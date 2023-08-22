@@ -1,0 +1,51 @@
+_id: 6424ae37416f325fcdd7560e
+archive: 6424ae39416f325fcdd7560f
+courseid: html_css_clement
+custom: {}
+grade: 0.0
+input:
+    '@attempts': '85'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-29 23:31:35.728070'
+    '@username': Clem
+    meta: <br charset="UTF-8" />
+    title: <title>INGInious | Plateforme d'apprentissage en programmation informatique
+        à destination des étudiants<title>
+problems:
+    meta:
+    - failed
+    - |
+        Voici des pistes qui pourraient vous aider:
+
+        - L'élément ``br`` ne correspond pas à l'élément normalement attendu.
+    title: |4
+
+                    Votre réponse ``<title>INGInious | Plateforme d'apprentissage en programmation informatique à destination des étudiants<title>`` ne semble pas correspondre à un élément HTML valide.
+
+                    Assurez-vous de respecter la syntaxe de base ainsi que l'écriture conventionnelle d'un élément, c'est-à-dire:
+
+                    - nom des balises en minuscule.
+                    - pas d'espacement au sein de votre balise ouvrante, sauf pour y ajouter des attributs (voire entre l'attribut et sa valeur).
+                    - pas d'espacement au sein de votre balise fermante.
+
+                    | exemple: ``<p id="premier-paragraphe">contenu du paragraphe</p>``
+                    | contre-exemple: ``<P id="premier-paragraphe">contenu du paragraphe</P>``, ``<p id="premier-paragraphe">contenu du paragraphe<   /p   >`` (remarquez l'espacement au sein de la balise fermante), ...
+                    |
+
+                    N'hésitez pas à consulter la `section théorique <https://inginious.org/course/html_css_clement/theory_html_basics>`_ en cas de doute.
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-03-29 23:31:35.728000
+taskid: header_tags
+tests: {}
+text: ''
+user_ip: 2a02:a03f:a8ac:3900:60b1:5612:8dd1:12a5
+username:
+- Clem

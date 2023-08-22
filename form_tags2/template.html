@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="submit_review.php" method="post">
+        <label for="date">Date d'achat :</label>
+        <input type="date" id="date" name="date">
+
+        <label for="hours_played">Nombre d'heures de jeu :</label>
+        <input type="number" id="hours_played" name="hours_played" required step="0.25" min="0.25" placeholder="Heures">
+
+        <label for="overall_rating">Appréciation globale :</label>
+        <select id="overall_rating" name="overall_rating" required>
+            <option value="">-- Sélectionnez une appréciation --</option>
+            <option value="1">Mauvais</option>
+            <option value="2">Moyen</option>
+            <option value="3">Bien</option>
+            <option value="4">Très bien</option>
+            <option value="5">Excellent</option>
+        </select>
+
+        <fieldset>
+            <legend>Points positifs</legend>
+            <!-- <div> -->
+                <input type="checkbox" id="graphics" name="graphics" value="graphics" />
+                <label for="graphics">Graphismes</label>
+            <!-- </div> -->
+            <!-- <div> -->
+                <input type="checkbox" id="gameplay" name="gameplay" value="gameplay" />
+                <label for="gameplay">Gameplay</label>
+            <!-- </div> -->
+            <!-- <div> -->
+                <input type="checkbox" id="music" name="music" value="music" />
+                <label for="music">Musique</label>
+            <!-- </div> -->
+        </fieldset>
+
+        <fieldset>
+            <legend>Points négatifs</legend>
+            <!-- <div> -->
+                <input type="checkbox" id="price" name="price" value="price" />
+                <label for="price">Prix</label>
+            <!-- </div> -->
+            <!-- <div> -->
+                <input type="checkbox" id="difficulty" name="difficulty" value="difficulty" />
+                <label for="difficulty">Difficulté</label>
+            <!-- </div> -->
+            <!-- <div> -->
+                <input type="checkbox" id="lifetime" name="lifetime" value="lifetime" />
+                <label for="lifetime">Durée de vie</label>
+            <!-- </div> -->
+        </fieldset>
+
+        <label for="detailed_review">Critique détaillée :</label>
+        <textarea id="detailed_review" name="detailed_review" rows="5" required></textarea>
+
+        <input type="submit" value="Soumettre">
+    </form>
+</body>
+</html>

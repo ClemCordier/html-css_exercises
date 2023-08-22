@@ -1,0 +1,86 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Les attributs universels sont des attributs qui peuvent être appliqués à n'importe quel élément HTML.
+
+    Nous allons voir quelques exemples ci-dessous:
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Attributs universels
+network_grading: false
+problems:
+    lang:
+        type: code_single_line
+        name: Attribut « lang »
+        header: |-
+            L'attribut universel ``lang`` permet d'indiquer au navigateur la langue de l'élément auquel il est assigné, ainsi que celle de tous ses éléments enfants (à moins qu'ils la redéfinisse eux-mêmes).
+
+            Il est très souvent renseigné au niveau de l'élément *racine* ``html`` pour indiquer globalement la langue du document.
+
+            Renseignez **uniquement la balise ouvrante** de l'élément ``html``, incluant l'attribut ``lang`` et sa valeur associée *"fr"*.
+        default: ''
+    title:
+        type: code_single_line
+        name: Attribut « title »
+        header: |-
+            L'attribut universel ``title`` permet d'apporter de l'information additionnelle à un élément, qui s'affichera éventuellement\ :sup:`1` sous forme de texte au survol de ce dernier (info-bulle).
+
+            | On retrouve notamment cet attribut accompagnant l'élément HTML ``abbr`` (l'élément d'abréviation). Dans ce cas, la valeur de l'attribut décrit l'abréviation en question.
+            |
+            | Voici un exemple concret d'utilisation:
+            |
+
+            .. code:: html
+
+                <p>Le <abbr title="Cascading Style Sheets">CSS</abbr> est un langage de styles</p>
+
+            Placez votre souris sur le mot "CSS" ci-dessous afin de constater le résultat:
+
+            +-----------------------------------------------------------------------------------------------+
+            | .. raw:: html                                                                                 |
+            |                                                                                               |
+            |    <p>                                                                                        |
+            |        Le <abbr title="Cascading Style Sheets">CSS</abbr> est un langage de feuilles de style.|
+            |        Il permet de mettre en forme une page web via un ensemble de règles.                   |
+            |    </p>                                                                                       |
+            |                                                                                               |
+            +-----------------------------------------------------------------------------------------------+
+
+            .. note::
+
+               1 En fonction du navigateur utilisé, il se peut que l'info-bulle n'apparaisse pas.
+
+            ----
+
+            | Faites de même en renseignant l'élément ``abbr`` accompagné de l'attribut ``title``, cette fois-ci pour l'abréviation du terme "HTML".
+            | L'attribut doit prendre la valeur suivante: *"HyperText Markup Language"*
+            |
+            | Il viendra s'insérer à la place du ``[?]`` dans le template suivant:
+            |
+
+            .. raw:: html
+
+                <p class="codepen" data-height="200" data-default-tab="html,result" data-slug-hash="XWPGWgK" data-editable="true" data-user="clem09" style="height: 200px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            |
+        default: <p>Le [?] est un langage de structure. Il permet de représenter le
+            contenu d'une page web via un ensemble d'éléments sous forme de balises.</p>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

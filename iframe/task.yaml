@@ -1,0 +1,84 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    L'élément ``iframe`` permet d'intégrer un document HTML imbriqué dans la page courante.
+
+    Nous allons illustrer cela à travers divers exemples.
+
+    .. raw:: html
+
+        <p class="codepen" data-height="500" data-default-tab="html,result" data-slug-hash="GRYOqxE" data-editable="true" data-user="clem09" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+    |
+
+    **Attention**: Vous pouvez tester vos intégrations dans la zone bac à sable ci-dessus, mais veuillez répondre aux questions avec l'élément ``iframe`` uniquement.
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Élément de cadre intégré
+network_grading: false
+problems:
+    document:
+        type: code
+        name: Intégration de document
+        header: |-
+            Pour observer concrètement le résultat obtenu, nous allons intégré une page web basique, disponible à l'adresse suivante: https://example.org
+
+            Comme pour les éléments ``img``, ``audio`` et ``video``, l'URL vers le site en question est renseigné via l'attribut ``src``.
+
+            Répondez avec l'élément ``iframe`` et son attribut ``src``.
+        language: html
+        default: ''
+    youtube:
+        type: code
+        name: 'Intégration multimédia : vidéo'
+        header: |-
+            | Les ``iframe`` sont couramment utilisés pour l'intégration de contenu multimédia.
+            | Un premier exemple est l'intégration de vidéo disponible en ligne, typiquement des vidéos *YouTube*.
+            |
+            | Nous pouvons configurer diverses autorisations liées à l'``iframe`` via l'attribut ``allow``.
+            |
+            | Répondez avec l'élément ``iframe`` et son attribut ``src`` afin d'intégrer la vidéo suivante: https://www.youtube.com/embed/dQw4w9WgXcQ
+            | Ajoutez l'attribut ``allow`` à la valeur ``fullscreen`` afin d'autoriser l'utilisateur à mettre la vidéo en plein écran.
+            |
+        language: html
+        default: ''
+    map:
+        type: code
+        name: 'Intégration multimédia : carte interactive'
+        header: |-
+            | Un second exemple d'intégration que vous avez déjà pu croiser: une carte de navigation interactive.
+            | Pour cela, nous allons utiliser le site *OpenStreetMap* (équivalent Open Source [#]_ de *Google Maps*).
+            |
+            | Les dimensions par défaut d'une intégration sont ``300x150`` pixels. Tout comme pour les éléments ``img`` et ``video``, celles-ci peuvent être renseignées manuellement avec les attributs ``width`` & ``height``.
+            |
+            | Répondez avec l'élément ``iframe`` et son attribut ``src`` afin d'intégrer la carte interactive suivante: https://www.openstreetmap.org/export/embed.html
+            | Ajoutez-y les dimensions suivantes: ``500x250`` afin de rendre la navigation plus agréable pour les utilisateurs.
+            |
+
+            .. note::
+
+                .. [#] Selon *Red Hat* ("L'Open Source, qu'est-ce que c'est ?", 24 octobre 2019):
+
+                |
+                | *"Un logiciel Open Source est un code conçu pour être accessible au public : n'importe qui peut voir, modifier et distribuer le code à sa convenance."*
+        language: html
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

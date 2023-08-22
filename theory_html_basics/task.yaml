@@ -1,0 +1,207 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    |
+
+    Le langage HTML (de l'anglais *HyperText Markup Language*) est utilisé afin de construire la structure d'une page web.
+
+    Dans ce but de structuration, une page web est composée d'un ensemble d'*éléments*, chacun ayant une raison d'être, un sens qui lui est propre: on parle alors de la *sémantique* d'un élément.
+
+    Un *élément* définit la nature du contenu qui lui est associé.
+
+    Un exemple d'élément courant est l'élément ``p``. On utilise cet élément afin d'indiquer au navigateur que son contenu est un paragraphe.
+
+    .. note::
+
+        | **Note:** Vous rencontrerez peut-être le terme HTML accompagné d'un chiffre, tel que *HTML5*. Ce chiffre représente la version majeure du langage, la 5e étant la plus récente.
+        |
+        | Une analogie peut être faite avec les déclinaisons d'un smartphone, prenons par exemple les versions du système d'exploitation d'un Iphone : iOS 14, 15, 16, ...
+        | Tout comme les versions iOS, HTML5 vient avec son lot d'améliorations et de nouvelles fonctionnalités par rapport à la version 4 qui la précède.
+        |
+        | Il y a quelques années, il a été décidé par le `World Wide Web Consortium <https://www.w3.org>`_ (W3C, un organisme de standardisation du Web) qu'il n'y aurait plus mention d'une quelconque version, l'*HTML* actuel étant la seule et unique version standard.
+
+    |
+
+    **1. Élément HTML**
+    ===================
+
+    | On distingue 2 grandes catégories d'éléments HTML: les éléments "blocs" et les éléments "en ligne".
+    | Selon la documentation `MDN Web Docs <https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started#%C3%A9l%C3%A9ments_bloc_vs_en_ligne>`_,
+    |
+
+    .. raw:: html
+
+        <blockquote style="padding: 10px 10px 1px 10px; background: #eee; border-radius: 5px;">
+        <p><i>"Les éléments de niveau bloc forment un bloc visible sur une page — ils apparaissent sur une nouvelle ligne quel que soit le contenu précédant et tout contenu qui les suit apparaît également sur une nouvelle ligne. (...)</i></p>
+
+        <p><i>Un élément de niveau bloc ne peut pas être imbriqué dans un élément en ligne, mais il peut être imbriqué dans un autre élément de niveau bloc."</i></p>
+        </blockquote>
+
+    .. raw:: html
+
+        <blockquote style="padding: 10px 10px 1px 10px; background: #eee; border-radius: 5px;">
+        <p><i>Les éléments en ligne sont contenus dans des éléments de niveau bloc. Ils entourent seulement des petites parties du contenu du document, ni des paragraphes entiers, ni des regroupements de contenu.</i></p>
+
+        <p><i>Un élément en ligne ne fait pas apparaître une nouvelle ligne dans le document.</i></p>
+        </blockquote>
+
+    1.1. Les balises
+    ----------------
+
+    La première composante d'un élément HTML est la *balise*.
+
+    La plupart des éléments sont dotés de 2 balises:
+
+    * Ils commencent par une balise dite *ouvrante*.
+    * Ils se terminent par une balise dite *fermante*.
+
+    Celles-ci délimitent la *zone d'effet* de l'élément en question.
+
+    La syntaxe de base d'un élément est la suivante:
+
+    .. code:: html
+
+        <balise_ouvrante>contenu</balise_fermante>
+
+    .. note::
+
+        | **Note:** *Les balises ne sont pas sensible à la casse (autrement dit, les majuscules et minuscules sont interprétées de la même manière).*
+        |
+        | *Il est toutefois recommandé de toujours écrire ses balises en minuscules.*
+
+    1.2. Les attributs
+    ------------------
+    | Un élément HTML peut être (optionnellement) accompagné d'un ou plusieurs *attributs*. Ceux-ci permettent de fournir des informations et/ou fonctionnalités additionnelles.
+    |
+    | Il y a des attributs dits *universels*, c'est-à-dire qu'ils peuvent être utilisés avec n'importe quel élément HTML. D'autres sont propres à un (groupe d') élément.
+    |
+    | Il n'y a pas de limite quant aux nombres d'attributs qu'un élément peut prendre, cependant un même attribut ne peut être assigné qu'une fois par élément. Dans le cas contraire, seule la première occurrence devrait être retenue; les autres seront ignorées par le navigateur.
+    |
+
+    Avec attributs, la syntaxe devient:
+
+    .. code:: html
+
+        <balise_ouvrante [attribut1="valeur1" attribut2="valeur2"]>contenu</balise_fermante>
+
+    .. note::
+
+        | **Note:**
+        | - *les crochets* ``[]`` *sont là pour indiquer le caractère optionnel des attributs, mais ne font en aucun cas partie de la syntaxe.*
+        | - *le nom d'un attribut n'est pas sensible à la casse. Il est toutefois recommandé de toujours écrire ses attributs en minuscules.*
+        | - *les guillemets (simple* ``'`` *ou double* ``"`` *) autour de la valeur d'un attribut peuvent être omis* **à condition qu'elle ne contienne pas d'espace**. *Il est toutefois recommandé de toujours inclure les guillemets pour entourer la valeur d'un attribut.*
+
+    ----
+
+    | Certains éléments sont dit *vide* (aussi appelé élément *orphelin* ou *auto-fermant*), c'est-à-dire qu'ils ne prennent ni contenu ni élément enfant.
+    | Il n'y a plus 2 balises (ouvrante et fermante) mais une unique balise dont la fermeture se fait classiquement en utilisant un simple chevron (``>``), optionnellement accompagné d'une barre oblique (``/>``).
+    |
+
+    La syntaxe se simplifie comme suit:
+
+    .. code:: html
+
+        <balise [attribut="valeur"]> OU <balise [attribut="valeur"] />
+
+    |
+
+    **2. Document HTML**
+    ====================
+
+    Nous avons vu à quoi ressemblait la structure-type d'un *élément* HTML.
+
+    Nous allons maintenant voir plus en détail à quoi ressemble la structure-type d'un *document* HTML (aussi appelé "squelette").
+
+    En voici les éléments essentiels afin de constituer un document HTML *valide*.
+
+    Ce squelette prend la forme suivante:
+
+    .. code:: html
+
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="utf-8">
+                <title>Titre de l'onglet navigateur</title>
+            </head>
+            <body>
+                <h1>Ma première page web</h1>
+            </body>
+        </html>
+
+    Afin de vous faire une idée concrète de ce que permet le langage HTML, effectuez les démarches ci-dessous sur votre machine:
+
+    1. Créez un nouveau dossier ``apprentissage_dev_web`` (ou un quelconque autre nom, toutefois qu'il soit pertinent pour vous).
+    2. Ouvrez un éditeur de texte, et effectuez un copier-coller du bout de code fourni ci-dessus.
+    3. Sauvegardez le contenu dans votre nouveau dossier, afin de créer un nouveau fichier. Nommez-le ``index.html`` (Notez ici que l'extension du fichier ``.html`` est importante).
+    4. | Effectuez un double clic gauche sur votre fichier ``index.html`` afin d'observer le rendu de votre document dans le navigateur par défaut de votre ordinateur.
+       | *Alternativement, clic droit → "Ouvrir avec" et sélectionner le navigateur de votre choix ou bien effectuer un glisser-déposer de votre fichier directement dans le navigateur*
+
+
+    ``<!DOCTYPE html>``
+    ===================
+
+    | Cette balise (qui n'en est d'ailleurs pas vraiment une, nous parlerons plutôt de *déclaration*) est la première ligne essentielle à tout fichier HTML.
+    | Elle permet de signaler au navigateur (*Chrome, Safari, Firefox, ...*) le type de document qu'il s'apprête à interpréter.
+    |
+    | Bien que ``<!DOCTYPE html>`` soit l'écriture adoptée par la majorité des développeurs, la déclaration n'est toutefois pas sensible à la casse.
+    | Ainsi, ``<!doctype HTML>``, ``<!DOCTYPE HTML>`` ou encore ``<!Doctype Html>`` sont des déclarations tout aussi valides.
+    | Il en va de même pour toutes les balises HTML, ainsi que pour les attributs que nous verrons un peu plus tard (**Attention**, ce n'est pas le cas pour la *valeur* associée à ces derniers).
+    |
+    | Toutefois, ``<!DOCTYPE html>`` mise à part, on favorisera les noms de balises en minuscule: ``<html>`` est donc préféré à ``<HTML>``.
+    |
+
+
+    ``<html>``
+    ==========
+
+    | Après la déclaration ``!DOCTYPE`` vient la balise ``<html>``. Le terme d'élément *racine* est parfois utilisé pour faire référence à ce dernier.
+    | Cet élément sera le "conteneur parent" de tous les autres éléments HTML (à commencer par les 2 éléments ci-dessous).
+    |
+
+    Les enfants directs sont les suivants:
+
+    ``<head>``
+    ----------
+
+    Le premier est l'élément ``head``. C'est la balise de premier niveau qui englobera l'ensemble des *métadonnées* de votre document, tel que le format d'encodage via l'élément ``meta``.
+
+    .. note::
+
+        **Note:** une *métadonnée* est une donnée qui en définit/caractérise une autre.
+
+        Un exemple concret directement observable sur votre machine: les informations affichées au survol d'un fichier stocké sur votre disque dur.
+
+        Le type de fichier, l'espace qu'il occupe, ses dimensions dans le cas d'une image, et même sa durée dans le cas d'une vidéo: toutes ses informations sont des données caractérisant vos fichiers.
+
+
+    ``<body>``
+    ----------
+
+    Le second est l'élément ``body``. C'est la balise de premier niveau qui englobera l'ensemble du *contenu* de votre document, tel que le titre de votre page via l'élément ``h1``.
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: '[Théorie] Syntaxe HTML'
+network_grading: false
+problems:
+    validation_check:
+        type: multiple_choice
+        name: Lecture complétée
+        header: Une fois la théorie parcourue, validez pour passer à la suite du cours.
+        limit: 0
+        choices:
+        -   text: Je confirme avoir parcourue la théorie.
+            feedback: Bon apprentissage !
+            valid: true
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

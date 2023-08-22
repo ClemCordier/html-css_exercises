@@ -1,0 +1,45 @@
+_id: 6424cd0e416f325fcdd75967
+archive: 6424cd12416f325fcdd7596a
+courseid: html_css_clement
+custom: {}
+grade: 50.0
+input:
+    '@attempts': '59'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-30 01:43:10.521236'
+    '@username': Clem
+    list_items: |-
+        <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>C</li>
+        </ul>
+    list_tags: '0'
+problems:
+    list_items:
+    - failed
+    - |-
+        Voici des pistes qui pourraient vous aider:
+
+        - Ligne 1: L'élément ``ul`` ne correspond pas à l'élément attendu en position n°1 dans la hiérarchie.
+
+        Ici, l'ordre de la liste a une importance particulière. Pensez donc à vous servir de l'élément de liste adéquat !
+    list_tags:
+    - success
+    - Bonne réponse!
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-03-30 01:43:10.521000
+taskid: list_tags
+tests: {}
+text: ''
+user_ip: 2a02:a03f:a8ac:3900:60b1:5612:8dd1:12a5
+username:
+- Clem

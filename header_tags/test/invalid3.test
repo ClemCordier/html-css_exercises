@@ -1,0 +1,52 @@
+_id: 64e3996e054821c46a619964
+archive: 64e39970054821c46a619965
+courseid: html_css_clement
+custom: {}
+grade: 0.0
+input:
+    '@attempts': '103'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-08-21 19:05:50.429456'
+    '@username': Clem
+    meta: <meta>
+    title: <title>INGInious | Plateforme d'apprentissage en programmation informatique
+        à destination des étudiants</title >
+problems:
+    meta:
+    - failed
+    - |+
+        Voici des pistes qui pourraient vous aider:
+
+        - Vous n'avez pas renseigné le bon nombre d'attributs à l'élément ``meta``: attendu 1 - reçu 0
+
+    title: |4
+
+                    Votre réponse ``<title>INGInious | Plateforme d'apprentissage en programmation informatique à destination des étudiants</title >`` ne semble pas correspondre à un élément HTML valide.
+
+                    Assurez-vous de respecter la syntaxe de base ainsi que l'écriture conventionnelle d'un élément, c'est-à-dire:
+
+                    - nom des balises (et des éventuels atrributs) en minuscule.
+                    - pas d'espacement au sein de votre balise ouvrante, sauf pour y ajouter des attributs (voire entre l'attribut et sa valeur).
+                    - pas d'espacement au sein de votre balise fermante.
+
+                    | exemple: ``<p id="premier-paragraphe">contenu du paragraphe</p>``
+                    | contre-exemple: ``<P id="premier-paragraphe">contenu du paragraphe</P>``, ``<p id="premier-paragraphe">contenu du paragraphe<   /p   >`` (remarquez l'espacement au sein de la balise fermante), ...
+                    |
+
+                    N'hésitez pas à consulter la `section théorique <https://inginious.org/course/html_css_clement/theory_html_basics>`_ en cas de doute.
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-21 19:05:50.429000
+taskid: header_tags
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:2c1a:6ca:e5c8:6959
+username:
+- Clem

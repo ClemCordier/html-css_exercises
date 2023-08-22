@@ -1,0 +1,42 @@
+_id: 6424ccb7fb6b25edf258e946
+archive: 6424ccbbfb6b25edf258e948
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '58'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-30 01:41:43.158336'
+    '@username': Clem
+    list_items: |-
+        <ol>
+            <li>Python</li>
+            <li>Java</li>
+            <li>C</li>
+        </ol>
+    list_tags: '0'
+problems:
+    list_items:
+    - success
+    - |+
+        **Correct!**
+
+    list_tags:
+    - success
+    - Bonne réponse!
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-03-30 01:41:43.158000
+taskid: list_tags
+tests: {}
+text: ''
+user_ip: 2a02:a03f:a8ac:3900:60b1:5612:8dd1:12a5
+username:
+- Clem

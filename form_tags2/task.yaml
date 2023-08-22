@@ -1,0 +1,97 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Maintenant que nous avons les bases, nous allons voir plus en profondeur les différents types d'``input`` qui existent.
+
+    Notre formulaire correspondera à un système d'évaluation de jeu vidéo afin de recueillir des informations sur les joueurs.
+
+    Cette partie se contentera de n'utiliser que des champs de formulaire basés sur l'élément ``input``.
+
+    Nous verrons d'autres éléments à intégrer à notre formulaire dans la question suivante.
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Éléments de formulaire (2)
+network_grading: false
+problems:
+    date_number:
+        type: code
+        name: Heures de jeu
+        header: |-
+            La première information récupérée via le formulaire correspond aux nombres d'heures jouées.
+
+            Pour cela, nous allons utiliser un élément ``input`` qui aura l'attribut ``type="number"`` afin d'obtenir un champ de saisie pouvant accueillir un nombre entier relatif.
+
+            Liez vos éléments ``label`` et ``input`` en renseignant la valeur "hours-played" à vos attributs for et id.
+        language: html
+        default: ''
+    step:
+        type: code
+        name: Prévention des incohérences utilisateur
+        header: |
+            | Vous constaterez qu'en l'état, un utilisateur peut renseigner une valeur négative pour les heures jouées, ce qui n'aurait pas beaucoup de sens...
+            | Afin d'éviter qu'un petit rigolo renseigne une valeur incohérente, nous allons définir une valeur minimum obligatoire.
+            |
+            | De plus, l'utilisateur est pour l'instant limité à des valeurs entières. Nous pourrions affiner cette information en autorisant les nombres décimaux.
+            | Par exemple, un utilisateur ayant joué une heure et demie pourrait renseigner la valeur :math:`1.5`, plutôt que d'être contraint à choisir entre les valeurs :math:`1` et :math:`2`.
+            |
+
+            Reprenez votre réponse à la question 1, et ajoutez-y les attributs ``step`` et ``min`` au champ des heures de jeu.
+
+            | ``step`` prendra la valeur ``0.25``. Cela forcera l'utilisateur à renseigner des multiples de :math:`0.25`, soit des pas de :math:`15` minutes.
+            | ``min`` prendra la valeur ``0.5``. Nous partons du principe qu'un retour d'utilisateur ayant passé moins de :math:`30` minutes sur le jeu n'est pas pertinent.
+        language: html
+        default: ''
+    checkbox:
+        type: code
+        name: Cases à cocher
+        header: |-
+            Pour conclure cette première partie, nous allons ajouter un champ de cases à sélectionner dans le but de sonder les joueurs sur les vecteurs de communication leur ayant fait découvrir le jeu.
+
+            Pour cela, nous allons utiliser des ``input`` de type ``checkbox``.
+
+            Afin de regrouper ces différents champs pour ne former qu'une seule entité, nous allons les englober en tant qu'enfants de l'élément ``fieldset``.
+
+            Celui-ci peut éventuellement contenir une légende via l'élément ``legend`` et son contenu:
+
+            .. code:: html
+
+                <fieldset>
+                  <legend>Titre</legend>
+                  <input id="first-choice">
+                  <label for="first-choice">Libellé 1</label>
+                  <input id="second-choice">
+                  <label for="second-choice">Libellé 2</label>
+                  ...
+                </fieldset>
+
+            Notez l'ordre inversé des éléments ``input`` et ``label`` par rapport aux précédentes questions. Cela permet d'avoir nos case à cocher en tête, devant nos libellés.
+
+            Répondez avec la légende suivante: "Via quel(s) vecteur(s) avez-vous entendu parler du jeu pour la première fois ?" suivi des paires ``label`` - ``input`` dont les libellés seront les suivants:
+
+            - un(e) ami(e)
+            - des publicités
+            - des influenceurs (YouTube, Twitch, ...)
+            - autres
+
+            Liez vos paires d'éléments ``label`` et ``input`` en renseignant les valeurs "friend", "pub", "influencer" et "other" à vos attributs for et id respectifs.
+        language: html
+        default: |-
+            <fieldset>
+            </fieldset>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

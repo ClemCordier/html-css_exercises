@@ -1,0 +1,151 @@
+# This is a basic workflow to help you get started with Actions
+
+name: INGInious tasks tester
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: main
+    # branches: [ $default-branch ]
+  pull_request:
+    branches: main
+    # branches: [ $default-branch ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+env:
+  INGINIOUS: /home/runner/INGInious
+  CONTAINERS: /home/runner/containers
+  CONFIG_FILE: ${GITHUB_WORKSPACE}/.github/workflows/inginious-task-tester.env
+  INGINIOUS_IMAGES: /home/runner/inginious-images.tar
+  PYTHON_VER: 3.11
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  submissions_rerun:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-20.04
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Add REPO_NAME in env variables
+      - name: Setup repo name as env variable
+        run: echo "REPO_NAME=${{ github.event.repository.name }}" >> $GITHUB_ENV
+
+      - name: Load workflow config
+        run: |
+          cat ${{ env.CONFIG_FILE }} >> $GITHUB_ENV
+          echo ${GITHUB_ENV}
+
+      # Get INGInious source code
+      - name: Cache INGInious install
+        id: cache-inginious
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.INGINIOUS }}
+          key: ${{ runner.os }}-inginious
+
+      - name: Get INGInious
+        if: steps.cache-inginious.outputs.cache-hit != 'true'
+        run: |
+          git clone https://github.com/UCL-INGI/INGInious.git ${INGINIOUS}
+          git -C ${INGINIOUS} checkout 5c4eb0b90f2fcd7683383b96db6a5e4e2aa4b6af
+
+      # Get INGInious containers
+      - name: Cache INGInious containers
+        id: cache-inginious-containers
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.CONTAINERS }}
+          key: ${{ runner.os }}-inginious-containers
+
+      - name: Get INGInious containers
+        if: steps.cache-inginious-containers.outputs.cache-hit != 'true'
+        run: git clone https://github.com/UCL-INGI/INGInious-containers ${CONTAINERS}
+
+      # Get APT dependencies
+      # see https://github.com/actions/cache/issues/324
+      - name: "[TMP] Chown APT cache"
+        if: steps.cache-apt.outputs.cache-hit != 'true'
+        run: sudo chown ${USER}:${USER} -R /var/cache/apt
+
+      - name: Cache APT
+        id: cache-apt
+        uses: actions/cache@v3
+        with:
+          path: /var/cache/apt
+          key: ${{ runner.os }}-apt
+
+      # see https://github.com/actions/cache/issues/324
+      - name: Install APT dependencies
+        if: steps.cache-apt.outputs.cache-hit != 'true'
+        run: |
+          sudo apt-get install -y libtidy5deb1 libzmq3-dev
+          sudo chown ${USER}:${USER} -R /var/cache/apt
+
+      # Add python3.11 because the syntax "tuple[type, type]" is not supported by the shipped python version
+      - name: Add Python3.11
+        if: steps.cache-apt.outputs.cache-hit != 'true'
+        run: |
+          sudo apt install -y software-properties-common
+          sudo add-apt-repository ppa:deadsnakes/ppa
+          sudo apt update
+          sudo apt-get install -y python${{env.PYTHON_VER}} python${{env.PYTHON_VER}}-venv
+          python${{env.PYTHON_VER}} -m ensurepip --upgrade
+
+      # Get PIP dependencies
+      - name: Cache PIP
+        id: cache-pip
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.local/lib/python${{env.PYTHON_VER}}
+          key: ${{ runner.os }}-pip
+
+      - name: Install PIP dependencies and INGInious
+        if: steps.cache-pip.outputs.cache-hit != 'true'
+        run: |
+          pip${{env.PYTHON_VER}} install --user nose==1.3.7 selenium==3.141.0 coverage pyvirtualdisplay pytest
+          pip${{env.PYTHON_VER}} install --user ${INGINIOUS}
+          if [[ ! -z ${PLUGIN_URLS} ]]; then pip${{env.PYTHON_VER}} install --upgrade ${PLUGIN_URLS}; fi
+          pip${{env.PYTHON_VER}} install --user --upgrade markupsafe==2.0.1
+
+      - name: Start services
+        run: |
+          sudo systemctl start mongod
+          sudo systemctl start docker
+
+      - name: Install INGInious
+        if: steps.cache-inginious.outputs.cache-hit != 'true'
+        run: |
+          cd ${INGINIOUS}
+          python${{env.PYTHON_VER}} inginious-install --default
+
+      - name: Add current repo in course list
+        run: ln -s ${GITHUB_WORKSPACE} ${INGINIOUS}/tasks/${REPO_NAME}
+
+      # Build INGInious containers
+      - name: Cache INGInious images
+        id: cache-inginious-images
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.INGINIOUS_IMAGES }}
+          key: ${{ runner.os }}-inginious-images
+
+      - name: Build INGInious images
+        if: steps.cache-inginious-images.outputs.cache-hit != 'true'
+        run: python${{env.PYTHON_VER}} ${GITHUB_WORKSPACE}/.github/workflows/inginious-task-tester-container-builder.py
+
+      - name: Load INGInious Images
+        if: steps.cache-inginious-images.outputs.cache-hit == 'true'
+        run: docker load --input ${INGINIOUS_IMAGES}
+
+      - name: Re-playing old submissions
+        run: python${{env.PYTHON_VER}} ${INGINIOUS}/utils/task_tester/inginious-test-task -p ${PLUGIN_NAMES} -c ${INGINIOUS}/configuration.yaml ${REPO_NAME}

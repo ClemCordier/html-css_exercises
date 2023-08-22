@@ -1,0 +1,79 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    Nous allons améliorer notre page de recette de cuisine, en y ajoutant une illustration de tarte Tatin à la suite de notre titre principal/de premier niveau.
+
+    Celle-ci sera accompagnée d'une brève description mentionnant les droits d'auteur relative à l'image.
+
+    Pour ce faire, nous allons englober notre image au sein d'un élément ``figure``.
+
+    La description sera quant à elle renseignée au sein d'un élément ``small``, lui-même inclus dans l'élément ``footer``.
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: '[Récap] Liens & Images'
+network_grading: false
+problems:
+    recipe:
+        type: code
+        name: Recette
+        header: |-
+            **Quelques infos/consignes à respecter:**
+
+            - Votre image, nommez ``tarte_tatin.jpg``, se trouve dans le dossier ``images/`` et votre fichier HTML se situe au même niveau que ce dernier:
+
+              ::
+
+                index.html   <-- document qui contient notre page recette de cuisine
+                images/
+                └── tarte_tatin.jpg
+
+            - | L'image d'origine étant assez imposante (640x444 px), renseignez les attributs ``width`` et ``height`` afin de réduire sa taille de moitié, tout en gardant les mêmes proportions pour ne pas déformer l'image.
+              | Enfin, n'oubliez pas le texte alternatif "tarte tatin cuisinée" à afficher en cas de problème avec l'image (et pour une meilleure accessibilité)
+
+            .. note::
+
+                **Note:** Les liens relatifs ne sont pas pris en charge. Vous pouvez temporairement utiliser le lien absolu suivant:
+
+                - https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Tarte_Tatin_a_la_Michalak.jpg/640px-Tarte_Tatin_a_la_Michalak.jpg
+
+                | pour effectuer vos tests.
+                |
+                | Pensez à le remplacer par le lien relatif attendu avant de soumettre votre réponse finale !
+
+
+            - La description doit être la suivante: "Par Shani Evenstein, CC BY-SA 4.0, Lien" où:
+
+                - | "CC BY-SA 4.0" est un lien qui doit rediriger vers les détails de la licence en question: https://creativecommons.org/licenses/by-sa/4.0
+                  |  De plus, nous allons préciser que la relation de redirection correspond à des informations de licence à l'aide de l'attribut ``rel`` et sa valeur ``license``.
+                - "Lien" est un lien qui doit rediriger vers la photo d'origine: https://commons.wikimedia.org/w/index.php?curid=56359426
+
+            .. raw:: html
+
+                <p class="codepen" data-height="250" data-default-tab="html,result" data-slug-hash="PodLoRX" data-editable="true" data-user="clem09" style="height: 250px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            |
+        language: html
+        default: |-
+            <figure>
+                <img [?]>
+                <footer><small>[?]</small></footer>
+            </figure>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

@@ -1,0 +1,47 @@
+_id: 6424cdf7607332efce358863
+archive: 6424cdfb607332efce358864
+courseid: html_css_clement
+custom: {}
+grade: 50.0
+input:
+    '@attempts': '62'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-30 01:47:03.228077'
+    '@username': Clem
+    list_items: |-
+        <ol>
+            <li>Python</li>
+            <li>C</li>
+            <li>Java</li>
+        </ol>
+    list_tags: '0'
+problems:
+    list_items:
+    - failed
+    - |-
+        Voici des pistes qui pourraient vous aider:
+
+        - Les 2 premiers éléments (``ol`` , ``li``) sont corrects.
+        - Ligne 3: Le contenu "*c*" associé à l'élément ``li`` en position n°3 dans la hiérarchie n'est pas celui attendu.
+        - Ligne 4: Le contenu "*java*" associé à l'élément ``li`` en position n°4 dans la hiérarchie n'est pas celui attendu.
+
+        Ici, l'ordre de la liste a une importance particulière. Pensez donc à vous servir de l'élément de liste adéquat !
+    list_tags:
+    - success
+    - Bonne réponse!
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-03-30 01:47:03.228000
+taskid: list_tags
+tests: {}
+text: ''
+user_ip: 2a02:a03f:a8ac:3900:60b1:5612:8dd1:12a5
+username:
+- Clem

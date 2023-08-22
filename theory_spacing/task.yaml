@@ -1,0 +1,84 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    Il est important de noter qu'en HTML, toute forme d'espacement sera interprétée la façon suivante:
+
+    **Un simple espace entre chaque mots composant le contenu d'un élément et ignoré aux extrémités. L'espacement entre les éléments est quant à lui toujours ignoré.**
+
+    Cela inclus les caractères de la barre espace, mais aussi de la touche de tabulation (⇥) ou encore de la touche entrée (⏎)
+
+    Autrement dit, ces 3 éléments:
+
+    .. code:: html
+
+        <p>   Ce paragraphe est équivalent   </p>
+        <p>Ce   paragraphe   est   équivalent</p>
+        <p>
+           Ce
+           paragraphe
+           est
+           équivalent
+        </p>
+
+    Auront un rendu identique:
+
+    +----------------------------------------------+
+    |.. raw:: html                                 |
+    |                                              |
+    |    <p>   Ce paragraphe est équivalent   </p> |
+    |    <p>Ce   paragraphe   est   équivalent</p> |
+    |    <p>                                       |
+    |       Ce                                     |
+    |       paragraphe                             |
+    |       est                                    |
+    |       équivalent                             |
+    |    </p>                                      |
+    +----------------------------------------------+
+
+    Considérons le 3e cas de figure. Pour "forcer" le retour de ligne, une solution (non recommandée) serait d'exploiter le comportement par défaut des éléments "bloc" qui commencent sur une nouvelle ligne.
+
+    .. code:: html
+
+        <p>ce</p>
+        <p>paragraphe</p>
+        <p>est</p>
+        <p>équivalent</p>
+
+    +---------------------------------------+
+    |.. raw:: html                          |
+    |                                       |
+    |    <p>ce</p>                          |
+    |    <p>paragraphe</p>                  |
+    |    <p>est</p>                         |
+    |    <p>équivalent</p>                  |
+    +---------------------------------------+
+
+    Cette solution n'est pas viable, car la sémantique de l'élément ``p``, supposée correspondre à un paragraphe, n'est plus du tout respectée.
+
+    Une solution plus adéquate est d'utiliser l'élément vide ``br`` qui existe précisément à cet effet: ajouter un saut de ligne.
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: '[Théorie] Gestion des espaces'
+network_grading: false
+problems:
+    validation_check:
+        type: multiple_choice
+        name: ''
+        header: ''
+        limit: 0
+        choices:
+        -   text: Passer à la suite du cours.
+            feedback: Bon apprentissage !
+            valid: true
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

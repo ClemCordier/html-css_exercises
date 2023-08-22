@@ -1,0 +1,84 @@
+_id: 6424c4c7416f325fcdd75894
+archive: 6424c4ce416f325fcdd75896
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '55'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-30 01:07:51.734005'
+    '@username': Clem
+    em: |-
+        <p>
+            La plateforme INGInious est créée et maintenue par le département d'ingénierie informatique de l'UCLouvain.
+            <em>Entièrement </em> libre d'accès, son code-source est disponible sous licence open-source.
+        </p>
+    strong: |-
+        <p>
+            Au fil des années, INGInious a accumulé <strong>des centaines d'exercices</strong> liés à différents cours d'informatique.
+            Nous y retrouvons de nombreux cours d'introduction à divers langages de programmation, notamment:
+        </p>
+problems:
+    em:
+    - success
+    - |
+        **Correct!**
+
+
+
+        .. note::
+            :title: Encadré ci-dessous, le résultat de votre soumission:
+
+            .. raw:: html
+
+                <p>
+                    La plateforme INGInious est créée et maintenue par le département d'ingénierie informatique de l'UCLouvain.
+                    <em>Entièrement </em> libre d'accès, son code-source est disponible sous licence open-source.
+                </p>
+    strong:
+    - success
+    - |
+        **Correct!**
+
+
+
+        .. note::
+            :title: Encadré ci-dessous, le résultat de votre soumission:
+
+            .. raw:: html
+
+                <p>
+                    Au fil des années, INGInious a accumulé <strong>des centaines d'exercices</strong> liés à différents cours d'informatique.
+                    Nous y retrouvons de nombreux cours d'introduction à divers langages de programmation, notamment:
+                </p>
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-03-30 01:07:51.734000
+taskid: inline_tags
+tests: {}
+text: |4
+
+
+    .. tip::
+        :title: Tips
+
+        HTML possède aussi les éléments ``i`` et ``b`` qui ont respectivement le même rendu visuel que ``em`` et ``strong``: ils transforment  le texte en italique/gras.
+
+                On pourrait légitimement se poser la question: pourquoi existe-t'il plusieurs éléments HTML ayant le même rendu ?
+
+                Pour en comprendre la raison, il faut se rappeler du **rôle de l'HTML: organiser, structurer une page web.**
+                Pour cela, on utilise divers éléments, chacun ayant sa propre sémantique.
+
+                L'apparence de notre page, quant à elle, sera gérée par le langage CSS que nous aborderons dans la suite du cours.
+
+                La sémantique des éléments ``i`` et ``b`` n'est donc simplement pas la même que celle des éléments ``em`` et ``strong`` que nous venons de voir.
+user_ip: 2a02:a03f:a8ac:3900:60b1:5612:8dd1:12a5
+username:
+- Clem

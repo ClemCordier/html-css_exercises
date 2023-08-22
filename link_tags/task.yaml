@@ -1,0 +1,95 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    L'élément ``a`` (pour *anchor*, ou *ancre* en français) crée un lien cliquable, appelé lien *hypertexte*.
+
+    Il permet notamment des redirections dites *externes* et *internes*:
+
+    - *externe*: vers un autre site web (URL absolue)
+    - *interne*: vers une page différente au sein d'un même site (URL relative)
+
+    Il est nécessairement accompagné de l'attribut ``href`` qui va renseigner le lien vers lequel l'élément va rediriger.
+
+    La syntaxe est la suivante:
+
+    .. code:: html
+
+        <a href="lien">Ceci est un lien hypertexte</a>
+
+    Nous allons nous concentrer sur la redirection externe pour l'instant. Nous aborderons la redirection interne ultérieurement.
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '200'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Élément de liens (1)
+network_grading: false
+problems:
+    a:
+        type: code_single_line
+        name: Élément de redirection
+        header: |
+            Répondez avec l'élément ``a`` redirigeant vers le premier site web de l'histoire, `http://info.cern.ch <http://info.cern.ch>`_.
+
+            Le texte cliquable de votre lien hypertexte doit être le suivant: "The very first website".
+        default: ''
+    mailto:
+        type: code_single_line
+        name: Redirection vers adresse e-mail
+        header: |
+            Outre la redirection vers des pages web, l'élément d'ancre permet aussi des redirections spécifiques, tel que l'ouverture d'une adresse mail directement dans l'application de messagerie (ex.: *Outlook*, *Thunderbird*) par défaut de l'utilisateur.
+
+            Pour ce faire, la valeur de l'attribut ``href`` prend la forme suivante: "mailto:*insérer_adresse_mail*"
+
+            .. code:: html
+
+                <a href="mailto:mail">
+
+            Les formats d'adresse mail valide sont multiples.
+
+            Répondez avec l'élément ``a`` redirigeant vers l'adresse mail fictive "mail@address.com".
+
+            Le texte cliquable de votre lien hypertexte doit être le suivant: "Contact par mail".
+        default: ''
+    tel:
+        type: code_single_line
+        name: Redirection vers n° de téléphone
+        header: |
+            De même, la redirection peut se faire afin d'ouvrir des numéros de téléphone dans l'application par défaut de l'utilisateur.
+
+            Pour ce faire, la valeur de l'attribut ``href`` prend la forme suivante: "tel:*insérer_numéro*"
+
+            .. code:: html
+
+                <a href="tel:numero">
+
+            Les formats de numéro valide sont multiples.
+
+            Répondez avec l'élément ``a`` redirigeant vers le numéro de téléphone fictif "+3223456789".
+
+            Le texte cliquable de votre lien hypertexte doit être le suivant: "Contact par téléphone".
+        default: ''
+    a2:
+        type: code_single_line
+        name: Redirection dans un nouvel onglet
+        header: |-
+            Reprenez votre réponse à la première question, et ajoutez-y l'attribut ``target`` avec la valeur "_blank".
+
+            Ce dernier permet de modifier le comportement par défaut du lien hypertexte.
+
+            Plutôt que de s'ouvrir dans l'onglet courant de votre navigateur, il s'ouvrira dorénavant dans un nouvel onglet.
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

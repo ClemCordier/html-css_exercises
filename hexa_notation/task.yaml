@@ -1,0 +1,161 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    Une autre manière de renseigner une couleur est d'utiliser la notation *hexadécimale*.
+
+    Comme son nom l'indique, les valeurs sont représentées non plus en base :math:`10` (la base décimale que vous connaissez déjà) mais en base :math:`16`.
+
+    En hexadécimal, les chiffres :math:`0` à :math:`9` ont la même représentation qu'en décimal. La différence se fait avec les lettres :math:`A` à :math:`F` qui correspondent respectivement aux valeurs :math:`10` à :math:`15` en décimal.
+
+    .. table::
+
+        ======= ===========
+        Décimal Hexadécimal
+        ======= ===========
+        0         0
+        1         1
+        2         2
+        3         3
+        4         4
+        5         5
+        6         6
+        7         7
+        8         8
+        9         9
+        10        A
+        11        B
+        12        C
+        13        D
+        14        E
+        15        F
+        ======= ===========
+
+    En informatique, une valeur hexadécimale est généralement accompagnée du préfixe :math:`0x`.
+
+    |
+
+    Convertir de la base 10 vers la base 16
+    =======================================
+
+    Pour convertir un nombre décimal en son équivalent hexadécimal, nous allons nous servir de la division *entière* ou *euclidienne*.
+
+    Supposons que nous souhaitons convertir la valeur :math:`421` dans sa représentation hexadécimale:
+
+    :math:`421/16 = 26R5` (soit :math:`421 = 26*16+5`)
+
+    Le quotient (résultat de la division) est divisible par :math:`16`, nous continuons d'effectuer la division avec ce dernier comme dividende:
+
+    :math:`26/16 = 1R10` (soit :math:`26 = 1*16+10`)
+
+    Finalement, le quotient (`1`) étant plus petit que la base (`16`), nous obtenons la dernière division suivante:
+
+    :math:`1/16 = 0R1` (soit :math:`1 = 0*16+1`)
+
+    Il ne nous reste plus qu'à concaténer les restes de chaque division effectuée, et ce en partant de la fin:
+
+    .. image:: hexa_notation/dec_to_hex.png
+
+    Nous devons donc concaténer :math:`1` (reste de la troisième division), :math:`10` (reste de la deuxième division), :math:`5` (reste de la première division).
+
+    :math:`1` et :math:`5` ont tous deux leur équivalence directe en hexadécimal.
+
+    Il ne reste qu'à convertir :math:`10`. On observe que sa correspondance dans le tableau ci-dessus est :math:`A`.
+
+    Finalement, nous obtenons donc :math:`421=0x1A5`
+
+    |
+
+    Convertir de la base 16 vers la base 10
+    =======================================
+
+    Pour convertir un nombre hexadécimal en son équivalent décimal, voyons d'abord la décomposition d'un nombre décimal par *rang*: le rang des centaines, le rang des dizaines et enfin le rang des unités.
+
+    Reprenons la valeur :math:`421`. Sa décomposition correspond à :math:`4*100 + 2*10 + 1*1`, que nous pouvons réécrire en utilisant uniquement des puissances de dix comme suit:
+
+    :math:`4*10^2 + 2*10^1 + 1*10^0`
+
+    Pour effectuer la conversion de :math:`0x1A5` en décimal, nous allons utiliser cette même décomposition, non plus avec des puissances de :math:`10` mais des puissances de :math:`16`:
+
+    :math:`0x1A5 = 1*16^2 + A*16^1 + 5*16^0`
+
+    Nous connaissons la correspondance de `A` en décimal, `10`.
+
+    :math:`0x1A5 = 1*16^2 + 10*16^1 + 5*16^0`
+
+    Il ne nous reste plus qu'à faire les maths:
+
+    :math:`0x1A5 = 1*16^2 + 10*16^1 + 5*16^0 = 1*256 + 10*16 + 5*1 = 256 + 160 + 5 = 421`
+
+    |
+
+    Répondez aux questions suivantes afin de vous familiariser avec cette notation.
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: '[Théorie + Quiz] Notation hexadécimale'
+network_grading: false
+problems:
+    q1:
+        type: multiple_choice
+        name: Quel est l'équivalent décimal de 0x16 ?
+        header: ''
+        limit: 0
+        choices:
+        -   text: '16'
+        -   text: '112'
+        -   text: '22'
+            feedback: Bonne réponse!
+            valid: true
+        -   text: '32'
+    q2:
+        type: multiple_choice
+        name: Quel est l'équivalent décimal de 0xF0 ?
+        header: ''
+        limit: 0
+        choices:
+        -   text: '240'
+            feedback: Bonne réponse!
+            valid: true
+        -   text: '15'
+        -   text: '16'
+        -   text: '150'
+    q3:
+        type: multiple_choice
+        name: Quel est l'équivalent hexadécimal de 16 ?
+        header: ''
+        limit: 0
+        choices:
+        -   text: '0x1'
+        -   text: '0x10'
+            feedback: Bonne réponse!
+            valid: true
+        -   text: '0x01'
+        -   text: '0xF'
+    q4:
+        type: multiple_choice
+        name: Quel est l'équivalent hexadécimal de 30 ?
+        header: ''
+        limit: 0
+        choices:
+        -   text: 1E
+            feedback: Bonne réponse!
+            valid: true
+        -   text: 2E
+        -   text: 3E
+        -   text: 4E
+    q5:
+        type: match
+        name: Quel est l'équivalent décimal de 0x2A ?
+        header: ''
+        answer: '42'
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

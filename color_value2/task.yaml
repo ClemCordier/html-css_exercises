@@ -1,0 +1,99 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Une autre manière de renseigner une couleur est d'utiliser la notation *hexadécimale*.
+
+    En CSS, le préfixe :math:`0x` habituellement utilisé pour indiquer un nombre hexadécimal est remplacé par le dièse (:math:`\#`).
+
+    La syntaxe est la suivante :
+
+    :math:`#RRGGBB`
+
+    où :math:`RR` désigne la composante de rouge,
+    :math:`GG` désigne la composante de vert,
+    :math:`BB` désigne la composante de bleu.
+
+    Chacune de ces composantes varie de :math:`00` (absence de la composante de couleur) à :math:`FF` (intensité maximale de la composante de couleur).
+
+    - :math:`#FF0000` correspond à la couleur rouge (et est l'équivalent de la couleur CSS prédéfinie ``red``).
+    - :math:`#00FF00` correspond à la couleur verte (et est l'équivalent de la couleur CSS prédéfinie ``green``).
+    - :math:`#0000FF` correspond à la couleur bleue (et est l'équivalent de la couleur CSS prédéfinie ``blue``).
+    - :math:`#000000` l'absence de composante de couleur correspond au noir (et est l'équivalent de la couleur CSS prédéfinie ``black``).
+    - :math:`#FFFFFF` l'intensité maximale de toutes les composantes de couleur correspond au blanc (et est l'équivalent de la couleur CSS prédéfinie ``white``).
+
+    |
+
+    | **Note:** Lorsque chacune des 3 composantes utilisent une paire de nombres, ces dernières peuvent être simplifiées en un seul chiffre.
+    |          De cette façon, les 3 paires de :math:`00` de la couleur noire (:math:`#000000`) peuvent chacune être abrégées en un seul :math:`0`, on se retrouve alors avec :math:`#000`.
+    |          De même, la couleur rouge :math:`#FF0000` peut être simplifiée en :math:`#F00`.
+    |          Toutefois, une couleur plus complexe telle que :math:`#000042` ne peut être simplifiée: la composante de bleu ne forme pas une paire (:math:`4 \neq 2`).
+    |
+
+    .. raw:: html
+
+        <p class="codepen" data-height="240" data-default-tab="css,result" data-slug-hash="mdGaWaO" data-editable="true" data-user="clem09" style="height: 240px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '200'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Couleur hexadécimale
+network_grading: false
+problems:
+    h1_border_color:
+        type: code
+        name: Couleur de bordures
+        header: |
+            La propriété ``border-color`` permet d'assigner une couleur aux bordures des éléments.
+
+            Insérer la déclaration nécessaire afin d'encadrer le titre principal en rouge. Utilisez la notation hexadécimale.
+
+            .. code:: css
+
+                h1 {
+                  border-style: dashed;
+                  [?]
+                }
+        language: css
+        default: |-
+            h1 {
+              border-style: dashed;
+              [?]
+            }
+    precise_border_color:
+        type: code
+        name: Couleur avancée
+        header: |
+            L'avantage de la notation hexadécimale par rapport aux couleurs CSS prédéfinies réside notamment dans la précision que l'on peut avoir sur le choix de la couleur.
+
+            Complétez la règle suivante en renseignant la déclaration nécessaire afin que les bordures de votre titre prennent la couleur suivante : :math:`#BEAA33`
+
+            .. code:: css
+
+                h1 {
+                  border-style: dashed;
+                  [?]
+                }
+        language: css
+        default: |-
+            h1 {
+              border-style: dashed;
+              [?]
+            }
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

@@ -1,0 +1,67 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Nous avons mentionné l'utilisation de l'élément d'ancre ``a`` permettant la redirection vers des ressources (externes ou internes) à notre site.
+
+    Nous allons maintenant voir un autre usage de ce dernier, cette fois-ci permettant une navigation à travers les différentes sections d'une page.
+
+    .. raw:: html
+
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="LYgeYrV" data-editable="true" data-user="clem09" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+    |
+
+    **Note:** La zone bac à sable est volontairement petite par rapport au code qu'elle contient, de cette façon vous pourrez facilement constater le bon fonctionnement de vos liens.
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Élément de liens (2)
+network_grading: false
+problems:
+    top:
+        type: code_single_line
+        name: Redirection pré-existante
+        header: |-
+            Un premier cas typique de redirection au sein d'une même page: la redirection vers le haut de la page courante.
+
+            Ce cas de figure est d'ailleurs défini dans la spécification HTML, 2 valeurs clés lui sont dédiées: ``#top`` ou simplement ``#``.
+
+            Répondez avec un lien de redirection vers le haut de la page, avec le texte cliquable suivant: "Revenir en haut de page".
+        default: ''
+    section:
+        type: code
+        name: Redirection personnalisée
+        header: |
+            Outre ces valeurs prédéfinies dans la spécification, il est aussi possible de créer ses propres redirections au sein d'une page.
+
+            Pour ce faire, on ajoute l'attribut ``id`` à l'élément vers lequel on souhaite effectuer la redirection, et lui assigne un nom faisant office d'identifiant unique.
+
+            Nous pouvons ensuite y faire référence depuis l'attribut ``href`` en lui assignant le caractère ``#`` suivi de l'identifiant en tant que valeur.
+
+            Nous allons ajouter un menu de navigation contenant 3 liens afin de pouvoir naviguer aisément d'une section à l'autre.
+
+            Pour cela, utilisez l'élément ``nav`` qui existe à cet effet, et ajoutez-y vos liens avec un texte identique au section auquel ils se rapportent: Histoire, Ingrédients, Préparation.
+
+            Un ``id`` est déjà attribué à chaque ``h2`` dans la zone bac à sable, servez-vous en pour vos redirections.
+
+            **Attention:** Seul le menu de navigation est attendu en réponse, il n'est pas nécessaire d'inclure le reste de la page fourni dans la zone bac à sable.
+        language: html
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

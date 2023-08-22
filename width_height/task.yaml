@@ -1,0 +1,85 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Nous avions brièvement abordé les attributs ``width`` et ``height`` dans la section HTML pour redimensionner notre image de tarte Tatin.
+
+    Leur équivalent CSS porte les mêmes noms: les propriétés ``width`` et ``height`` permettent de spécifier les dimensions en largeur et en hauteur.
+
+    Leur valeur par défaut est ``auto``, autrement dit elles sont gérées par votre navigateur.
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '200'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Hauteur & largeur
+network_grading: false
+problems:
+    width:
+        type: code
+        name: Largeur fixe
+        header: |-
+            Nous allons restreindre les paragraphes de notre recette en largeur.
+
+            Pour cela, insérez la règle CSS afin de leur appliquer une ``width`` de ``400px``.
+
+            .. raw:: html
+
+                <p class="codepen" data-height="500" data-default-tab="css,result" data-slug-hash="RweWPOZ" data-editable="true" data-user="clem09" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            |
+        language: css
+        default: ''
+    percentage:
+        type: code
+        name: Pourcentage
+        header: |-
+            Les valeurs acceptées ne sont pas uniquement des unités de mesure. Nous pouvons aussi renseigner une valeur en pourcentage.
+
+            Ce pourcentage correspond à l'espace du conteneur parent.
+
+            Pour mieux comprendre son fonctionnement, prenons ce titre englobé dans un élément ``header``:
+
+            .. code:: html
+
+                <body>
+                  <header>
+                    <h1>Titre englobé</h1>
+                  </header>
+                </body>
+
+            Appliquez-y 2 règles CSS :
+
+            - La première afin que le ``header`` occupe 50% de la largeur de son conteneur avec un arrière-plan de couleur rouge.
+            - La seconde afin que le titre principal occupe 75% de la largeur de son conteneur avec des bordures (pointillées) de couleur bleue.
+
+            .. note::
+
+                | Pour les bordures de votre titre principal, servez-vous de la propriété raccourcie ``border`` permettant de renseigner en même temps le style de vos bordures **et** leur couleur:
+                |
+                | ``border: [border-style_value] [border-color_value];``
+
+            .. raw:: html
+
+                <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="YzJypdZ" data-editable="true" data-user="clem09" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            |
+        language: css
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

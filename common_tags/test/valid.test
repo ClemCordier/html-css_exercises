@@ -1,0 +1,97 @@
+_id: 6424b0d7416f325fcdd7566a
+archive: 6424b0db416f325fcdd7566c
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '96'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-29 23:42:47.068294'
+    '@username': Clem
+    h1_tag: <h1>INGInious - Plateforme d'apprentissage informatique à destination
+        des étudiants</h1>
+    p_tags: |-
+        <p>
+            La plateforme INGInious est créée et maintenue par le département d'ingénierie informatique de l'UCLouvain.
+            Entièrement libre d'accès, son code-source est disponible sous licence open-source.
+        </p>
+        <p>
+            Quand un étudiant soumet une réponse à un exercice de programmation, INGInious exécute automatiquement le programme écrit par l'étudiant et le soumet à une batterie de tests définis par l'enseignant.
+            Grâce à ces tests, l'étudiant peut rapidement vérifier si sa réponse est correcte et sinon il corrige son programme jusqu'à ce qu'il réussisse les différents tests.
+        </p>
+problems:
+    h1_tag:
+    - success
+    - |-
+        **Correct!**
+
+
+
+        .. tip::
+            :title: Tips
+
+            L'élément ``h1`` est généralement utilisé une seule fois par document, pour le titre principal de votre page.
+    p_tags:
+    - success
+    - |-
+        **Correct!**
+
+
+
+        .. tip::
+            :title: Tips
+
+            Notez que les retours à la ligne dans le code au niveau du contenu d'un même élément (ici, ``p``) ne sont là que pour le confort du développeur.
+
+                            Ceux-ci ne se reflètent pas sur le rendu visible dans le navigateur (cf. feedback global).
+
+                            Nous verrons dans un prochain exercice comment le langage interprète les espacements.
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-03-29 23:42:47.068000
+taskid: common_tags
+tests: {}
+text: |4
+
+            Les 2 questions regroupées ensemble, voici ce que vous obtenez en ouvrant le document HTML dans un navigateur web:
+
+
+    .. note::
+        :title: Encadré ci-dessous, le résultat de votre soumission:
+
+        .. raw:: html
+
+            <h1>INGInious - Plateforme d'apprentissage informatique à destination des étudiants</h1>
+                    <p>
+                        La plateforme INGInious est créée et maintenue par le département d'ingénierie informatique de l'UCLouvain.
+                        Entièrement libre d'accès, son code-source est disponible sous licence open-source.
+                    </p>
+                    <p>
+                        Quand un étudiant soumet une réponse à un exercice de programmation, INGInious exécute automatiquement le programme écrit par l'étudiant et le soumet à une batterie de tests définis par l'enseignant.
+                        Grâce à ces tests, l'étudiant peut rapidement vérifier si sa réponse est correcte et sinon il corrige son programme jusqu'à ce qu'il réussisse les différents tests.
+                    </p>
+
+
+    .. tip::
+        :title: Tips
+
+        Vous remarquerez que le titre à un rendu bien différent de nos paragraphes.
+
+                Ce rendu peut légèrement varier d'un navigateur à un autre, mais ce que l'on observe en règle général pour les éléments ``h1-h6``:
+
+                - texte en gras
+                - taille de police plus imposante (et qui décroît avec l'importance du titre choisi: un titre ``h1`` sera plus imposant qu'un titre ``h2``, qui sera lui-même plus imposant qu'un titre ``h3``, etc...)
+
+                En réalité, **chaque élément HTML a un style par défaut qui lui est associé**. Nous pourrons modifier ce style comme bon nous semble à l'aide du langage *CSS* qui sera abordé dans la seconde partie de ce cours.
+
+                Ne faites donc pas l'erreur d'utiliser des éléments HTML tel que ``h1-h6`` pour leur rendu visuel, réservez-les plutôt pour leur **sémantique** !
+user_ip: 2a02:a03f:a8ac:3900:60b1:5612:8dd1:12a5
+username:
+- Clem

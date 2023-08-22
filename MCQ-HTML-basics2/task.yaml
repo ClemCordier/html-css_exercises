@@ -1,0 +1,69 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: Répondez à ce QCM dans le style texte à trous afin de tester vos connaissances.
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: '[QCM] Syntaxe d''un document HTML'
+network_grading: false
+problems:
+    html_syntax1:
+        type: multiple_choice
+        name: A quoi correspond (1) ?
+        header: 'La toute première ligne d''un document HTML est : (1). Elle est nécessaire
+            pour des raisons historiques afin d''avoir un document valide pour le
+            navigateur. '
+        limit: 0
+        choices:
+        -   text: '``<!DOCTYPE html>``'
+            valid: true
+        -   text: '``<doctype html>``'
+        -   text: '``<!doc HTML5>``'
+        -   text: '``<!DOCUMENT HTML>``'
+    html_syntax2:
+        type: multiple_choice
+        name: A quoi correspond (2) ?
+        header: L'élément racine (2) est le premier élément que l'on retrouve dans
+            tous documents HTML, juste après (1).
+        limit: 0
+        choices:
+        -   text: '``html``'
+            valid: true
+        -   text: '``main``'
+        -   text: '``header``'
+        -   text: '``root``'
+    html_syntax3:
+        type: multiple_choice
+        name: A quoi correspond (3) ?
+        header: L'élément de premier niveau (3) permet de définir un ensemble de métadonnées
+            à notre document HTML.
+        limit: 0
+        choices:
+        -   text: '``head``'
+            valid: true
+        -   text: '``header``'
+        -   text: '``body``'
+        -   text: '``meta``'
+    html_syntax4:
+        type: multiple_choice
+        name: A quoi correspond (4) ?
+        header: L'élément de premier niveau (4) permet de définir le contenu visible
+            de notre document HTML.
+        limit: 0
+        choices:
+        -   text: '``body``'
+            valid: true
+        -   text: '``content``'
+        -   text: '``html``'
+        -   text: '``head``'
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

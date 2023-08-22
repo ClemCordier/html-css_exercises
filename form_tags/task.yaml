@@ -1,0 +1,158 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    L'élément ``form`` est l'élément parent qui va nous permettre de créer des formulaires en HTML.
+
+    .. code:: html
+
+        <form>
+
+        </form>
+
+    Les formulaires font partie des moyens de communication, d'interaction entre le site web et l'utilisateur.
+
+    .. note::
+
+      *Note:* Nous nous contenterons d'aborder la partie création d'un formulaire. Le traitement de ses données nécessite des notions avancées dans d'autres langages de programmation qui dépassent le cadre de ce cours.
+
+
+    Nous allons voir différents éléments enfant qui l'accompagne.
+
+    Les 2 éléments de formulaire les plus courants et qui vont de pairs sont les suivants:
+
+    - ``label``: il permet d'associer, via son contenu, un libellé sous forme de texte à un champ spécifique de notre formulaire.
+    - ``input``: il correspond au champ avec lequel l'utilisateur va pouvoir interagir.
+
+    Voici un exemple minimaliste:
+
+    .. code:: html
+
+        <form>
+          <label>Libellé du champ de texte</label>
+          <input>
+        </form>
+
+    On obtient:
+
+    +-----------------------------------------------+
+    |                                               |
+    | .. raw:: html                                 |
+    |                                               |
+    |    <form>                                     |
+    |      <label>Libellé du champ de texte</label> |
+    |      <input>                                  |
+    |    </form>                                    |
+    |                                               |
+    +-----------------------------------------------+
+
+    |
+    | L'élément ``input``, au même titre que les éléments ``br`` et ``img`` abordés précédemment, est un élément *vide*. Il ne prend donc pas de contenu.
+    | Il n'en reste pas moins un élément très complet et polyvalent de par les différents attributs qu'il est possible de lui assigner et les valeurs qui leur sont associés.
+    |
+
+    Nous allons voir certains de ces attributs au travers des questions qui suivent.
+
+    Nous nous limiterons aux champs de texte pour le moment, mais nous verrons dans la suite du cours qu'il existe d'autres types de champ.
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Éléments de formulaire (1)
+network_grading: false
+problems:
+    label_input:
+        type: code
+        name: Saisie d'adresse mail
+        header: |
+            Un premier attribut incontournable est l'attribut ``type``.
+
+            Lorsqu'il est omis (comme dans l'exemple du dessus) sa valeur par défaut est "text".
+
+            Le résultat du code ci-dessous est donc similaire à l'exemple précédent:
+
+            .. code:: html
+
+                <form>
+                  <label>Label du champ de texte</label>
+                  <input type="text">
+                </form>
+
+            Complétez l'élément de formulaire ci-dessous avec un libellé "Adresse mail:" et un champ de saisie pour lequel l'attribut ``type`` et sa valeur sont renseignés explicitement.
+
+            Notez que ``type`` peut prendre la valeur "email", qui a visuellement le même rendu que "text" mais permet de préciser au navigateur
+            que ce qui est attendu par l'utilisateur est spécifiquement une adresse mail valide.
+        language: html
+        default: |-
+            <form>
+            </form>
+    label_input_for:
+        type: code
+        name: Liaison libellé - champ de formulaire
+        header: |-
+            En l'état, les éléments ``label`` et ``input`` sont indépendants l'un de l'autre.
+
+            | Il est possible de créer une liaison entre ces 2 éléments. Pour ce faire, nous allons ajouter un attribut ``id`` à l'élément ``input``.
+            | Nous allons ensuite y faire référence depuis notre élément ``label`` grâce à l'attribut ``for`` auquel on assigne le nom de l'ID.
+            |
+
+            .. code:: html
+
+                <form>
+                  <label for="text-input">Label du champ de texte</label>
+                  <input id="text-input" type="text">
+                </form>
+
+            Reprenez votre réponse à la question 1, et ajoutez-y les attributs ``for`` et ``id`` avec la valeur "email-input".
+
+            TODO expliquer l'intérêt en fb et montrer la façon alternative de lier ces 2 éléments entre eux (englober l'élément ``input`` au sein de l'élément label)
+        language: html
+        default: |-
+            <form>
+            </form>
+    input_password:
+        type: code
+        name: Saisie de mot de passe
+        header: |-
+            Un formulaire d'inscription classique est généralement constitué d'un champ de mot de passe en plus de l'adresse mail.
+
+            Reprenez votre réponse à la question 2, et ajoutez-y le libellé "Mot de passe:" et un champ de texte pour lequel l'attribut ``type`` prend la valeur "password".
+
+            Faites de même qu'à la question 2 pour le champ de mot de passe avec les attributs ``for`` et ``id``, en leur donnant cette fois la valeur "password-input".
+
+            Ce type de champ de texte se différencie des 2 types précédent en remplaçant les caractères par des "•" afin qu'il ne puisse pas être lu par des personnes malintentionnées ayant des vues sur votre écran...
+        language: html
+        default: |-
+            <form>
+            </form>
+    input_attributes:
+        type: code
+        name: Quelques attributs utiles
+        header: |
+            Outre l'attribut ``type``, voici une liste d'attributs pouvant accompagner un ``input``:
+
+            - ``minlength`` & ``maxlength``: force l'utilisateur à renseigner un nombre minimum/maximum de caractères
+            - ``placeholder``: inclus une chaîne de caractères sous forme de texte "fictif" afin d'indiquer à l'utilisateur l'information attendue
+
+            Reprenez votre réponse à la question 3, et ajoutez-y les attributs nécessaires afin de répondre aux critères suivants:
+
+            - Le placeholder "mail@address.com" pour le champ d'adresse mail
+            - Un minimum de 8 et un maximum de 16 caractères pour le champ de mot de passe
+        language: html
+        default: |-
+            <form>
+            </form>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

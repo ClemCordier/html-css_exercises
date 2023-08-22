@@ -1,0 +1,66 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    Faisons le point sur ce que nous avons appris jusqu'à maintenant:
+
+    - Le squelette de base d'un document HTML, constitué du doctype ``!DOCTYPE html``, de l'élément racine ``html``, de l'élément d'en-tête ``head`` et enfin de l'élément de corps ``body``
+
+    - Les éléments utilisés à l'intérieur du ``head``:
+
+        - l'élément vide de métadonnées ``meta``
+        - l'élément de titre du document ``title``
+
+    - Les éléments utilisés à l'intérieur du ``body``:
+
+        - les éléments de type "bloc":
+
+            - les éléments titre de section ``h1`` à ``h6``
+            - l'élément paragraphe ``p``
+            - les éléments de liste ``ul``, ``ol`` et ``li``
+
+        - les éléments de type "en ligne":
+
+            - l'élément vide saut de ligne ``br``
+            - les éléments de mise en évidence ``em`` et ``strong``
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '250'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: '[Récap] L''en-tête'
+network_grading: false
+problems:
+    skeleton:
+        type: code
+        name: Le template essentiel
+        header: |
+            L'un de vos camarades, afin de se faire la main avec le langage, s'est essayé à reproduire de tête la structure de base d'un document HTML.
+
+            Naturellement, il ne maitrise pas encore parfaitement la syntaxe et demande votre aide.
+
+            Arriverez-vous à corriger ses erreurs ?
+        language: html
+        default: |-
+            <doctype html>
+                <header>
+                    <meta>charset="utf-8"</meta>
+                    <h1>Titre affiché au niveau de l'onglet du navigateur</h1>
+                </header>
+                <body>
+
+                <body>
+            </html>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

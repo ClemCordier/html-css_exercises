@@ -1,0 +1,61 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    Nous avons vu en introduction du cours la déclaration ``<!DOCTYPE html>`` dont la syntaxe diffère du balisage classique des éléments HTML.
+
+    .. \ :sup:`1` non-interactive ref
+
+    Ce n'est pas la seule à avoir une syntaxe qui lui est propre: les commentaires [#]_ aussi ont leur propre syntaxe.
+
+    .. code:: html
+
+        <!-- Ceci est un commentaire -->
+
+    .. note::
+
+        .. [#] | En programmation, les commentaires sont des lignes de code qui ne sont pas interprétées par votre machine.
+               | Ils seront tout bonnement ignorés, leur seul but étant d'être lu par le(s) programmeur(s).
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Commenter son code
+network_grading: false
+problems:
+    comment:
+        type: code
+        name: Commentaires
+        header: |-
+            Insérez les commentaires suivants:
+
+            - Au-dessus du ``head``: "contient l'ensemble des métadonnées du document"
+            -  Au-dessus du ``body``: "contient l'ensemble des données visibles du document"
+        language: html
+        default: |-
+            <!DOCTYPE html>
+            <html>
+
+                <head>
+                    <meta charset="UTF-8">
+                    <title>Titre de l'onglet au niveau du navigateur</title>
+                </head>
+
+                <body>
+                    <h1>Bienvenue sur mon site !</h1>
+                </body>
+            </html>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

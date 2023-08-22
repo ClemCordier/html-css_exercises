@@ -1,0 +1,91 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Il est évidemment possible de personnaliser davantage la police d'écriture de votre site.
+
+    Une première possibilité est de de modifier la famille de police.
+
+    Pour cela, on utilise la propriété ``font-family``:
+
+    .. code:: css
+
+        body {
+          font-family: family_name;
+        }
+
+    .. raw:: html
+
+        <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="KKGKvxG" data-editable="true" data-user="clem09" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Famille de police
+network_grading: false
+problems:
+    space:
+        type: code
+        name: Polices de mots composés
+        header: |-
+            Pour éviter tout problème d'interprétation, les familles de police composées de plusieurs mots (séparés par des espaces), de chiffres ou encore de caractères de ponctuation (autre que le trait d'union) doivent être encadrées entre guillemets (simples ou doubles, selon vos préférences).
+
+            Renseignez la règle CSS afin d'appliquer la police "Comic Sans MS" à l'ensemble de votre page web, en l'appliquant à l'élément ``body``.
+        language: css
+        default: ''
+    multiple_fonts:
+        type: code
+        name: Polices alternatives
+        header: |-
+            La disponibilité des familles de police varie d'une machine à l'autre.
+
+            Il est possible de renseigner plusieurs familles de police, chacune séparée d'une virgule:
+
+            .. code:: css
+
+                body {
+                  font-family: family_name1, family_name2;
+                }
+
+            L'ordre des polices renseignées correspond à leur priorité.
+
+            Dans notre exemple, family_name1 sera la première police choisie. Si toutefois elle n'est pas disponible pour un utilisateur, son navigateur se rabattera sur la police family_name2.
+
+            Reprenez votre réponse à la question 1, et ajoutez-y "Consolas" en tant que police de secours.
+
+            "Consolas" ne contenant ni espace, ni chiffre, ni ponctuation, les guillemets ne sont pas nécessaire.
+        language: css
+        default: ''
+    generic_font:
+        type: code
+        name: Polices génériques
+        header: |-
+            Afin de s'assurer qu'au moins une des police renseignées soit disponible pour tous les utilisateurs, nous pouvons renseigner une police parmi un ensemble de noms de famille dit *générique*.
+
+            .. code:: css
+
+                body {
+                  font-family: family_name1, family_name2, generic_name;
+                }
+
+            Reprenez votre réponse à la question 2, et ajoutez-y la police générique "sans-serif" en tant que police de secours.
+
+            Au même titre que "Consolas", "sans-serif" ne requiert pas de guillemets (le trait d'union ne représente pas un caractère problématique).
+        language: css
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

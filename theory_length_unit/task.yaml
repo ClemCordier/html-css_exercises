@@ -1,0 +1,129 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Outre la famille, il est aussi possible de modifier la **taille** de la police.
+
+    Pour cela, on utilise la propriété ``font-size``. Avant de nous en servir, voyons d'abord comment sont gérées les unités de mesure en CSS.
+
+    ----
+
+    La plupart des navigateurs ont une police par défaut de ``16px``. Vous pouvez vérifier cette information via les paramètres [#]_.
+
+    Nous avions pu observer dans la section HTML que les éléments avaient aussi des tailles de police variables (``h1-h6``, ``small``).
+
+    | Nous allons maintenant voir comment redéfinir ces valeurs manuellement à l'aide de différentes unités de mesures existantes.
+    | Il en existe de nombreuses, certaines ayant un cas d'usage très spécifique, autre que le développement web.
+    |
+    | Nous nous contenterons d'aborder les plus populaires d'entre elles.
+    |
+
+    On distingue 2 catégories d'unités de mesure:
+
+    - **Absolue:** Mesure fixe et statique, basée sur une unité physique réelle. On y retrouve notamment le pixel (``px``), le centimètre (``cm``),  le milimètre (``mm``) ou encore le pouce (``in``).
+
+    - **Relative:** Mesure dynamique calculée par rapport à un élément tierce. On y retrouve notamment le ``em``, le ``rem``,  le ``vw`` ou encore le ``vh``.
+
+    La syntaxe des longueurs en CSS correspond à un nombre directement suivi de l'unité de mesure, sans espace: ``10px``, ``1.5em``, ...
+
+    Il en va de même pour tout autre type de dimension CSS.
+
+    .. note::
+
+        .. [#] Les manipulations à faire pour accéder aux paramètres varient d'un navigateur à l'autre:
+
+        |
+        | - **Firefox:** Entrez *about:preferences* dans la barre d'adresse afin d'accéder aux paramètres. Tapez ensuite "police" dans la barre de recherche.
+        | - **Chrome:** Entrez *chrome://settings* dans la barre d'adresse afin d'accéder aux paramètres. Depuis le panel de gauche, accéder au menu "Apparence" -> Personnaliser les polices.
+
+
+    .. raw:: html
+
+        <p class="codepen" data-height="600" data-default-tab="css,result" data-slug-hash="GRXVdNM" data-editable="true" data-user="clem09" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+    |
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Unités de mesure
+network_grading: false
+problems:
+    px:
+        type: code
+        name: Pixel
+        header: |
+            Renseignez 3 règles CSS:
+
+            | - la première définira la taille du titre principal à ``38px``.
+            | - la seconde, la taille des titres de second niveau à ``28px``.
+            | - la troisième, la taille des paragraphes **et** de la liste à ``18px``.
+            |
+
+            .. note::
+
+                | *Rappel*: Pour éviter de dupliquer du code, plusieurs sélecteurs peuvent être regroupés en une seule et même règle CSS.
+                | Pour cela, on sépare chaque sélecteur par une virgule:
+                |
+
+                .. code:: html
+
+                    selector1, selector2 { ... }
+
+            .. note::
+
+                | *Note*: Vous pouvez appliquer la règle CSS à votre liste à l'aide d'un sélecteur ciblant les éléments ``li`` directement. Mais vous pourriez tout aussi bien utiliser un sélecteur ciblant l'élément de liste (ici ``ul``).
+                |
+                | Cela fonctionne grâce au principe d'**héritage**: ``font-size`` est une propriété héritée, autrement dit les éléments ``li`` héritent de la ``font-size`` de leur parent ``ul``.
+        language: css
+        default: ''
+    em:
+        type: code
+        name: Em
+        header: |-
+            Contrairement au ``pixel``, le ``em`` n'a pas de valeur fixe.
+
+            Elle est calculée par rapport à la valeur de la propriété ``font-size`` explicitement redéfinie de l'élément le plus proche rencontré dans l'arborescence (**à commencer par l'élément lui-même**), en remontant les ancêtres un par un.
+
+            Le parent direct est évalué en premier, ensuite si sa propriété ``font-size`` n'a pas été redéfinie, l'élément parent de ce dernier est évalué à son tour, etc.
+
+            Si aucun ancêtre n'a de ``font-size`` redéfinie et ce jusqu'à atteindre la racine ``html``, la ``font-size`` sera héritée de ce dernier (lui-même héritant de la ``font-size`` définie par le navigateur, dont la valeur est généralement ``16px`` comme indiqué plus haut).
+
+            Renseignez la règle CSS afin d'appliquer une taille relative de ``1.5em`` aux éléments ``p`` **et** ``strong``.
+        language: css
+        default: ''
+    rem:
+        type: code
+        name: Rem
+        header: |-
+            | Tout comme ``em``, le ``rem`` est une unité de mesure relative. La différence réside dans la façon dont ils héritent la ``font-size``.
+            |
+            | Vous aurez sans doute remarqué à travers l'exercice précédent que les tailles de police s'appliquent à la chaine et s'accumulent:
+            | les éléments ``p`` ont hérité de l'élément racine (:math:`1.5em = 1.5*16px = 24px`) mais l'élément ``strong`` quant à lui a hérité de son parent direct; le paragraphe (:math:`1.5*24px = 36px`).
+            |
+            | Ce phénomène porte le nom de **composition**, et on imagine facilement à quel point il peut devenir problématique dans des cas de figure plus complexe.
+            |
+
+            L'unité de mesure ``rem`` a été inventé pour pallier ce problème lié à la composition.
+
+            Contrairement au ``em`` relatif à la première ``font-size`` rencontrée (et ultimement, à la ``font-size`` de l'élément racine), ``rem`` (*r* pour *root*) sera **toujours** relatif à la ``font-size`` de l'élément racine ``html``.
+
+            Renseignez la règle CSS afin d'appliquer une taille relative de ``1.5rem`` aux éléments ``p`` **et** ``strong``.
+        language: css
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

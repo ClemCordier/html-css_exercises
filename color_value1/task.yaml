@@ -1,0 +1,97 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Il existe diverses manières de définir une valeur correspondant à une couleur en CSS.
+
+    La première est celle utilisée dans les exercices précédents, à savoir renseigner les noms de couleur en toutes lettres.
+
+    Il existe plus d'une centaine de couleurs prédéfinies de la sorte. En voici `la liste exhaustive <https://www.w3.org/wiki/CSS/Properties/color/keywords>`_.
+
+    Répondez aux questions suivantes sur base du code HTML suivant:
+
+    .. code:: html
+
+        <body>
+            <h1>Recette du jour - Tarte Tatin</h1>
+
+            ...
+
+            <h2>Histoire</h2>
+
+            ...
+
+            <h2>Ingrédients</h2>
+
+            ...
+
+            <h2>Préparation</h2>
+
+            ...
+
+        </body>
+
+    .. raw:: html
+
+        <p class="codepen" data-height="500" data-default-tab="css,result" data-slug-hash="abaQxbQ" data-editable="true" data-user="clem09" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '200'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Couleur nommée
+network_grading: false
+problems:
+    background_color:
+        type: code
+        name: Couleur d'arrière-plan
+        header: |-
+            Outre le fait de donner une couleur au contenu, il est aussi possible de modifier la couleur d'arrière-plan d'un élément.
+
+            La propriété CSS ``background-color`` existe à cet effet.
+
+            Complétez la règle CSS ci-dessous en insérant la déclaration nécessaire afin d'appliquer la couleur d'arrière-plan ``papayawhip`` au titre principal.
+
+            .. code:: css
+
+                h1 {
+                  [?]
+                }
+        language: css
+        default: |-
+            h1 {
+
+            }
+    background_color_global:
+        type: code
+        name: Couleur d'arrière-plan globale
+        header: |-
+            Cette propriété peut notamment être utilisée pour modifier la couleur globale d'une page, en l'appliquant au ``body``.
+
+            Complétez la règle CSS ci-dessous en insérant la déclaration nécessaire afin d'appliquer la couleur d'arrière-plan ``oldlace`` à votre page web.
+
+            .. code:: css
+
+                body {
+                  [?]
+                }
+        language: css
+        default: |-
+            body {
+
+            }
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

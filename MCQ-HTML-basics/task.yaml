@@ -1,0 +1,120 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |4-
+
+    Sur base de cette illustration,
+
+        .. image:: MCQ-HTML-basics/mcq-syntax.png
+
+    .. note::
+
+        **Note:** l'attribut ``id`` permet d'identifier de manière unique un élément HTML. Nous verrons son utilité plus tard.
+
+    répondez au QCM suivant:
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: '[QCM] Syntaxe d''un élément HTML'
+network_grading: false
+problems:
+    html_syntax1:
+        type: multiple_choice
+        name: A quoi correspond (1) ?
+        header: ''
+        limit: 0
+        success_message: Bonne réponse!
+        error_message: Mauvaise réponse!
+        choices:
+        -   text: Une valeur
+        -   text: Un attribut
+        -   text: Une balise ouvrante
+        -   text: Un élément
+            valid: true
+        -   text: Une balise fermante
+        -   text: Du contenu
+    html_syntax2:
+        type: multiple_choice
+        name: A quoi correspond (2) ?
+        header: ''
+        limit: 0
+        success_message: Bonne réponse !
+        error_message: Mauvaise réponse !
+        choices:
+        -   text: Une valeur
+        -   text: Un attribut
+            valid: true
+        -   text: Une balise ouvrante
+        -   text: Un élément
+        -   text: Une balise fermante
+        -   text: Du contenu
+    html_syntax3:
+        type: multiple_choice
+        name: A quoi correspond (3) ?
+        header: ''
+        limit: 0
+        success_message: Bonne réponse !
+        error_message: Mauvaise réponse !
+        choices:
+        -   text: Une valeur
+            valid: true
+        -   text: Un attribut
+        -   text: Une balise ouvrante
+        -   text: Un élément
+        -   text: Une balise fermante
+        -   text: Du contenu
+    html_syntax4:
+        type: multiple_choice
+        name: A quoi correspond (4) ?
+        header: ''
+        limit: 0
+        success_message: Bonne réponse !
+        error_message: Mauvaise réponse !
+        choices:
+        -   text: Une valeur
+        -   text: Un attribut
+        -   text: Une balise ouvrante
+            valid: true
+        -   text: Un élément
+        -   text: Une balise fermante
+        -   text: Du contenu
+    html_syntax5:
+        type: multiple_choice
+        name: A quoi correspond (5) ?
+        header: ''
+        limit: 0
+        success_message: Bonne réponse !
+        error_message: Mauvaise Réponse !
+        choices:
+        -   text: Une valeur
+        -   text: Un attribut
+        -   text: Une balise ouvrante
+        -   text: Un élément
+        -   text: Une balise fermante
+        -   text: Du contenu
+            valid: true
+    html_syntax6:
+        type: multiple_choice
+        name: A quoi correspond (6) ?
+        header: ''
+        limit: 0
+        success_message: Bonne réponse !
+        error_message: Mauvaise réponse !
+        choices:
+        -   text: Une valeur
+        -   text: Un attribut
+        -   text: Une balise ouvrante
+        -   text: Un élément
+        -   text: Une balise fermante
+            valid: true
+        -   text: Du contenu
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

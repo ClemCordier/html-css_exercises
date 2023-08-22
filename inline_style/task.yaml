@@ -1,0 +1,36 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    La façon la plus directe d'appliquer du CSS à un élément HTML est d'y ajouter l'attribut ``style``.
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Style en ligne
+network_grading: false
+problems:
+    inline_style:
+        type: code_single_line
+        name: Style en ligne
+        header: |
+            Personnalisez le titre avec la couleur de votre choix (rouge, vert ou bleu) en ajoutant la *déclaration* correspondante en tant que valeur à cet attribut à la place du ``[?]`` dans le template ci-dessous.
+
+            Sa syntaxe respecte celle du CSS, à savoir: ``property: value;``
+
+            La propriété CSS est ``color`` et les 3 valeurs possibles pour répondre à cet exercice sont ``red``, ``green`` ou ``blue``.
+        default: <h1 style="[?]">Le titre de votre site est de couleur:</h1>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

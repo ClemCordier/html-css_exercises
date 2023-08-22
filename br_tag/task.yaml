@@ -1,0 +1,73 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    Un cas de figure où le saut de ligne est pratique: les adresses postales.
+
+    .. code:: html
+
+        <address>
+            Université catholique de Louvain
+            Department of Computing Science and Engineering
+            Place Sainte-Barbe, 2 bte L5.02.01
+            B-1348 Louvain-la-Neuve (Belgium)
+        </address>
+
+    En l'état, l'ensemble des éléments de l'adresse s'afficheront sur 1 seule ligne:
+
+    +---------------------------------------------------------+
+    |.. raw:: html                                            |
+    |                                                         |
+    |    <address>                                            |
+    |        Université catholique de Louvain                 |
+    |        Department of Computing Science and Engineering  |
+    |        Place Sainte-Barbe, 2 bte L5.02.01               |
+    |        B-1348 Louvain-la-Neuve (Belgium)                |
+    |    </address>                                           |
+    +---------------------------------------------------------+
+
+    Pour parvenir à un format plus conventionnel et plus lisible, nous allons insérer des sauts de ligne après chaque composante de l'adresse.
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Élément saut de ligne
+network_grading: false
+problems:
+    address:
+        type: code
+        name: Espacement effectif au sein d'un élément
+        header: |-
+            Répondez à cette question en insérant l'élément ``br`` entre chaque sous-partie de l'adresse.
+
+            **Rappel:** La syntaxe d'un élément vide est la suivante: ``<element_name>`` (ou éventuellement ``<element_name />``)
+
+            .. raw:: html
+
+                <p class="codepen" data-height="250" data-default-tab="html,result" data-slug-hash="mdGvqYg" data-editable="true" data-user="clem09" style="height: 250px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            |
+        language: html
+        default: |-
+            <address>
+                Université catholique de Louvain
+                Department of Computing Science and Engineering
+                Place Sainte-Barbe, 2 bte L5.02.01
+                B-1348 Louvain-la-Neuve (Belgium)
+            </address>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

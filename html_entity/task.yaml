@@ -1,0 +1,83 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Les entités HTML sont des courtes chaines de caractères qui permettent de représenter certains caractères spécifiques.
+
+    La syntaxe d'une entité HTML se distingue par son premier (``&``) et son dernier (``;``) caractère:
+
+    .. code:: html
+
+        &entity_name;
+
+    Nous allons voir ci-dessous quelques cas de figure où l'utilisation d'entités s'avèrent utile, voire nécessaire.
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Entités HTML
+network_grading: false
+problems:
+    reserved:
+        type: code_single_line
+        name: Entités de caractères réservés
+        header: |
+            Ces entités permettent entre autre d'afficher des caractères *réservés*, c'est-à-dire des caractères faisant partie de la syntaxe HTML, sans qu'ils ne soient interprétés comme tel.
+
+            Les caractères ``<`` et ``>``, réservés en HTML pour l'ouverture et la fermeture de balises HTML, peuvent être représentés par les entités ``&lt;`` et ``&gt;`` (``lt`` pour *less than* et ``gt`` pour *greater than*).
+
+            Prenons l'exemple suivant qui n'utilisent pas d'entités:
+
+            .. code:: html
+
+                <p>La balise fermante d'un élément html est semblable à la balise ouvrante <h1> auquel on ajoute une barre oblique: </h1></p>
+
+            | Avant de répondre à cette question, essayez dans un premier temps de comprendre par vous-même quel est le problème.
+            |
+            | Décommentez maintenant la ligne de code dans la zone bac à sable ci-dessous (en supprimant les caractères ``<!--`` et ``-->`` à chaque extrémité du paragraphe) afin d'observer concrètement ce qui ne va pas.
+            |
+
+            .. raw:: html
+
+                <p class="codepen" data-height="200" data-default-tab="html,result" data-slug-hash="ZEMPzjZ" data-editable="true" data-user="clem09" style="height: 200px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            |
+
+            Répondez à cette question en remplaçant les ``[?]`` avec l'équivalent en entité des caractères réservés ``<`` et ``>``.
+        default: '<p>La balise fermante d''un élément html est semblable à la balise
+            ouvrante [?]h1[?] auquel on ajoute une barre oblique: [?]/h1[?]</p>'
+    symbol:
+        type: code_single_line
+        name: Entité de caractère de symboles
+        header: |-
+            Les entités HTML sont aussi pratique afin d'afficher des caractères spéciaux, tels que des symboles.
+
+            Observez par exemple le contenu présent en bas à droite de la page web sur laquelle vous êtes actuellement.
+
+            Vous remarquerez la présence du symbole *Copyright* (©):
+
+            .. code:: html
+
+                <p>Fourni par INGInious v.x.x.x [?] 2014-20xx Université catholique de Louvain.</p>
+
+            Visitez la page suivante afin de connaître son équivalent en entité: https://developer.mozilla.org/fr/docs/Glossary/Entity
+
+            Une fois trouvée, renseignez l'entité correspondante en remplacant le ``[?]``.
+        default: <p>Fourni par INGInious v.x.x.x [?] 2014-20xx Université catholique
+            de Louvain.</p>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

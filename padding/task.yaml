@@ -1,0 +1,73 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    L'espace séparant le contenu d'un élément et ses bordures porte le nom de *zone de remplissage*.
+
+    Cet écart peut être personnalisé via la propriété ``padding``. À nouveau, cette propriété peut prendre 1 à 4 valeurs s'appliquant aux différents côtés.
+
+    .. raw:: html
+
+        <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="VwEKEJR" data-editable="true" data-user="clem09" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Marges (intérieures)
+network_grading: false
+problems:
+    length_value:
+        type: code
+        name: Marge intérieure
+        header: |
+            Renseignez la règle CSS afin d'obtenir des bordures continues de ``4px`` ainsi qu'un ``padding`` vertical de ``25px`` et horizontal de ``50px``.
+
+            Utilisez les propriétés ``border`` et ``padding`` raccourcie à 2 valeurs :
+
+            - ``border: [border_width] [border_style];``
+            - ``padding: [top_and_bottom_value] [left_and_right_value];``
+        language: css
+        default: ''
+    percentage_value:
+        type: code
+        name: Pourcentage
+        header: |-
+            La valeur de la propriété ``padding`` peut aussi prendre la forme d'un pourcentage.
+
+            Son fonctionnement est identique lorsqu'il est renseigné pour ``width``: il est relatif à la ``width`` du conteneur parent dans lequel il se trouve.
+
+            Insérez la règle CSS afin d'obtenir ``border`` et ``padding`` identique à la question précédente mais en utilisant des valeurs en pourcentage pour ce dernier.
+
+            En sachant que votre titre est englobé au sein d'un élément générique ``div`` comme ceci:
+
+            .. code:: html
+
+                <div class="container">
+                  <h1>Title</h1>
+                </div>
+
+            et que la règle CSS suivante est d'application:
+
+            .. code:: css
+
+                .container {
+                  width: 500px;
+                }
+        language: css
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

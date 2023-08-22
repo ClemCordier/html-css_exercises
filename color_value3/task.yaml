@@ -1,0 +1,82 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Il existe une notation alternative à la notation hexadécimale, dite *fonctionnelle*.
+
+    Elle s'appuie sur la fonction ``rgb()``.
+
+    Cette fonction prend 3 nombres entier en paramètre, correspondant au teinte de rouge, vert et bleue respectivement. Ces valeurs sont renseignées en décimal, allant de :math:`0` à :math:`255`.
+
+    Chaque valeur est séparée par une virgule: ``rgb(255, 127, 63)`` ou un simple espace: ``rgb(255 127 63)``.
+
+    Répondez aux questions ci-dessous en vous servant de cette nouvelle notation.
+
+    **Attention:** Si vous répondez aux questions avec la notation ``rgb(255, 127, 63)``, assurez-vous d'insérer un espace après chaque virgule. [#]_
+
+    .. note::
+
+        .. [#] *Note: Ceci est une contrainte propre au système de correction et n'est pas directement lié à la syntaxe CSS.*
+
+    .. raw:: html
+
+        <p class="codepen" data-height="220" data-theme-id="dark" data-default-tab="css,result" data-slug-hash="NWLegzG" data-editable="true" data-user="clem09" style="height: 220px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Couleur RGB
+network_grading: false
+problems:
+    percentage:
+        type: code
+        name: Unité de valeur alternative
+        header: |
+            Outre des valeurs décimales, la fonction ``rgb()`` prend aussi en charge des valeurs en pourcentage, où 100% équivaut à la valeur décimale 255.
+
+            Renseignez la *règle* CSS afin d'assigner la couleur ``rgb(255 127 63)`` fournie dans l'énoncé au contenu du titre de premier niveau.
+
+            **Attention:** Vous devez renseignez les composantes de couleur **en pourcentage**. Considérez les valeurs 127 et 63 comme étant respectivement la moitié et le quart des valeurs possibles.
+        language: css
+        default: ''
+    alpha:
+        type: code
+        name: Opacité
+        header: |
+            Tout comme la notation hexadécimale, la notation fonctionnelle permet aussi de jouer sur l'opacité.
+
+            Pour cela, la fonction ``rgb()`` peut être étendue avec un quatrième paramètre optionnel: la composante alpha.
+
+            Sa valeur correspond au degré d'opacité qui sera appliqué à votre couleur, allant de 0 (complètement transparent) à 1 (complètement opaque).
+
+            Tout comme les 3 premiers paramètres, l'alpha peut être renseigné en pourcentage, où 50% équivaut à 0.5 et 100% équivaut à la valeur 1.
+
+            La syntaxe diffère selon l'absence ou la présence du caractère séparateur (les virgules).
+
+            .. code:: css
+
+               /* Avec caractères séparateurs */
+               rgb(red, green, blue, alpha)
+
+               /* Sans caractères séparateurs */
+               rgb(red green blue / alpha)
+
+            Vous êtes libre d'utiliser la notation que vous désirez, du moment que la couleur est équivalente à celle fournie dans l'énoncé.
+        language: css
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

@@ -1,0 +1,117 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    En plus d'images, nous pouvons inclure divers contenus multimédia à notre site.
+
+    Nous allons voir comment inclure du contenu audio/vidéo à notre page web via les éléments correspondant ``audio`` et ``video``.
+
+    .. error::
+       :title: Disclaimer
+
+        ⚠ Avant de réaliser les exercices qui suivent, assurez-vous d'être dans un endroit isolé et/ou d'avoir des écouteurs afin de ne pas risquer d'importuner les personnes qui vous entourent.
+
+    .. raw:: html
+
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="XWxeJwV" data-editable="true" data-user="clem09" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: 'Éléments multimédia : audio & vidéo'
+network_grading: false
+problems:
+    audio1:
+        type: code_single_line
+        name: Contenu audio
+        header: |-
+            À l'instar de l'élément ``img``, l'attribut ``src`` permet de renseigner le chemin vers le fichier audio que l'on souhaite inclure.
+
+            | Pour cet exercice, nous allons utiliser un extrait musical libre de droit, obtenu via la `bibliothèque audio YouTube <https://www.youtube.com/audiolibrary?feature=blog>`_.
+            | Ce dernier est disponible à l'adresse suivante: https://github.com/ClemCordier/html-css_course_resources/blob/main/audio.mp3?raw=true
+            |
+
+            Vous remarquerez que rien ne s'affiche dans la zone bac à sable, bien que vous ayez renseigné l'attribut ``src`` avec le lien fourni ci-dessus en tant que valeur. Et c'est tout à fait normal.
+
+            Pour voir apparaître notre contenu audio et interagir avec, nous devons ajouter l'attribut booléen ``controls``.
+
+            Renseignez l'élément ``audio`` accompagné de sa source et des contrôles de lecture.
+        default: ''
+    audio2:
+        type: code
+        name: Sources de secours
+        header: |
+            Le même extrait audio (converti au format "wav") est disponible à l'adresse suivante: https://github.com/ClemCordier/html-css_course_resources/blob/main/audio.wav?raw=true
+
+            Il est possible d'inclure plusieurs pistes audio en prévention d'un quelconque problème (par exemple, format audio non pris en charge par votre navigateur).
+
+            Pour cela, on va ajouter des éléments vides ``source`` en tant qu'enfants de notre élément ``audio``. L'attribut ``src`` initialement inclus dans l'élément ``audio`` sera assigné à chacun de ces éléments ``source`` pour proposer une version alternative de l'audio:
+
+            .. code:: html
+
+                <audio>
+                  <source src="">
+                  <source src="">
+                </audio>
+
+            En plus de ``src``, l'attribut ``type`` associé à l'élément ``source`` permet de faciliter le travail du navigateur en signalant le `type <https://fr.wikipedia.org/wiki/Type_de_m%C3%A9dias>`_ du fichier audio (tel que "audio/mpeg" pour un fichier mp3).
+
+            Comme pour la question précédente, renseignez l'élément ``audio`` accompagné de son attribut booléen ``controls``, sans l'attribut ``src`` cette fois.
+
+            À la place, ajoutez-y 2 éléments ``source``:
+
+            - Le premier avec un lien identique à celui de la question précédente, en plus de l'information du type de fichier: ``audio/mpeg``.
+            - Le second avec un lien vers la version au format "wav" de l'extrait audio, en plus de l'information du type de fichier: ``audio/wav``.
+        language: html
+        default: ''
+    audio3:
+        type: code
+        name: Texte de secours
+        header: |-
+            Nous avons vu qu'il était possible de renseigner un texte alternatif à l'élément vide ``img`` (attribut ``alt``).
+
+            Nous pouvons faire de même avec notre élément ``audio``, à la différence près que le texte alternatif est renseigné directement à travers le contenu et non plus via un attribut.
+
+            Plutôt que de laisser l'utilisateur avec un simple texte, nous allons inclure un lien de téléchargement vers le contenu audio.
+
+            Reprenez votre réponse à la question précédente, et ajoutez-y le paragraphe ``p`` suivant à la suite des éléments ``source``: "Votre navigateur ne prend pas en charge les éléments audio. Voici un lien de téléchargement direct."
+
+            où "*lien de téléchargement direct*" est un élément de lien ``a`` vers le fichier mp3.
+        language: html
+        default: ''
+    video:
+        type: code_single_line
+        name: Contenu vidéo
+        header: |
+            L'intégration d'élément ``video`` se fait de façon similaire.
+
+            Tout ce que nous avons vu jusqu'à présent avec l'élément ``audio`` est également valide pour ``video``. De même, les attributs que nous allons utiliser dans cet exercice sont tout aussi applicable à un élément ``audio``.
+
+            Une courte vidéo est disponible à l'adresse suivante: https://github.com/ClemCordier/html-css_course_resources/blob/main/video.mp4?raw=true
+
+            Ajoutez l'élément ``video`` accompagné de l'attribut ``src`` avec le lien ci-dessus.
+
+            Nous allons simuler un comportement semblable à un GIF animé pour notre vidéo.
+
+            Pour cela, nous allons ajouter 3 attributs booléens à notre élément ``video``:
+
+            - ``muted``: le volume du contenu multimédia est coupé.
+            - ``autoplay``: la lecture du contenu multimédia est automatique.
+            - ``loop``: la lecture du contenu multimédia tourne en boucle.
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

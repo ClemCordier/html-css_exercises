@@ -1,0 +1,39 @@
+_id: 6424b05b607332efce358745
+archive: 6424b05d607332efce358746
+courseid: html_css_clement
+custom: {}
+grade: 0.0
+input:
+    '@attempts': '86'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-29 23:40:43.382394'
+    '@username': Clem
+    meta: <br charset="UTF-8" />
+    title: <titre>INGInious | Plateforme d'apprentissage en programmation informatique
+        à destination des étudiants</titre>
+problems:
+    meta:
+    - failed
+    - |
+        Voici des pistes qui pourraient vous aider:
+
+        - L'élément ``br`` ne correspond pas à l'élément normalement attendu.
+    title: |4
+
+                           L'élément ``titre`` renseigné ne semble pas correspondre à un élément HTML existant.
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-03-29 23:40:43.382000
+taskid: header_tags
+tests: {}
+text: ''
+user_ip: 2a02:a03f:a8ac:3900:60b1:5612:8dd1:12a5
+username:
+- Clem

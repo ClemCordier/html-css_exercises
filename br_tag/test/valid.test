@@ -1,0 +1,59 @@
+_id: 6424cbee48feceafeabc8647
+archive: 6424cbf348feceafeabc8649
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '89'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-30 01:38:22.488084'
+    '@username': Clem
+    address: |-
+        <address>
+            Université catholique de Louvain<br>
+            Department of Computing Science and Engineering<br>
+            Place Sainte-Barbe, 2 bte L5.02.01<br>
+            B-1348 Louvain-la-Neuve (Belgium)
+        </address>
+problems:
+    address:
+    - success
+    - |+
+        **Correct!**
+
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-03-30 01:38:22.488000
+taskid: br_tag
+tests: {}
+text: |4
+
+                +-------------------------------------------------------------+------------------------------------------------------------+
+                |.. code:: html                                               |.. raw:: html                                               |
+                |                                                             |                                                            |
+                |    <address>                                                |    <address>                                               |
+                |        Université catholique de Louvain                     |        Université catholique de Louvain                    |
+                |        Department of Computing Science and Engineering      |        Department of Computing Science and Engineering     |
+                |        Place Sainte-Barbe, 2 bte L5.02.01                   |        Place Sainte-Barbe, 2 bte L5.02.01                  |
+                |        B-1348 Louvain-la-Neuve (Belgium)                    |        B-1348 Louvain-la-Neuve (Belgium)                   |
+                |    </address>                                               |    </address>                                              |
+                +-------------------------------------------------------------+------------------------------------------------------------+
+                |.. code:: html                                               |.. raw:: html                                               |
+                |                                                             |                                                            |
+                |    <address>                                                |    <address>                                               |
+                |        Université catholique de Louvain<br>                 |        Université catholique de Louvain<br>                |
+                |        Department of Computing Science and Engineering<br>  |        Department of Computing Science and Engineering<br> |
+                |        Place Sainte-Barbe, 2 bte L5.02.01<br>               |        Place Sainte-Barbe, 2 bte L5.02.01<br>              |
+                |        B-1348 Louvain-la-Neuve (Belgium)                    |        B-1348 Louvain-la-Neuve (Belgium)                   |
+                |    </address>                                               |    </address>                                              |
+                +-------------------------------------------------------------+------------------------------------------------------------+
+user_ip: 2a02:a03f:a8ac:3900:60b1:5612:8dd1:12a5
+username:
+- Clem

@@ -1,0 +1,72 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    Nous allons voir ci-dessous quelques-uns des éléments les plus populaires parmi ceux que l'on retrouve au niveau du contenu d'un document.
+
+    Autrement dit, des éléments englobés dans l'élément de premier niveau ``body``.
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Éléments courants
+network_grading: false
+problems:
+    h1_tag:
+        type: code_single_line
+        name: Élément « titre de section »
+        header: |-
+            Il existe 6 variantes de cet élément: ``h1``, ``h2``, ..., ``h6``.
+
+            Ceux-ci correspondent aux titres de sections, sous-sections, ... de votre document.
+
+            Chacun dénote un niveau d'importance décroissant, ``h1`` ayant la plus haute importance.
+
+            Remplacez le ``[?]`` par la balise adéquate dans le template ci-dessous.
+
+            .. raw:: html
+
+                <p class="codepen" data-height="200" data-default-tab="html,result" data-slug-hash="LYJqZeQ" data-editable="true" data-user="clem09" style="height: 200px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            |
+        default: '[?]INGInious - Plateforme d''apprentissage informatique à destination
+            des étudiants</h1>'
+    p_tags:
+        type: code
+        name: Élément « paragraphe »
+        header: |-
+            Remplacez les ``[?]`` par les balises adéquates dans le template ci-dessous.
+
+            .. raw:: html
+
+                <p class="codepen" data-height="330" data-default-tab="html,result" data-slug-hash="jOvdrzb" data-editable="true" data-user="clem09" style="height: 330px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            |
+        language: html
+        default: |-
+            <p>
+                La plateforme INGInious est créée et maintenue par le département d'ingénierie informatique de l'UCLouvain.
+                Entièrement libre d'accès, son code-source est disponible sous licence open-source.
+            [?]
+            [?]
+                Quand un étudiant soumet une réponse à un exercice de programmation, INGInious exécute automatiquement le programme écrit par l'étudiant et le soumet à une batterie de tests définis par l'enseignant.
+                Grâce à ces tests, l'étudiant peut rapidement vérifier si sa réponse est correcte et sinon il corrige son programme jusqu'à ce qu'il réussisse les différents tests.
+            </p>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

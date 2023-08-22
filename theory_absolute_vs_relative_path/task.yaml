@@ -1,0 +1,113 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Les exemples ci-dessous se baseront sur l'arborescence de fichiers suivante:
+
+    ::
+
+        D:/
+        └── html-css/
+            └── projet/                <-- ceci est le dossier parent des 2 sous-dossiers images/ et src/
+                ├── images/
+                │   └── logo.png
+                └── src/               <-- ceci est le dossier courant
+                    ├── index.html     <-- ceci est le document HTML auquel on va ajouter une image
+                    └── profile.html
+
+    |
+
+    **Élément img**
+    ---------------
+
+    L'élément vide/orphelin ``img`` permet d'inclure des images de différents formats (png, jpg, svg) et même des animations (gif).
+
+    L'inclusion se fait via l'attribut ``src`` associé à l'élément, en renseignant comme valeur le chemin vers le fichier image.
+
+    .. code:: html
+
+        <img src="insérer_chemin_ici">
+
+    Il existe 2 types de chemin:
+
+    - **relatif:** il correspond au chemin vers le fichier destination, *relatif* au dossier courant.
+
+      | Pour permettre de remonter dans l'arborescence de fichier avec un chemin relatif, nous utilisons ``"."`` et ``".."`` qui font respectivement référence au dossier courant et au dossier parent.
+      | Autrement dit, ``".."`` permet de remonter d'un niveau dans l'arborescence de fichiers.
+      |
+
+    - **absolu:** il correspond au chemin complet vers le fichier destination depuis la *racine*.
+
+        Sous Windows, la racine correspond au lecteur (``C:`` et ``D:`` étant les plus communs).
+
+    Si nous souhaitons ajouter le logo (``logo.png``) à notre page principale (``index.html``), 2 possibilités s'offrent à nous:
+
+    1. Le chemin absolu ``D:/html-css/projet/images/logo.png`` (ou ``/html-css/projet/images/logo.png``).
+
+       | Commencer un chemin par ``/`` sous-entend *"à la racine du lecteur sur lequel nous nous situons actuellement"*, plutôt que l'indiquer explicitement.
+       |
+
+    2. Le chemin relatif ``../images/logo.png``
+
+    **Attention !** bien que l'utilisation d'un chemin absolu fonctionne pour vous localement, ça ne sera pas le cas pour les autres utilisateurs de votre site une fois mis en ligne et hébergé sur un serveur distant.
+
+    Un chemin relatif sera donc toujours préféré lorsqu'il s'agit d'inclure une image locale à votre projet, stockée sur votre disque dur.
+
+    | Les chemins absolus ont tout de même leur utilité pour l'élément ``img``, mais dans un autre contexte: pour faire référence à une image non plus stockée localement, mais disponible sur le Web.
+    | Pour cela, on renseigne l'adresse URL complète vers l'image en question.
+    |
+    | Cette option n'est toutefois pas recommandée, et ce pour plusieurs raisons:
+
+    1. Bon nombre d'images en ligne ne sont pas pour autant libre de droit, vous en servir sans l'autorisation de son auteur/propriétaire serait donc **illégal**.
+    2. Cela génère un surplus de travail pour le navigateur qui doit chercher le serveur sur lequel est stocké l'image en question.
+    3. Vous n'êtes pas à l'abri de modifications (voire d'une suppression) de l'image vers laquelle vous redirigée.
+
+    En conclusion, favorisez l'insertion d'images via des liens relatifs, en les téléchargeant localement sur votre machine depuis des sites fournissant des images libres de droit tel que `unsplash <https://unsplash.com/fr/s/photos/computer>`_ par exemple.
+
+    |
+
+    **Élément a**
+    -------------
+
+    L'élément ``a`` permet de renseigner des liens hypertextes,  via l'attribut ``href`` cette fois.
+
+    .. code:: html
+
+        <a href="insérer_lien_ici">Ceci est un lien cliquable</a>
+
+    Tout comme pour l'élément ``img``, on distingue 2 types de liens/chemins:
+
+    - **relatif:** il correspond à l'emplacement local dans votre explorateur de fichier. Il permet la redirection *interne*, c'est-à-dire vers une page de notre propre site.
+
+    - **absolu:** il correspond à la redirection *externe*, c'est-à-dire vers un autre site web. Dans ce cas, comme pour les images, on renseigne l'URL complète.
+
+    | Nous pouvons ajouter une redirection vers la page ``profile.html`` de notre site depuis ``index.html``, avec le chemin relatif ``./profile.html``
+    | (ou simplement ``profile.html``, le préfixe ``./`` peut être omis lorque le fichier ciblé se situe dans le dossier courant).
+    |
+
+    Si par contre on souhaite créer un lien hypertexte vers un site externe, par exemple la page d'accueil Wikipédia, on utilisera un lien absolu tel que ``https://fr.wikipedia.org``.
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: '[Théorie] Chemins & liens: relatif ou absolu'
+network_grading: false
+problems:
+    validation_check:
+        type: multiple_choice
+        name: Lecture complétée
+        header: ''
+        limit: 0
+        choices:
+        -   text: Je confirme avoir parcourue la théorie.
+            feedback: Bon apprentissage !
+            valid: true
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

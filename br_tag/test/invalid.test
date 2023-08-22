@@ -1,0 +1,41 @@
+_id: 6424cb90fb6b25edf258e92f
+archive: 6424cb94fb6b25edf258e930
+courseid: html_css_clement
+custom: {}
+grade: 0.0
+input:
+    '@attempts': '88'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-30 01:36:48.694466'
+    '@username': Clem
+    address: |-
+        <address>
+            Université catholique de Louvain<br>
+            Department of Computing Science and Engineering<br>
+            Place Sainte-Barbe, 2 bte L5.02.01<br>
+            B-1348 Louvain-la-Neuve (Belgium)<br>
+        </address>
+problems:
+    address:
+    - failed
+    - |
+        Voici des pistes qui pourraient vous aider:
+
+        - Les 4 premiers éléments (``address`` , ``br`` , ``br`` , ``br``) sont corrects.
+        - Vous n'avez pas renseigné le bon nombre d'éléments: attendu 4 - reçu 5
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-03-30 01:36:48.694000
+taskid: br_tag
+tests: {}
+text: ''
+user_ip: 2a02:a03f:a8ac:3900:60b1:5612:8dd1:12a5
+username:
+- Clem

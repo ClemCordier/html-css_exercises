@@ -1,0 +1,106 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Nous allons compléter notre formulaire de critique de jeux de vidéo, en permettant aux utilisateurs de fournir une appréciation globale ainsi qu'une critique détaillée du jeu.
+
+    Nous n'utiliserons plus des variantes de l'élément ``input`` comme à la question précédente.
+
+    **Note:** Bien que nous n'utiliserons plus d'élément ``input`` pour répondre aux questions qui suivent, la liaison des champs de formulaire à un élément ``label`` reste nécessaire.
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Éléments de formulaire (3)
+network_grading: false
+problems:
+    select:
+        type: code
+        name: Liste déroulante
+        header: |
+            Le champ d'appréciation globale se présentera sous la forme d'une liste d'options déroulantes à travers laquelle l'utilisateur pourra sélectionner le choix qui lui convient:
+
+            .. raw:: html
+
+                <select>
+                  <option selected hidden>De quelle team êtes-vous ?</option>
+                  <option>Team chat !</option>
+                  <option>Team chien !</option>
+                </select>
+
+            |
+
+            Pour cela, nous allons utiliser l'élément ``select``. Chaque option au sein de cette liste sera représentée à l'aide de l'élément ``option``.
+
+            .. code:: html
+
+                <select>
+                  <option selected disabled hidden>De quelle team êtes-vous ?</option>
+                  <option>Team chat !</option>
+                  <option>Team chien !</option>
+                </select>
+
+            Vous constaterez la présence de 3 attributs *booléens* associé au premier élément ``option``. Ces attributs ne prennent pas de valeur.
+
+            - ``selected`` définit l'option comme étant le choix par défaut de notre liste au chargement de la page
+            - ``disabled`` indique que l'option n'est pas sélectionnable (apparait grisée dans la liste déroulante)
+            - ``hidden`` cache l'option afin qu'elle n'aparaisse pas dans la liste déroulante
+
+            .. note::
+
+                | *Note:* En informatique, un booléen est une variable à 2 états (généralement notés "vrai" et "faux").
+                | En HTML, la présence d'un attribut booléen correspond à la valeur "vrai" tandis que son absence correspond à la valeur "faux".
+
+            Faites de même afin de créer la liste déroulante suivante:
+
+            +-------------------------------------------------------------------------------------------------------+
+            |                                                                                                       |
+            | .. raw:: html                                                                                         |
+            |                                                                                                       |
+            |        <label for="overall_rating">Appréciation globale :</label>                                     |
+            |        <select id="overall_rating" name="overall_rating">                                             |
+            |            <option value=""  selected disabled hidden>-- Sélectionnez une appréciation --</option>    |
+            |            <option value="1">Mauvais</option>                                                         |
+            |            <option value="2">Moyen</option>                                                           |
+            |            <option value="3">Bien</option>                                                            |
+            |            <option value="4">Très bien</option>                                                       |
+            |            <option value="5">Excellent</option>                                                       |
+            |        </select>                                                                                      |
+            |                                                                                                       |
+            +-------------------------------------------------------------------------------------------------------+
+
+            Liez vos éléments ``label`` et ``select`` en renseignant la valeur "overall-rating" à vos attributs ``for`` et ``id``.
+        language: html
+        default: ''
+    textarea:
+        type: code
+        name: Zone de texte étendue
+        header: |
+            Vous aurez sans doute remarqué que l'élément ``input`` de type ``text`` crée un champ de texte assez limité.
+
+            Q'en est-il si nous voulions réserver plus d'espace, afin d'avoir une zone de texte qui n'est pas limité à une seule ligne ?
+
+            Pour cela, nous allons utiliser l'élément ``textarea``.
+
+            Il est toujours préférable de renseigner les attributs ``rows`` (nombre de lignes) et ``cols`` (nombre de caractères par ligne) afin que le navigateur prévoit les dimensions de la zone de texte au chargement de la page.
+
+            - Le libellé attendu est "Critique détaillée :"
+            - Les dimensions par défaut attendues sont de 15 lignes et 80 caractères par ligne
+
+            Liez vos éléments ``label`` et ``textarea`` en renseignant la valeur "detailed-review" à vos attributs ``for`` et ``id``.
+        language: html
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

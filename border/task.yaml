@@ -1,0 +1,79 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    Maintenant que nous avons abordé les unités de mesure, nous allons voir les différentes propriétés auxquelles elles peuvent s'appliquer.
+
+    Parmi celles-ci, on retrouve notamment la propriété ``border`` et ses variantes, qui permettent d'ajouter des bordures à nos éléments.
+
+    La propriété ``border-style`` permet de définir le style des bordures. Sa valeur par défaut est ``none`` (d'où l'absence de bordure sur nos éléments jusqu'à présent).
+
+    Il est donc nécessaire de la redéfinir afin de voir apparaître des bordures entourant nos éléments.
+
+    .. raw:: html
+
+        <p class="codepen" data-height="450" data-default-tab="css,result" data-slug-hash="mdzMWQN" data-editable="true" data-user="clem09" style="height: 450px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Bordures
+network_grading: false
+problems:
+    single_value:
+        type: code
+        name: Valeur unique
+        header: |
+            Ajoutez des bordures composées de lignes continues au titre principal.
+
+            Pour cela, renseignez la propriété ``border-style`` et sa valeur ``solid``.
+        language: css
+        default: ''
+    double_value:
+        type: code
+        name: Double valeur
+        header: |-
+            Il est possible de passer plus d'une valeur à ``border-style``, séparée les unes des autres par un espace.
+
+            - Lorsque l'on renseigne 2 valeurs, la première s'applique aux côtés horizontaux (haut & bas), tandis que la deuxième s'applique aux côtés verticaux (gauche & droit).
+            - Lorsque l'on renseigne 3 valeurs, la première s'applique au côté supérieur, la deuxième aux côtés gauche & droit, et la troisième au côté inférieur.
+            - Lorsque l'on renseigne 4 valeurs, la première s'applique au côté supérieur, la deuxième au côté droit, la troisième au côté inférieur et enfin la quatrième au côté gauche.
+
+            Ajoutez des bordures de tirets (``dashed``) aux côtés horizontaux et des bordures en pointillé (``dotted``) aux côtés verticaux des titres secondaires.
+        language: css
+        default: ''
+    quad_value:
+        type: code
+        name: Quadruple valeur
+        header: |-
+            La taille des bordures peut être redéfinie via la propriété ``border-width``.
+
+            Sa valeur par défaut est le mot-clé ``medium``. 2 autres mots-clés sont valides: ``thin`` (bordure fine) et ``thick`` (bordure épaisse).
+
+            Leur correspondance en valeur concrète n'est toutefois pas indiquée dans la spécification, leur interprétation peut donc varier d'un navigateur à l'autre selon leur implémentation.
+
+            Plutôt que ces valeurs peu précises, nous allons exploiter le ``px`` afin de donner une taille fixe à nos bordures.
+
+            Le nombre de valeur est variable et suis le même schéma de fonctionnement que celui présenté à la question précédente pour la propriété ``border-style``.
+
+            | Ajoutez la règle CSS afin d'ajouter des bordures continues aux 4 côtés des titres secondaires.
+            | Leur taille doit être de ``4px`` pour les côtés gauche/supérieur, et de ``8px`` pour les côtés droit/inférieur.
+            |
+        language: css
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

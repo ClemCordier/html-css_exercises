@@ -1,0 +1,118 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Il existe plusieurs éléments pour représenter des listes.
+
+    On retrouve notamment les éléments ``ul`` et ``ol``
+
+    L'élément ``ul``
+    ----------------
+
+    ``ul`` représente une liste **non ordonnée** (*unordered list*).
+    L'ordre des éléments n'a donc pas d'importance, ils sont interchangeables.
+
+    *Exemple: une liste de course.*
+
+    .. code:: html
+
+        <ul>
+            <li>Salade</li>
+            <li>Tomates</li>
+            <li>Oignon</li>
+        </ul>
+
+    Leur style par défaut est une liste à puce:
+
+    .. raw:: html
+
+        <ul>
+            <li>Salade</li>
+            <li>Tomates</li>
+            <li>Oignon</li>
+        </ul>
+
+    L'élément ``ol``
+    ----------------
+
+    ``ol`` quant à lui représente une liste **ordonnée** (*ordered list*).
+    L'ordre des éléments a une importance particulière, ils ne sont pas interchangeables.
+
+    *Exemple: classement au cross du collège.*
+
+    .. code:: html
+
+        <ol>
+            <li>Jean</li>
+            <li>Damien</li>
+            <li>Baptiste</li>
+        </ol>
+
+    Leur style par défaut est une liste numérotée:
+
+    .. raw:: html
+
+        <ol>
+            <li>Jean</li>
+            <li>Damien</li>
+            <li>Baptiste</li>
+        </ol>
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Éléments de liste
+network_grading: false
+problems:
+    list_tags:
+        type: multiple_choice
+        name: ''
+        header: |-
+            Nous allons ajouter une liste de cours à la suite du dernier paragraphe:
+
+            .. code:: html
+
+                <p>
+                    Au fil des années, INGInious a accumulé des centaines d'exercices liés à différents cours d'informatique.
+                    Nous y retrouvons de nombreux cours d'introduction à divers langages de programmation, notamment:
+                </p>
+
+            Indiquez ci-dessous quel serait le type de liste le plus adapté au listing des cours de programmation sur le site INGInious : ``ul`` ou ``ol``.
+
+
+            Notez qu'il n'y a aucun ordre d'importance à respecter entre les cours.
+        limit: 0
+        success_message: Bonne réponse !
+        error_message: Mauvaise réponse
+        choices:
+        -   text: ul
+            feedback: Bonne réponse !
+            valid: true
+        -   text: ol
+            feedback: Mauvaise réponse
+    list_items:
+        type: code
+        name: ''
+        header: |
+            Afin d'ajouter un élément dans une liste (aussi bien ordonnée que non ordonnée), on utilise l'élément ``li`` (de l'anglais *list item*). Cet élément vient donc s'insérer à l'intérieur de votre élément liste (``ul`` ou ``ol``) en tant qu'élément enfant.
+
+            Répondez en insérant les 3 cours suivant au sein d'une liste adéquate: Python, Java, C
+
+            Notez cette fois que le listing des cours doit se faire tel qu'énoncé (Python, ensuite Java, et enfin C) afin de correspondre à l'ordre d'apprentissage des différents langages de programmation vu à travers le cycle d'études.
+        language: html
+        default: |4+
+
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

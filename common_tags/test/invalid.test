@@ -1,0 +1,60 @@
+_id: 6424bb4348feceafeabc856d
+archive: 6424bb4748feceafeabc856e
+courseid: html_css_clement
+custom: {}
+grade: 0.0
+input:
+    '@attempts': '99'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-30 00:27:15.727151'
+    '@username': Clem
+    h1_tag: <h2>INGInious - Plateforme d'apprentissage informatique à destination
+        des étudiants</h1>
+    p_tags: |-
+        <p>
+            La plateforme INGInious est créée et maintenue par le département d'ingénierie informatique de l'UCLouvain.
+            Entièrement libre d'accès, son code-source est disponible sous licence open-source.
+        </p>
+        </p>
+            Quand un étudiant soumet une réponse à un exercice de programmation, INGInious exécute automatiquement le programme écrit par l'étudiant et le soumet à une batterie de tests définis par l'enseignant.
+            Grâce à ces tests, l'étudiant peut rapidement vérifier si sa réponse est correcte et sinon il corrige son programme jusqu'à ce qu'il réussisse les différents tests.
+        </p>
+problems:
+    h1_tag: |
+        Il y a des erreurs de syntaxe:
+
+
+                    Votre réponse ``<h2>INGInious - Plateforme d'apprentissage informatique à destination des étudiants</h1>`` ne semble pas correspondre à un élément HTML valide.
+
+                    Assurez-vous de respecter la syntaxe de base ainsi que l'écriture conventionnelle d'un élément, c'est-à-dire:
+
+                    - nom des balises en minuscule.
+                    - pas d'espacement au sein de votre balise ouvrante, sauf pour y ajouter des attributs (voire entre l'attribut et sa valeur).
+                    - pas d'espacement au sein de votre balise fermante.
+
+                    | exemple: ``<p id="premier-paragraphe">contenu du paragraphe</p>``
+                    | contre-exemple: ``<P id="premier-paragraphe">contenu du paragraphe</P>``, ``<p id="premier-paragraphe">contenu du paragraphe<   /p   >`` (remarquez l'espacement au sein de la balise fermante), ...
+                    |
+
+                    N'hésitez pas à consulter la `section théorique <https://inginious.org/course/html_css_clement/theory_html_basics>`_ en cas de doute.
+    p_tags: |
+        Il y a des erreurs de syntaxe:
+
+        - Ligne 5 : No ``p`` element in scope but a ``p`` end tag seen.
+        - Ligne 8 : No ``p`` element in scope but a ``p`` end tag seen.
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-03-30 00:27:15.727000
+taskid: common_tags
+tests: {}
+text: ''
+user_ip: 2a02:a03f:a8ac:3900:60b1:5612:8dd1:12a5
+username:
+- Clem

@@ -1,0 +1,41 @@
+_id: 64e39d34a6700337f4fafd4f
+archive: 64e39d38a6700337f4fafd50
+courseid: html_css_clement
+custom: {}
+grade: 0.0
+input:
+    '@attempts': '131'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-08-21 19:21:56.224307'
+    '@username': Clem
+    address: |-
+        <address>
+            Université catholique de Louvain<br>
+            Department of Computing Science and Engineering<br>
+            Place Sainte-Barbe, 2 bte L5.02.01
+            B-1348 Louvain-la-Neuve (Belgium)<br>
+        </address>
+problems:
+    address:
+    - failed
+    - |
+        Voici des pistes qui pourraient vous aider:
+
+        - Les 3 premiers éléments (``address`` , ``br`` , ``br``) sont corrects.
+        - Ligne 5: L'élément vide ``br`` en position n°4 dans la hiérarchie ne semble pas être renseigné au bon endroit.
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-21 19:21:56.224000
+taskid: br_tag
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:2c1a:6ca:e5c8:6959
+username:
+- Clem

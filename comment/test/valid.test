@@ -1,0 +1,55 @@
+_id: 6424bd9d48feceafeabc85a1
+archive: 6424bda148feceafeabc85a2
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '19'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-30 00:37:17.413949'
+    '@username': Clem
+    comment: |-
+        <!DOCTYPE html>
+        <html>
+            <!-- contient l'ensemble des métadonnées du document -->
+            <head>
+                <meta charset="UTF-8">
+                <title>Titre de l'onglet au niveau du navigateur</title>
+            </head>
+            <!-- contient l'ensemble des données visibles du document -->
+            <body>
+                <h1>Bienvenue sur mon site !</h1>
+            </body>
+        </html>
+problems:
+    comment:
+    - success
+    - |+
+        **Correct!**
+
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-03-30 00:37:17.413000
+taskid: comment
+tests: {}
+text: |4
+
+
+    .. tip::
+        :title: Tips
+
+        Lorsqu'on ouvre un projet perso après l'avoir laissé de côté pendant un moment, il n'est pas rare de se demander pourquoi avoir écrit telle chose, avoir choisi telle option plutôt qu'une autre, ...
+
+                        Les commentaires peuvent vous servir d'aide-mémoire afin de justifier un choix d'implémentation, pour détailler un bout de code potentiellement complexe, ...
+
+                        En outre, les commentaires peuvent s'avérer très utile lorsque l'on travaille en collaboration sur un projet pour faciliter la compréhension de votre code à une personne tierce.
+user_ip: 2a02:a03f:a8ac:3900:60b1:5612:8dd1:12a5
+username:
+- Clem

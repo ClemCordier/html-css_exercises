@@ -1,0 +1,93 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    Dans cette section, nous allons voir 2 éléments en ligne utilisés pour mettre une partie de texte en évidence.
+
+    Repartons des paragraphes créés précédemment:
+
+    .. code:: html
+
+            <p>
+                La plateforme INGInious est créée et maintenue par le département d'ingénierie informatique de l'UCLouvain.
+                Entièrement libre d'accès, son code-source est disponible sous licence open-source.
+            </p>
+            <p>
+                Quand un étudiant soumet une réponse à un exercice de programmation, INGInious exécute automatiquement le programme écrit par l'étudiant.
+                Grâce à ces tests, l'étudiant peut rapidement vérifier si sa réponse est correcte et sinon il corrige son programme jusqu'à ce qu'il réussisse les différents tests.
+            </p>
+            <p>
+                Au fil des années, INGInious a accumulé des centaines d'exercices liés à différents cours d'informatique.
+                Nous y retrouvons de nombreux cours d'introduction à divers langages de programmation, notamment:
+            </p>
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Éléments de mise en évidence
+network_grading: false
+problems:
+    em:
+        type: code
+        name: Élément « emphase »
+        header: |-
+            | On utilise l'élément d'emphase ``em`` lorsque l'on veut insister sur une portion de texte par rapport au reste du contenu.
+            | De plus, un style par défaut est appliqué à leur contenu: il est *italisé*.
+            |
+
+            Nous allons créer l'élément ``em`` avec pour contenu le mot "*Entièrement*" afin de mettre l'accent dessus.
+
+            Ajoutez-y les balises ouvrantes et fermantes.
+
+            .. raw:: html
+
+                <p class="codepen" data-height="200" data-default-tab="html,result" data-slug-hash="ZEMwpyr" data-editable="true" data-user="clem09" style="height: 200px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            |
+        language: html
+        default: |-
+            <p>
+                La plateforme INGInious est créée et maintenue par le département d'ingénierie informatique de l'UCLouvain.
+                Entièrement libre d'accès, son code-source est disponible sous licence open-source.
+            </p>
+    strong:
+        type: code
+        name: Élément « haute importance »
+        header: |-
+            | On utilise l'élément de haute importance ``strong`` lorsque l'on veut mettre en avant le caractère important d'une portion de texte.
+            | De plus, un style par défaut est appliqué à leur contenu: il est mis en **gras**.
+            |
+
+            Nous allons créer l'élément ``strong`` avec pour contenu les mots "**des centaines d'exercices**" afin de mettre l'information en évidence.
+
+            Ajoutez-y les balises ouvrantes et fermantes.
+
+            .. raw:: html
+
+                <p class="codepen" data-height="220" data-default-tab="html,result" data-slug-hash="PodVGKZ" data-editable="true" data-user="clem09" style="height: 220px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            |
+        language: html
+        default: |-
+            <p>
+                Au fil des années, INGInious a accumulé des centaines d'exercices liés à différents cours d'informatique.
+                Nous y retrouvons de nombreux cours d'introduction à divers langages de programmation, notamment:
+            </p>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
