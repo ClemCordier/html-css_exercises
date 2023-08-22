@@ -1,0 +1,110 @@
+admins:
+- Clem
+- Clem_
+description: ''
+dispenser_data:
+-   config:
+        closed: false
+    id: introduction
+    rank: 0
+    tasks_list:
+        sandbox: 0
+    title: Introduction
+-   config:
+        closed: false
+    id: tasks-list
+    rank: 1
+    tasks_list:
+        HTML_structure: 1
+        MCQ-HTML-basics: 2
+        MCQ-HTML-basics2: 3
+        absolute_vs_relative_path: 23
+        advanced_structure: 31
+        br_tag: 11
+        comment: 8
+        common_tags: 7
+        common_tags_continued: 19
+        form_tags: 33
+        form_tags2: 34
+        form_tags3: 35
+        global_attributes: 21
+        header_tags: 6
+        html_MDN_documentation: 18
+        html_entity: 14
+        html_overview1: 15
+        html_overview2: 16
+        html_overview3: 27
+        html_overview4: 36
+        iframe: 30
+        img_tags: 24
+        inline_tags: 9
+        link_tags: 25
+        link_tags_continued: 26
+        list_tags: 12
+        mandatory_tags: 5
+        multimedia: 29
+        one-line_task: 28
+        overview1: 13
+        qcm_attributes: 4
+        semantic_tags: 20
+        table_tags: 32
+        test_task: 17
+        theory_absolute_vs_relative_path: 22
+        theory_html_basics: 0
+        theory_spacing: 10
+    title: HTML
+-   config:
+        closed: false
+    id: css
+    rank: 2
+    tasks_list:
+        border: 15
+        collapsing_margin: 19
+        color_value1: 7
+        color_value2: 9
+        color_value3: 10
+        display: 27
+        external_stylesheet: 4
+        flag: 28
+        font_family: 11
+        font_size: 13
+        generic_tags: 23
+        hexa_notation: 8
+        inline_style: 2
+        internal_stylesheet: 3
+        margin: 18
+        padding: 17
+        position: 26
+        qcm-box_model: 21
+        qcm_basics: 1
+        shorthand_properties: 25
+        specificity_mcq: 6
+        text: 12
+        text_size: 24
+        theory_box_model: 20
+        theory_cascade-specificity: 5
+        theory_css_basics: 0
+        theory_inheritance: 22
+        theory_length_unit: 14
+        theory_selector: 29
+        width_height: 16
+    title: CSS
+-   config:
+        closed: true
+    id: inginious_demo_tasks
+    rank: 3
+    tasks_list:
+        exemple1: 0
+        test-bs4: 2
+        test-editor: 3
+        test-validator: 1
+    title: Inginious demo tasks
+-   config:
+        closed: true
+    id: sondage
+    rank: 4
+    tasks_list:
+        form: 0
+    title: Sondage
+name: '[TFE] HTML - CSS'
+task_dispenser: toc
