@@ -53,6 +53,12 @@ context: |
     Nous allons voir certains de ces attributs au travers des questions qui suivent.
 
     Nous nous limiterons aux champs de texte pour le moment, mais nous verrons dans la suite du cours qu'il existe d'autres types de champ.
+
+    .. raw:: html
+
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="abPdvab" data-editable="true" data-user="clem09" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 environment_id: htmlcss
 environment_parameters:
     limits:
@@ -63,7 +69,7 @@ environment_parameters:
 environment_type: docker
 file: ''
 input_random: 0
-name: Éléments de formulaire (1)
+name: 25. Éléments de formulaire (1)
 network_grading: false
 problems:
     label_input:

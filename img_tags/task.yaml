@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |+
     L'élément vide ``img`` permet d'ajouter des images à son site web.
@@ -36,11 +34,9 @@ environment_parameters:
         memory: '200'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: Élément image
+name: 17. Élément image
 network_grading: false
 problems:
     path:
@@ -75,8 +71,3 @@ problems:
             |
         optional: 'on'
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

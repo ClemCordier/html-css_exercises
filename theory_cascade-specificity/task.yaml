@@ -191,7 +191,7 @@ environment_parameters: {}
 environment_type: mcq
 file: ''
 input_random: 0
-name: '[Théorie] Cascade & spécificité'
+name: 14. [Théorie] Cascade & spécificité
 network_grading: false
 problems:
     validation_check:

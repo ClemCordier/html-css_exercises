@@ -25,7 +25,7 @@ environment_parameters:
 environment_type: docker
 file: ''
 input_random: 0
-name: Commenter son code
+name: 6. Commenter son code
 network_grading: false
 problems:
     comment:

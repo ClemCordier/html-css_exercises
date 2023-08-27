@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |
     Un cas de figure où le saut de ligne est pratique: les adresses postales.
@@ -36,11 +34,9 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: Élément saut de ligne
+name: 10. Élément saut de ligne
 network_grading: false
 problems:
     address:
@@ -66,8 +62,3 @@ problems:
                 Place Sainte-Barbe, 2 bte L5.02.01
                 B-1348 Louvain-la-Neuve (Belgium)
             </address>
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

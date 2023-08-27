@@ -45,7 +45,7 @@ environment_parameters:
 environment_type: docker
 file: ''
 input_random: 0
-name: Couleur hexadécimale
+name: 7. Couleur hexadécimale
 network_grading: false
 problems:
     h1_border_color:

@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |
     Nous allons améliorer notre page de recette de cuisine, en y ajoutant une illustration de tarte Tatin à la suite de notre titre principal/de premier niveau.
@@ -18,11 +16,9 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: '[Récap] Liens & Images'
+name: 20. [Récap] Liens & Images
 network_grading: false
 problems:
     recipe:
@@ -72,8 +68,3 @@ problems:
                 <img [?]>
                 <footer><small>[?]</small></footer>
             </figure>
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

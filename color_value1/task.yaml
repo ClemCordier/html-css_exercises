@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |-
     Il existe diverses manières de définir une valeur correspondant à une couleur en CSS.
@@ -45,11 +43,9 @@ environment_parameters:
         memory: '200'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: Couleur nommée
+name: 5. Couleur nommée
 network_grading: false
 problems:
     background_color:
@@ -90,8 +86,3 @@ problems:
             body {
 
             }
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

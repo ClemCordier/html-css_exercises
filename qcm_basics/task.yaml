@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |-
     Tout comme en HTML, le langage CSS possède une syntaxe qui lui est propre et que tout développeur se doit de respecter.
@@ -13,11 +11,9 @@ context: |-
 environment_id: mcq
 environment_parameters: {}
 environment_type: mcq
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: '[QCM] Syntaxe CSS'
+name: 2. [QCM] Syntaxe CSS
 network_grading: false
 problems:
     css_syntax1:
@@ -80,8 +76,3 @@ problems:
         -   text: Une déclaration
         -   text: Une règle
             valid: true
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |
     Vous souvenez vous de l'élément ``head``, nous permettant de définir un ensemble de métadonnées, notamment d'assigner un ``title`` à notre onglet ?
@@ -57,11 +55,9 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: Feuille de style interne
+name: 4. Feuille de style interne
 network_grading: false
 problems:
     main_title:
@@ -94,8 +90,3 @@ problems:
             h2 {
 
             }
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

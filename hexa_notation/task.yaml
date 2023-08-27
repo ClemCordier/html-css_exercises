@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |
     Une autre manière de renseigner une couleur est d'utiliser la notation *hexadécimale*.
@@ -94,11 +92,9 @@ context: |
 environment_id: mcq
 environment_parameters: {}
 environment_type: mcq
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: '[Théorie + Quiz] Notation hexadécimale'
+name: 6. [Théorie + Quiz] Notation hexadécimale
 network_grading: false
 problems:
     q1:
@@ -154,8 +150,3 @@ problems:
         name: Quel est l'équivalent décimal de 0x2A ?
         header: ''
         answer: '42'
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

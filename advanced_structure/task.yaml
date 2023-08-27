@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |
     HTML est un langage dont le rôle principal est la **structure** [#]_ du document.
@@ -32,11 +30,9 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: Structure avancée
+name: 23. Structure avancée
 network_grading: false
 problems:
     header:
@@ -62,8 +58,3 @@ problems:
             Pour cela, englobez la partie concernée à l'intérieur de l'élément ``footer``.
         language: html
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

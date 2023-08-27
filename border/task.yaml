@@ -24,7 +24,7 @@ environment_parameters:
 environment_type: docker
 file: ''
 input_random: 0
-name: Bordures
+name: 12. Bordures
 network_grading: false
 problems:
     single_value:

@@ -61,7 +61,7 @@ environment_parameters:
 environment_type: docker
 file: ''
 input_random: 0
-name: '[Récap] Les éléments de base'
+name: 13. [Récap] Les éléments de base
 network_grading: false
 problems:
     recipe:

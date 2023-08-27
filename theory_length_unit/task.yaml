@@ -53,7 +53,7 @@ environment_parameters:
 environment_type: docker
 file: ''
 input_random: 0
-name: Unités de mesure
+name: 10. Unités de mesure
 network_grading: false
 problems:
     px:

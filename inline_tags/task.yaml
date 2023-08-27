@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |
     Dans cette section, nous allons voir 2 éléments en ligne utilisés pour mettre une partie de texte en évidence.
@@ -29,11 +27,9 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: Éléments de mise en évidence
+name: 8. Éléments de mise en évidence
 network_grading: false
 problems:
     em:
@@ -86,8 +82,3 @@ problems:
                 Au fil des années, INGInious a accumulé des centaines d'exercices liés à différents cours d'informatique.
                 Nous y retrouvons de nombreux cours d'introduction à divers langages de programmation, notamment:
             </p>
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

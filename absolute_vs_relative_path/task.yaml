@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |
     |
@@ -27,11 +25,9 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: '[QCM] Chemins: absolu vs relatif'
+name: '16. [QCM] Chemins: absolu vs relatif'
 network_grading: false
 problems:
     qcm1:
@@ -152,8 +148,3 @@ problems:
         -   text: Absolu
         -   text: Cela dépend de l'utilisation qu'on en fait
             valid: true
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

@@ -1,16 +1,12 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: Répondez à ce QCM dans le style texte à trous afin de tester vos connaissances.
 environment_id: mcq
 environment_parameters: {}
 environment_type: mcq
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: '[QCM] Syntaxe d''un document HTML'
+name: 3. [QCM] Syntaxe d'un document HTML
 network_grading: false
 problems:
     html_syntax1:
@@ -62,8 +58,3 @@ problems:
         -   text: '``content``'
         -   text: '``html``'
         -   text: '``head``'
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

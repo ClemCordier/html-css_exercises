@@ -16,7 +16,7 @@ environment_parameters:
 environment_type: docker
 file: ''
 input_random: 0
-name: Hauteur & largeur
+name: 11. Hauteur & largeur
 network_grading: false
 problems:
     width:

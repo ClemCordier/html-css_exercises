@@ -27,7 +27,7 @@ environment_parameters:
 environment_type: docker
 file: ''
 input_random: 0
-name: Éléments de tableau
+name: 24. Éléments de tableau
 network_grading: false
 problems:
     tr_td_tags:

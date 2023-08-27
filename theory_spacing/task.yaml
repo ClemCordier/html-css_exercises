@@ -61,7 +61,7 @@ environment_parameters: {}
 environment_type: mcq
 file: ''
 input_random: 0
-name: '[Théorie] Gestion des espaces'
+name: 9. [Théorie] Gestion des espaces
 network_grading: false
 problems:
     validation_check:
