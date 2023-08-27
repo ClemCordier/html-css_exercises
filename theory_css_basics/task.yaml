@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |-
     Maintenant que les bases de l'HTML ont été abordées, nous pouvons nous pencher sur le langage qui va venir styliser nos pages: le CSS (de l'anglais, *Cascading Style Sheets*)
@@ -17,7 +15,14 @@ context: |-
 
     Ce bloc de code, dans son ensemble, s'appelle une *règle* en CSS.
 
-    | Une règle peut être décomposée en 3 sous-partie : le *sélecteur* (``p``), la *propriété* (``color``) et la *valeur* (``blue``).
+    Une règle peut être décomposée en 3 sous-parties : le *sélecteur* (``p``), la *propriété* (``color``) et la *valeur* (``blue``):
+
+    .. code:: css
+
+        selector {
+            property: value;
+        }
+
     | La paire propriété-valeur(s), séparée par deux points et terminée par un point-virgule (``property: value;``), est appelée une *déclaration*.
     |
 
@@ -31,7 +36,7 @@ context: |-
 
     Un fichier CSS peut contenir autant de règles que vous le désirez. Celles-ci ne nécessitent pas de délimiteur spécifique pour les séparer.
 
-    De même, une règle peut contenir autant de déclarations que vous le désirez, mais elles doivent être séparées les unes des autres par le caractère ``;``.
+    De même, une règle peut contenir autant de déclarations que vous le désirez, mais elles doivent être séparées les unes des autres par le caractère "``;``".
 
     Avec ce bout de code HTML:
 
@@ -135,7 +140,7 @@ context: |-
     Ces valeurs sont définies dans les spécifications établies par diverses organisations de standardisation (telle que W3C mentionnée en introduction de la section HTML).
 
     | C'est la raison pour laquelle notre titre de section ``h1`` se retrouve avec une police d'écriture en gras et plus grande que nos paragraphes, alors même que nous leur avons appliqué aucun style.
-    | De même pour nos listes ``ul`` et ``ol`` dont les items sont accompagné de puces/numéros.
+    | De même pour nos listes ``ul`` et ``ol`` dont les items sont accompagnés de puces/numéros.
     |
 
     Ces spécifications restent toutefois théoriques: les navigateurs sont libres de ne pas les suivre à la lettre.
@@ -145,13 +150,11 @@ context: |-
     |
 
     C'est la raison pour laquelle on parle de *compatibilité* d'une propriété, propre à chaque navigateur.
-    Autrement dit: est-elle pris en charge par un navigateur donné ?
+    Autrement dit: est-elle prise en charge par un navigateur donné ?
 
     Cette compatibilité est répertoriée pour une propriété donnée sous forme de tableau en bas de sa page de documentation MDN:
 
-    +--------------------------------------------------------+
-    | .. image:: theory_css_basics/compatibility_table.png   |
-    +--------------------------------------------------------+
+    .. image:: theory_css_basics/compatibility_table.png
 
 
     |
@@ -165,9 +168,7 @@ context: |-
 environment_id: mcq
 environment_parameters: {}
 environment_type: mcq
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: '[Théorie] Syntaxe CSS'
 network_grading: false
@@ -178,10 +179,5 @@ problems:
         header: Une fois la théorie parcourue, validez pour passer à la suite du cours.
         limit: 0
         choices:
-        -   text: Je confirme avoir pourcourue la théorie
+        -   text: Je confirme avoir pourcouru la théorie
             valid: true
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

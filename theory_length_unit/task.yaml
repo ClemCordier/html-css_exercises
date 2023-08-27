@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |-
     Outre la famille, il est aussi possible de modifier la **taille** de la police.
@@ -53,9 +51,7 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Unités de mesure
 network_grading: false
@@ -109,21 +105,16 @@ problems:
         header: |-
             | Tout comme ``em``, le ``rem`` est une unité de mesure relative. La différence réside dans la façon dont ils héritent la ``font-size``.
             |
-            | Vous aurez sans doute remarqué à travers l'exercice précédent que les tailles de police s'appliquent à la chaine et s'accumulent:
+            | Vous aurez sans doute remarqué à travers l'exercice précédent que les tailles de polices s'appliquent à la chaine et s'accumulent:
             | les éléments ``p`` ont hérité de l'élément racine (:math:`1.5em = 1.5*16px = 24px`) mais l'élément ``strong`` quant à lui a hérité de son parent direct; le paragraphe (:math:`1.5*24px = 36px`).
             |
             | Ce phénomène porte le nom de **composition**, et on imagine facilement à quel point il peut devenir problématique dans des cas de figure plus complexe.
             |
 
-            L'unité de mesure ``rem`` a été inventé pour pallier ce problème lié à la composition.
+            L'unité de mesure ``rem`` a été inventée pour pallier ce problème lié à la composition.
 
             Contrairement au ``em`` relatif à la première ``font-size`` rencontrée (et ultimement, à la ``font-size`` de l'élément racine), ``rem`` (*r* pour *root*) sera **toujours** relatif à la ``font-size`` de l'élément racine ``html``.
 
             Renseignez la règle CSS afin d'appliquer une taille relative de ``1.5rem`` aux éléments ``p`` **et** ``strong``.
         language: css
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

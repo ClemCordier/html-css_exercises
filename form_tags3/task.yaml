@@ -1,13 +1,17 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
-context: |-
-    Nous allons compléter notre formulaire de critique de jeux de vidéo, en permettant aux utilisateurs de fournir une appréciation globale ainsi qu'une critique détaillée du jeu.
+context: |
+    Nous allons compléter notre formulaire de jeux vidéo en permettant aux utilisateurs de fournir une appréciation globale ainsi qu'une critique détaillée du jeu.
 
     Nous n'utiliserons plus des variantes de l'élément ``input`` comme à la question précédente.
 
     **Note:** Bien que nous n'utiliserons plus d'élément ``input`` pour répondre aux questions qui suivent, la liaison des champs de formulaire à un élément ``label`` reste nécessaire.
+
+    .. raw:: html
+
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="abPdvab" data-editable="true" data-user="clem09" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 environment_id: htmlcss
 environment_parameters:
     limits:
@@ -16,9 +20,7 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Éléments de formulaire (3)
 network_grading: false
@@ -49,7 +51,7 @@ problems:
                   <option>Team chien !</option>
                 </select>
 
-            Vous constaterez la présence de 3 attributs *booléens* associé au premier élément ``option``. Ces attributs ne prennent pas de valeur.
+            Vous constaterez la présence de 3 attributs booléens [#]_ associé au premier élément ``option``. Ces attributs ne prennent pas de valeur.
 
             - ``selected`` définit l'option comme étant le choix par défaut de notre liste au chargement de la page
             - ``disabled`` indique que l'option n'est pas sélectionnable (apparait grisée dans la liste déroulante)
@@ -57,8 +59,8 @@ problems:
 
             .. note::
 
-                | *Note:* En informatique, un booléen est une variable à 2 états (généralement notés "vrai" et "faux").
-                | En HTML, la présence d'un attribut booléen correspond à la valeur "vrai" tandis que son absence correspond à la valeur "faux".
+                .. [#] | En informatique, un booléen est une variable à 2 états (généralement notés "vrai" et "faux").
+                       | En HTML, la présence d'un attribut booléen correspond à la valeur "vrai" tandis que son absence correspond à la valeur "faux".
 
             Faites de même afin de créer la liste déroulante suivante:
 
@@ -87,7 +89,7 @@ problems:
         header: |
             Vous aurez sans doute remarqué que l'élément ``input`` de type ``text`` crée un champ de texte assez limité.
 
-            Q'en est-il si nous voulions réserver plus d'espace, afin d'avoir une zone de texte qui n'est pas limité à une seule ligne ?
+            Q'en est-il si nous voulions réserver plus d'espace, afin d'avoir une zone de texte qui n'est pas limitée à une seule ligne ?
 
             Pour cela, nous allons utiliser l'élément ``textarea``.
 
@@ -99,8 +101,3 @@ problems:
             Liez vos éléments ``label`` et ``textarea`` en renseignant la valeur "detailed-review" à vos attributs ``for`` et ``id``.
         language: html
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |
     En plus d'images, nous pouvons inclure divers contenus multimédia à notre site.
@@ -25,9 +23,7 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: 'Éléments multimédia : audio & vidéo'
 network_grading: false
@@ -96,7 +92,7 @@ problems:
         header: |
             L'intégration d'élément ``video`` se fait de façon similaire.
 
-            Tout ce que nous avons vu jusqu'à présent avec l'élément ``audio`` est également valide pour ``video``. De même, les attributs que nous allons utiliser dans cet exercice sont tout aussi applicable à un élément ``audio``.
+            Tout ce que nous avons vu jusqu'à présent avec l'élément ``audio`` est également valide pour ``video``. De même, les attributs que nous allons utiliser dans cet exercice sont tout aussi applicables à un élément ``audio``.
 
             Une courte vidéo est disponible à l'adresse suivante: https://github.com/ClemCordier/html-css_course_resources/blob/main/video.mp4?raw=true
 
@@ -110,8 +106,3 @@ problems:
             - ``autoplay``: la lecture du contenu multimédia est automatique.
             - ``loop``: la lecture du contenu multimédia tourne en boucle.
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

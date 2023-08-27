@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |-
     Les attributs universels sont des attributs qui peuvent être appliqués à n'importe quel élément HTML.
@@ -14,9 +12,7 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Attributs universels
 network_grading: false
@@ -25,7 +21,7 @@ problems:
         type: code_single_line
         name: Attribut « lang »
         header: |-
-            L'attribut universel ``lang`` permet d'indiquer au navigateur la langue de l'élément auquel il est assigné, ainsi que celle de tous ses éléments enfants (à moins qu'ils la redéfinisse eux-mêmes).
+            L'attribut universel ``lang`` permet d'indiquer au navigateur la langue de l'élément auquel il est assigné, ainsi que celle de tous ses éléments enfants (à moins qu'ils la redéfinissent eux-mêmes).
 
             Il est très souvent renseigné au niveau de l'élément *racine* ``html`` pour indiquer globalement la langue du document.
 
@@ -79,8 +75,3 @@ problems:
             |
         default: <p>Le [?] est un langage de structure. Il permet de représenter le
             contenu d'une page web via un ensemble d'éléments sous forme de balises.</p>
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

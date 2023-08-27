@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |-
     Nous avons mentionné l'utilisation de l'élément d'ancre ``a`` permettant la redirection vers des ressources (externes ou internes) à notre site.
@@ -24,9 +22,7 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Élément de liens (2)
 network_grading: false
@@ -47,21 +43,14 @@ problems:
         header: |
             Outre ces valeurs prédéfinies dans la spécification, il est aussi possible de créer ses propres redirections au sein d'une page.
 
-            Pour ce faire, on ajoute l'attribut ``id`` à l'élément vers lequel on souhaite effectuer la redirection, et lui assigne un nom faisant office d'identifiant unique.
-
-            Nous pouvons ensuite y faire référence depuis l'attribut ``href`` en lui assignant le caractère ``#`` suivi de l'identifiant en tant que valeur.
-
-            Nous allons ajouter un menu de navigation contenant 3 liens afin de pouvoir naviguer aisément d'une section à l'autre.
-
-            Pour cela, utilisez l'élément ``nav`` qui existe à cet effet, et ajoutez-y vos liens avec un texte identique au section auquel ils se rapportent: Histoire, Ingrédients, Préparation.
+            | Pour ce faire, on ajoute l'attribut ``id`` à l'élément vers lequel on souhaite effectuer la redirection, et lui assigne un nom faisant office d'identifiant unique.
+            | Nous pouvons ensuite y faire référence depuis l'attribut ``href`` en lui assignant le caractère ``#`` suivi de l'identifiant en tant que valeur.
+            |
+            | Nous allons ajouter un menu de navigation contenant 3 liens afin de pouvoir naviguer aisément d'une section à l'autre.
+            | Pour cela, utilisez l'élément ``nav`` qui existe à cet effet, et ajoutez-y vos liens avec un texte identique aux sections auxquelles ils se rapportent: Histoire, Ingrédients, Préparation.
 
             Un ``id`` est déjà attribué à chaque ``h2`` dans la zone bac à sable, servez-vous en pour vos redirections.
 
             **Attention:** Seul le menu de navigation est attendu en réponse, il n'est pas nécessaire d'inclure le reste de la page fourni dans la zone bac à sable.
         language: html
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

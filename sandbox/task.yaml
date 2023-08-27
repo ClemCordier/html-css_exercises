@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |
     |
@@ -10,7 +8,7 @@ context: |
 
     | En théorie, l'éditeur de texte inclus avec votre système d'exploitation est suffisant pour commencer à programmer.
     |
-    | En pratique, il existe des outils destinés aux programmeurs, appelés *IDE* (environnement de développement intégré) tel que `Visual Studio Code <https://code.visualstudio.com>`_ pour ne citer que lui.
+    | En pratique, il existe des outils destinés aux programmeurs, appelés *IDE* (environnement de développement intégré) tels que `Visual Studio Code <https://code.visualstudio.com>`_ pour ne citer que lui.
     | Ceux-ci sont dédiés à la programmation. Ils offrent un confort d'utilisation et de nombreuses fonctionnalités pour les développeurs.
     |
     | Outre votre application bloc-note par défaut et les IDE, des "éditeurs de texte avancé" tels que `Sublime Text <https://www.sublimetext.com>`_ ou encore `Brackets <https://brackets.io>`_ visent à proposer le meilleur des deux mondes.
@@ -83,7 +81,7 @@ context: |
     |    .. raw:: html                              |
     |                                               |
     |        <div style="text-align:center;">       |
-    |        <img src="br_tag/multi_cursor.gif">    |
+    |        <img src="sandbox/multi_cursor.gif">   |
     |        </div>                                 |
     +-----------------------------------------------+
 
@@ -104,9 +102,7 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Philosophie du cours / Support pour développer
 network_grading: false
@@ -123,8 +119,3 @@ problems:
             Un premier paragraphe</p>
             Un second paragraphe</p>
             Un dernier paragraphe</p>
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

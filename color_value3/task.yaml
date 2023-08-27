@@ -1,13 +1,11 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |-
     Il existe une notation alternative à la notation hexadécimale, dite *fonctionnelle*.
 
     Elle s'appuie sur la fonction ``rgb()``.
 
-    Cette fonction prend 3 nombres entier en paramètre, correspondant au teinte de rouge, vert et bleue respectivement. Ces valeurs sont renseignées en décimal, allant de :math:`0` à :math:`255`.
+    Cette fonction prend 3 nombres entiers en paramètres, correspondant aux teintes de rouge, vert et bleue respectivement. Ces valeurs sont renseignées en nombre décimal, allant de :math:`0` à :math:`255`.
 
     Chaque valeur est séparée par une virgule: ``rgb(255, 127, 63)`` ou un simple espace: ``rgb(255 127 63)``.
 
@@ -32,9 +30,7 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Couleur RGB
 network_grading: false
@@ -72,11 +68,6 @@ problems:
                /* Sans caractères séparateurs */
                rgb(red green blue / alpha)
 
-            Vous êtes libre d'utiliser la notation que vous désirez, du moment que la couleur est équivalente à celle fournie dans l'énoncé.
+            Vous êtes libre d'utiliser la notation que vous désirez, du moment que la couleur est équivalente à celle fournie dans l'énoncé, avec cette fois une composante alpha rendant la couleur semi-opaque (50% ou 0.5 d'opacité).
         language: css
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

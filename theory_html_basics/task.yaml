@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |
     |
@@ -67,7 +65,7 @@ context: |
 
     .. note::
 
-        | **Note:** *Les balises ne sont pas sensible à la casse (autrement dit, les majuscules et minuscules sont interprétées de la même manière).*
+        | **Note:** *Les balises ne sont pas sensibles à la casse (autrement dit, les majuscules et minuscules sont interprétées de la même manière).*
         |
         | *Il est toutefois recommandé de toujours écrire ses balises en minuscules.*
 
@@ -75,7 +73,7 @@ context: |
     ------------------
     | Un élément HTML peut être (optionnellement) accompagné d'un ou plusieurs *attributs*. Ceux-ci permettent de fournir des informations et/ou fonctionnalités additionnelles.
     |
-    | Il y a des attributs dits *universels*, c'est-à-dire qu'ils peuvent être utilisés avec n'importe quel élément HTML. D'autres sont propres à un (groupe d') élément.
+    | Il y a des attributs dits *universels*, c'est-à-dire qu'ils peuvent être utilisés avec n'importe quel élément HTML. D'autres sont propres à un (groupe d') élément(s).
     |
     | Il n'y a pas de limite quant aux nombres d'attributs qu'un élément peut prendre, cependant un même attribut ne peut être assigné qu'une fois par élément. Dans le cas contraire, seule la première occurrence devrait être retenue; les autres seront ignorées par le navigateur.
     |
@@ -95,7 +93,7 @@ context: |
 
     ----
 
-    | Certains éléments sont dit *vide* (aussi appelé élément *orphelin* ou *auto-fermant*), c'est-à-dire qu'ils ne prennent ni contenu ni élément enfant.
+    | Certains éléments sont dit *vides* (aussi appelés éléments *orphelins* ou *auto-fermants*), c'est-à-dire qu'ils ne prennent ni contenu ni élément enfant.
     | Il n'y a plus 2 balises (ouvrante et fermante) mais une unique balise dont la fermeture se fait classiquement en utilisant un simple chevron (``>``), optionnellement accompagné d'une barre oblique (``/>``).
     |
 
@@ -184,9 +182,7 @@ context: |
 environment_id: mcq
 environment_parameters: {}
 environment_type: mcq
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: '[Théorie] Syntaxe HTML'
 network_grading: false
@@ -197,11 +193,6 @@ problems:
         header: Une fois la théorie parcourue, validez pour passer à la suite du cours.
         limit: 0
         choices:
-        -   text: Je confirme avoir parcourue la théorie.
+        -   text: Je confirme avoir parcouru la théorie.
             feedback: Bon apprentissage !
             valid: true
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |
     Maintenant que nous avons abordé les unités de mesure, nous allons voir les différentes propriétés auxquelles elles peuvent s'appliquer.
@@ -24,9 +22,7 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Bordures
 network_grading: false
@@ -65,15 +61,10 @@ problems:
 
             Plutôt que ces valeurs peu précises, nous allons exploiter le ``px`` afin de donner une taille fixe à nos bordures.
 
-            Le nombre de valeur est variable et suis le même schéma de fonctionnement que celui présenté à la question précédente pour la propriété ``border-style``.
+            Le nombre de valeurs est variable et suis le même schéma de fonctionnement que celui présenté à la question précédente pour la propriété ``border-style``.
 
             | Ajoutez la règle CSS afin d'ajouter des bordures continues aux 4 côtés des titres secondaires.
             | Leur taille doit être de ``4px`` pour les côtés gauche/supérieur, et de ``8px`` pour les côtés droit/inférieur.
             |
         language: css
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

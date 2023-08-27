@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |-
     L'espace séparant le contenu d'un élément et ses bordures porte le nom de *zone de remplissage*.
@@ -20,9 +18,7 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Marges (intérieures)
 network_grading: false
@@ -35,7 +31,7 @@ problems:
 
             Utilisez les propriétés ``border`` et ``padding`` raccourcie à 2 valeurs :
 
-            - ``border: [border_width] [border_style];``
+            - ``border: [border_width] [border_style];`` (ou ``[border_style] [border_width];``)
             - ``padding: [top_and_bottom_value] [left_and_right_value];``
         language: css
         default: ''
@@ -66,8 +62,3 @@ problems:
                 }
         language: css
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

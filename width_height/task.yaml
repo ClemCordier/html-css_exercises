@@ -1,13 +1,11 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |-
     Nous avions brièvement abordé les attributs ``width`` et ``height`` dans la section HTML pour redimensionner notre image de tarte Tatin.
 
     Leur équivalent CSS porte les mêmes noms: les propriétés ``width`` et ``height`` permettent de spécifier les dimensions en largeur et en hauteur.
 
-    Leur valeur par défaut est ``auto``, autrement dit elles sont gérées par votre navigateur.
+    Leur valeur par défaut est ``auto``, autrement dit elle est gérée par votre navigateur.
 environment_id: htmlcss
 environment_parameters:
     limits:
@@ -16,9 +14,7 @@ environment_parameters:
         memory: '200'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Hauteur & largeur
 network_grading: false
@@ -78,8 +74,3 @@ problems:
             |
         language: css
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

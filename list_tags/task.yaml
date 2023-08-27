@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |-
     Il existe plusieurs éléments pour représenter des listes.
@@ -66,9 +64,7 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Éléments de liste
 network_grading: false
@@ -105,14 +101,9 @@ problems:
         header: |
             Afin d'ajouter un élément dans une liste (aussi bien ordonnée que non ordonnée), on utilise l'élément ``li`` (de l'anglais *list item*). Cet élément vient donc s'insérer à l'intérieur de votre élément liste (``ul`` ou ``ol``) en tant qu'élément enfant.
 
-            Répondez en insérant les 3 cours suivant au sein d'une liste adéquate: Python, Java, C
+            Répondez en insérant les 3 cours suivants au sein d'une liste adéquate: Python, Java, C
 
             Notez cette fois que le listing des cours doit se faire tel qu'énoncé (Python, ensuite Java, et enfin C) afin de correspondre à l'ordre d'apprentissage des différents langages de programmation vu à travers le cycle d'études.
         language: html
         default: |4+
 
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

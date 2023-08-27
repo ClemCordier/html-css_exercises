@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |-
     Les exemples ci-dessous se baseront sur l'arborescence de fichiers suivante:
@@ -59,11 +57,11 @@ context: |-
     |
     | Cette option n'est toutefois pas recommandée, et ce pour plusieurs raisons:
 
-    1. Bon nombre d'images en ligne ne sont pas pour autant libre de droit, vous en servir sans l'autorisation de son auteur/propriétaire serait donc **illégal**.
-    2. Cela génère un surplus de travail pour le navigateur qui doit chercher le serveur sur lequel est stocké l'image en question.
-    3. Vous n'êtes pas à l'abri de modifications (voire d'une suppression) de l'image vers laquelle vous redirigée.
+    1. Bon nombre d'images en ligne ne sont pas pour autant libres de droit, vous en servir sans l'autorisation de son auteur/propriétaire serait donc **illégal**.
+    2. Cela génère un surplus de travail pour le navigateur qui doit chercher le serveur sur lequel est stockée l'image en question.
+    3. Vous n'êtes pas à l'abri de modifications (voire d'une suppression) de l'image vers laquelle vous redirigez.
 
-    En conclusion, favorisez l'insertion d'images via des liens relatifs, en les téléchargeant localement sur votre machine depuis des sites fournissant des images libres de droit tel que `unsplash <https://unsplash.com/fr/s/photos/computer>`_ par exemple.
+    En conclusion, favorisez l'insertion d'images via des liens relatifs, en les téléchargeant localement sur votre machine depuis des sites fournissant des images libres de droit tels que `unsplash <https://unsplash.com/fr/s/photos/computer>`_ par exemple.
 
     |
 
@@ -90,9 +88,7 @@ context: |-
 environment_id: mcq
 environment_parameters: {}
 environment_type: mcq
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: '[Théorie] Chemins & liens: relatif ou absolu'
 network_grading: false
@@ -103,11 +99,6 @@ problems:
         header: ''
         limit: 0
         choices:
-        -   text: Je confirme avoir parcourue la théorie.
+        -   text: Je confirme avoir parcouru la théorie.
             feedback: Bon apprentissage !
             valid: true
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

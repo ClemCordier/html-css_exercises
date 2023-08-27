@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |-
     L'élément ``iframe`` permet d'intégrer un document HTML imbriqué dans la page courante.
@@ -24,26 +22,23 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Élément de cadre intégré
 network_grading: false
 problems:
     document:
-        type: code
+        type: code_single_line
         name: Intégration de document
         header: |-
-            Pour observer concrètement le résultat obtenu, nous allons intégré une page web basique, disponible à l'adresse suivante: https://example.org
+            Pour observer concrètement le résultat obtenu, nous allons intégrer une page web basique, disponible à l'adresse suivante: https://example.org
 
             Comme pour les éléments ``img``, ``audio`` et ``video``, l'URL vers le site en question est renseigné via l'attribut ``src``.
 
             Répondez avec l'élément ``iframe`` et son attribut ``src``.
-        language: html
         default: ''
     youtube:
-        type: code
+        type: code_single_line
         name: 'Intégration multimédia : vidéo'
         header: |-
             | Les ``iframe`` sont couramment utilisés pour l'intégration de contenu multimédia.
@@ -51,13 +46,12 @@ problems:
             |
             | Nous pouvons configurer diverses autorisations liées à l'``iframe`` via l'attribut ``allow``.
             |
-            | Répondez avec l'élément ``iframe`` et son attribut ``src`` afin d'intégrer la vidéo suivante: https://www.youtube.com/embed/dQw4w9WgXcQ
+            | Répondez avec l'élément ``iframe`` et son attribut ``src`` afin d'intégrer la vidéo suivante: https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1
             | Ajoutez l'attribut ``allow`` à la valeur ``fullscreen`` afin d'autoriser l'utilisateur à mettre la vidéo en plein écran.
             |
-        language: html
         default: ''
     map:
-        type: code
+        type: code_single_line
         name: 'Intégration multimédia : carte interactive'
         header: |-
             | Un second exemple d'intégration que vous avez déjà pu croiser: une carte de navigation interactive.
@@ -75,10 +69,4 @@ problems:
 
                 |
                 | *"Un logiciel Open Source est un code conçu pour être accessible au public : n'importe qui peut voir, modifier et distribuer le code à sa convenance."*
-        language: html
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

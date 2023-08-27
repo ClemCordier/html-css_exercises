@@ -1,11 +1,9 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |-
     Il est évidemment possible de personnaliser davantage la police d'écriture de votre site.
 
-    Une première possibilité est de de modifier la famille de police.
+    Une première possibilité est de de modifier la famille de polices.
 
     Pour cela, on utilise la propriété ``font-family``:
 
@@ -28,18 +26,16 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: Famille de police
+name: Famille de polices
 network_grading: false
 problems:
     space:
         type: code
         name: Polices de mots composés
         header: |-
-            Pour éviter tout problème d'interprétation, les familles de police composées de plusieurs mots (séparés par des espaces), de chiffres ou encore de caractères de ponctuation (autre que le trait d'union) doivent être encadrées entre guillemets (simples ou doubles, selon vos préférences).
+            Pour éviter tout problème d'interprétation, les familles de polices composées de plusieurs mots (séparés par des espaces), de chiffres ou encore de caractères de ponctuation (autre que le trait d'union) doivent être encadrées entre guillemets (simples ou doubles, selon vos préférences).
 
             Renseignez la règle CSS afin d'appliquer la police "Comic Sans MS" à l'ensemble de votre page web, en l'appliquant à l'élément ``body``.
         language: css
@@ -48,9 +44,9 @@ problems:
         type: code
         name: Polices alternatives
         header: |-
-            La disponibilité des familles de police varie d'une machine à l'autre.
+            La disponibilité des familles de polices varie d'une machine à l'autre.
 
-            Il est possible de renseigner plusieurs familles de police, chacune séparée d'une virgule:
+            Il est possible de renseigner plusieurs familles de polices, chacune séparée d'une virgule:
 
             .. code:: css
 
@@ -71,7 +67,7 @@ problems:
         type: code
         name: Polices génériques
         header: |-
-            Afin de s'assurer qu'au moins une des police renseignées soit disponible pour tous les utilisateurs, nous pouvons renseigner une police parmi un ensemble de noms de famille dit *générique*.
+            Afin de s'assurer qu'au moins une des polices renseignées soit disponible pour tous les utilisateurs, nous pouvons renseigner une police parmi un ensemble de noms de famille dit *générique*.
 
             .. code:: css
 
@@ -84,8 +80,3 @@ problems:
             Au même titre que "Consolas", "sans-serif" ne requiert pas de guillemets (le trait d'union ne représente pas un caractère problématique).
         language: css
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

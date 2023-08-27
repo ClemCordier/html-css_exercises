@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |-
     | Pour rappel, l'en-tête ``head`` est l'élément de premier niveau permettant de définir un ensemble de *métadonnées* à votre document, et ce en y insérant d'autres éléments HTML.
@@ -16,9 +14,7 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Éléments d'en-tête
 network_grading: false
@@ -49,15 +45,10 @@ problems:
             | Pour pallier ce problème, un second élément utilisable dans le ``head`` vient à notre rescousse: l'élément ``meta``.
             | Ce dernier possède plusieurs attributs, mais celui qui nous intéresse ici est l'attribut ``charset``. Celui-ci va définir le format d'encodage de notre fichier.
             |
-            | Nous allons utilisé ``UTF-8``, `format le plus répandu sur le web depuis 2008 <https://en.wikipedia.org/wiki/Popularity_of_text_encodings>`_.
+            | Nous allons utiliser ``UTF-8``, `format le plus répandu sur le web depuis 2008 <https://en.wikipedia.org/wiki/Popularity_of_text_encodings>`_.
             |
 
             .. <[?] charset="UTF-8">
 
             Ajoutez *le nom de l'élément* au template ci-dessous afin de créer l'élément *vide* correspondant.
         default: <[?] charset="UTF-8">
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

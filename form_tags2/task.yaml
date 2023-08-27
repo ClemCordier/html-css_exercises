@@ -1,15 +1,19 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
-context: |-
+context: |
     Maintenant que nous avons les bases, nous allons voir plus en profondeur les différents types d'``input`` qui existent.
 
-    Notre formulaire correspondera à un système d'évaluation de jeu vidéo afin de recueillir des informations sur les joueurs.
+    Notre formulaire correspondera à un système d'évaluation de jeux vidéo afin de recueillir des informations sur les joueurs.
 
     Cette partie se contentera de n'utiliser que des champs de formulaire basés sur l'élément ``input``.
 
     Nous verrons d'autres éléments à intégrer à notre formulaire dans la question suivante.
+
+    .. raw:: html
+
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="abPdvab" data-editable="true" data-user="clem09" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 environment_id: htmlcss
 environment_parameters:
     limits:
@@ -18,9 +22,7 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Éléments de formulaire (2)
 network_grading: false
@@ -49,8 +51,8 @@ problems:
 
             Reprenez votre réponse à la question 1, et ajoutez-y les attributs ``step`` et ``min`` au champ des heures de jeu.
 
-            | ``step`` prendra la valeur ``0.25``. Cela forcera l'utilisateur à renseigner des multiples de :math:`0.25`, soit des pas de :math:`15` minutes.
-            | ``min`` prendra la valeur ``0.5``. Nous partons du principe qu'un retour d'utilisateur ayant passé moins de :math:`30` minutes sur le jeu n'est pas pertinent.
+            - ``step`` prendra la valeur ``0.25``. Cela forcera l'utilisateur à renseigner des multiples de :math:`0.25`, soit des pas de :math:`15` minutes.
+            - ``min`` prendra la valeur ``0.5``. Nous partons du principe qu'un retour d'utilisateur ayant passé moins de :math:`30` minutes sur le jeu n'est pas pertinent.
         language: html
         default: ''
     checkbox:
@@ -76,7 +78,7 @@ problems:
                   ...
                 </fieldset>
 
-            Notez l'ordre inversé des éléments ``input`` et ``label`` par rapport aux précédentes questions. Cela permet d'avoir nos case à cocher en tête, devant nos libellés.
+            Notez l'ordre inversé des éléments ``input`` et ``label`` par rapport aux précédentes questions. Cela permet d'avoir les cases à cocher en tête, devant nos libellés.
 
             Répondez avec la légende suivante: "Via quel(s) vecteur(s) avez-vous entendu parler du jeu pour la première fois ?" suivi des paires ``label`` - ``input`` dont les libellés seront les suivants:
 
@@ -90,8 +92,3 @@ problems:
         default: |-
             <fieldset>
             </fieldset>
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

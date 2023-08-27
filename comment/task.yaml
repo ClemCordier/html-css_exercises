@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |
     Nous avons vu en introduction du cours la déclaration ``<!DOCTYPE html>`` dont la syntaxe diffère du balisage classique des éléments HTML.
@@ -15,8 +13,8 @@ context: |
 
     .. note::
 
-        .. [#] | En programmation, les commentaires sont des lignes de code qui ne sont pas interprétées par votre machine.
-               | Ils seront tout bonnement ignorés, leur seul but étant d'être lu par le(s) programmeur(s).
+        .. [#] | En informatique, les commentaires sont des lignes de code qui ne sont pas interprétées par votre machine.
+               | Ils seront tout bonnement ignorés, leur seul but étant d'être lus par le(s) programmeur(s).
 environment_id: htmlcss
 environment_parameters:
     limits:
@@ -25,9 +23,7 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Commenter son code
 network_grading: false
@@ -54,8 +50,3 @@ problems:
                     <h1>Bienvenue sur mon site !</h1>
                 </body>
             </html>
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |-
     |
@@ -21,7 +19,7 @@ context: |-
 
     De plus, un élément ne peut se voir attribuer qu'un seul ``id``, mais peut être associé à plusieurs ``class``.
 
-    Celles-ci sont alors renseignée l'une à la suite de l'autre, séparée par un espace:
+    Celles-ci sont alors renseignées l'une à la suite de l'autre, séparées par un espace:
 
     .. code:: html
 
@@ -179,7 +177,7 @@ context: |-
     | .. image:: theory_cascade-specificity/combined_selector.png  |
     +--------------------------------------------------------------+
 
-    Il existe des types de sélecteurs autre que les sélecteurs d'élément, de classe et d'ID mentionnés jusqu'à maintenant, certains seront abordés plus tard dans le cours.
+    Il existe des types de sélecteurs autres que les sélecteurs d'élément, de classe et d'ID mentionnés jusqu'à maintenant, certains seront abordés plus tard dans le cours.
 
     L'essentiel ici est de s'être familiarisé avec les concepts fondamentaux du CSS, à savoir la *cascade* et la *spécificité*.
 
@@ -191,9 +189,7 @@ context: |-
 environment_id: mcq
 environment_parameters: {}
 environment_type: mcq
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: '[Théorie] Cascade & spécificité'
 network_grading: false
@@ -206,8 +202,3 @@ problems:
         choices:
         -   text: Je confirme avoir pourcourue la théorie
             valid: true
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

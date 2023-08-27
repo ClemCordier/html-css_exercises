@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |
     L'élément ``table`` est l'élément parent qui va nous permettre de créer des tableaux en HTML.
@@ -11,13 +9,13 @@ context: |
 
         </table>
 
-    Nous allons voir différents éléments enfant qui l'accompagne.
+    Nous allons voir différents éléments enfants qui l'accompagnent.
 
     Notre tableau consistera en un listing de différents jeux vidéo, reprenant pour chacun sa catégorie et son nom.
 
     .. note::
 
-        | **Note:** Étant donné le style par défaut assez limité des tableaux en HTML pur, les exemples fournis ci-dessous ont été légèrement modifié à l'aide du *CSS* afin d'obtenir quelque chose de plus parlant visuellement.
+        | **Note:** Étant donné le style par défaut assez limité des tableaux en HTML pur, les exemples fournis ci-dessous ont été légèrement modifiés à l'aide du *CSS* afin d'obtenir quelque chose de plus parlant visuellement.
         | Nous verrons dans la section CSS du cours comment parvenir à un tel résulat.
 environment_id: htmlcss
 environment_parameters:
@@ -27,9 +25,7 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Éléments de tableau
 network_grading: false
@@ -293,8 +289,3 @@ problems:
             Notez que les cellules **Jeu de tir** et **Jeu de sport** sont devenues des cellules d'en-tête, au même titre que **Catégorie** et **Jeu**.
         language: html
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

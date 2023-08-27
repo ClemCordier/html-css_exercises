@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |-
     Une autre manière de renseigner une couleur est d'utiliser la notation *hexadécimale*.
@@ -25,7 +23,7 @@ context: |-
 
     |
 
-    | **Note:** Lorsque chacune des 3 composantes utilisent une paire de nombres, ces dernières peuvent être simplifiées en un seul chiffre.
+    | **Note:** Lorsque chacune des 3 composantes utilise une paire de nombres, ces dernières peuvent être simplifiées en un seul chiffre.
     |          De cette façon, les 3 paires de :math:`00` de la couleur noire (:math:`#000000`) peuvent chacune être abrégées en un seul :math:`0`, on se retrouve alors avec :math:`#000`.
     |          De même, la couleur rouge :math:`#FF0000` peut être simplifiée en :math:`#F00`.
     |          Toutefois, une couleur plus complexe telle que :math:`#000042` ne peut être simplifiée: la composante de bleu ne forme pas une paire (:math:`4 \neq 2`).
@@ -45,9 +43,7 @@ environment_parameters:
         memory: '200'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Couleur hexadécimale
 network_grading: false
@@ -69,8 +65,8 @@ problems:
         language: css
         default: |-
             h1 {
-              border-style: dashed;
-              [?]
+                border-style: dashed;
+                [?]
             }
     precise_border_color:
         type: code
@@ -89,11 +85,6 @@ problems:
         language: css
         default: |-
             h1 {
-              border-style: dashed;
-              [?]
+                border-style: dashed;
+                [?]
             }
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

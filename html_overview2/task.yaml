@@ -1,6 +1,4 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |
     Dans ce deuxième exercice récapitulatif, votre objectif va être de reproduire une page HTML.
@@ -32,7 +30,7 @@ context: |
     - ``h1-h6``
     - ``br``
 
-    Tous ne doivent pas forcément être utilisé: veillez à être le plus pertinent possible dans le choix de vos éléments !
+    Tous ne doivent pas forcément être utilisés: veillez à être le plus pertinent possible dans le choix de vos éléments !
 
     **Note:** Les retours à la ligne sont explicitement indiqués par le symbole "↵".
 
@@ -61,9 +59,7 @@ environment_parameters:
         memory: '300'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: '[Récap] Les éléments de base'
 network_grading: false
@@ -103,8 +99,3 @@ problems:
             Enfin, poser votre pâte feuilletée sur le moule. Bien rentrer les bords.
 
             Cuire au four à 210°C pendant 20 minutes. Après ce délai, sortir le plat du four et laisser refroidir 30 minutes.
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

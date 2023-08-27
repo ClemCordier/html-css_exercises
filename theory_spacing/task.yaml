@@ -1,13 +1,11 @@
-accessible: true
 author: ''
-categories: []
 contact_url: ''
 context: |
-    Il est important de noter qu'en HTML, toute forme d'espacement sera interprétée la façon suivante:
+    Il est important de noter qu'en HTML, toute forme d'espacement sera interprétée de la façon suivante:
 
     **Un simple espace entre chaque mots composant le contenu d'un élément et ignoré aux extrémités. L'espacement entre les éléments est quant à lui toujours ignoré.**
 
-    Cela inclus les caractères de la barre espace, mais aussi de la touche de tabulation (⇥) ou encore de la touche entrée (⏎)
+    Cela inclus les caractères de la barre d'espace, mais aussi de la touche de tabulation (⇥) ou encore de la touche entrée (⏎)
 
     Autrement dit, ces 3 éléments:
 
@@ -61,9 +59,7 @@ context: |
 environment_id: mcq
 environment_parameters: {}
 environment_type: mcq
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: '[Théorie] Gestion des espaces'
 network_grading: false
@@ -77,8 +73,3 @@ problems:
         -   text: Passer à la suite du cours.
             feedback: Bon apprentissage !
             valid: true
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0
