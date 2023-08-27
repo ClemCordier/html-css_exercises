@@ -1,0 +1,42 @@
+_id: 64e4e7ff41deff7399d23715
+archive: 64e4e80441deff7399d23716
+courseid: html_css_clement
+custom: {}
+grade: 0.0
+input:
+    '@attempts': '44'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-22 18:53:19.622278'
+    '@username': Clem
+    recipe: |-
+        <figure>
+            <img width="220" height="222" src="images/tarte_tatin.jpg" alt="tarte tatin cuisinée">
+            <footer><small>Par Shani Evenstein, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=56359426">Lien</a></small></footer>
+        </figure>
+problems:
+    recipe:
+    - failed
+    - |
+        Voici des pistes qui pourraient vous aider:
+
+        - Le premier élément (``figure``) est correct.
+        - Ligne 2: Le(s) attribut(s) associé(s) à l'élément ``img`` en position n°2 dans la hiérarchie contiennent des erreurs:
+
+            - La valeur "*220*" assignée à l'attribut ``width`` n'est pas celle attendue.
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-22 18:53:19.622000
+taskid: html_overview3
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:48a6:cf33:893d:72b4
+username:
+- Clem

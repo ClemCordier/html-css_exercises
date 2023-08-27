@@ -1,0 +1,58 @@
+_id: 64eb3794f0b7b51c848257b5
+archive: 64eb3797f0b7b51c848257b6
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '171'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-27 13:46:28.492721'
+    '@username': Clem
+    alpha: |-
+        h1 {
+            Color: rgb(255, 127, 63, 50%);
+        }
+    percentage: |-
+        h1 {
+           color:rgb(100%, 50%, 25%)
+        }
+problems:
+    alpha:
+    - success
+    - |+
+        **Correct !**
+
+    percentage:
+    - success
+    - |+
+        **Correct !**
+
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: |
+    ERROR    COLOR_VALUE: Missing token for production end FUNC ")": ('CHAR', ',', 2, 28)
+    ERROR    PropertyValue: No match: ('CHAR', ')', 2, 33)
+    ERROR    PropertyValue: Unknown syntax or no value:  rgb(255, 127, 63, 50%)
+    ERROR    CSSStyleDeclaration: Syntax Error in Property: Color: rgb(255, 127, 63, 50%)
+stdout: ''
+submitted_on: 2023-08-27 13:46:28.492000
+taskid: color_value3
+tests: {}
+text: |4
+
+
+    .. tip::
+        :title: Tips
+
+        Il n'y a pas de "meilleure" notation à proprement parler, mais il est toutefois de bon usage de ne pas varier sans cesse les notations afin de préserver une certaine cohérence et lisibilité au sein de votre code.
+
+                Vous êtes donc libre d'utiliser la notation qui vous convient le mieux dans vos futurs projets !
+user_ip: 2a02:a03f:b8af:bd00:655f:1ce3:6ee3:7401
+username:
+- Clem

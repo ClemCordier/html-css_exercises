@@ -1,0 +1,53 @@
+_id: 64771771b57a68c2f12d40c1
+archive: 64771775b57a68c2f12d40c2
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '3'
+    '@email': nathan.renguet@eleve.cndbs.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-05-31 11:46:25.034046'
+    '@username': nathan1580
+    generic_font: 'body {font-family: "Comic Sans Ms", Consolas, sans-serif;}'
+    multiple_fonts: 'body {font-family: "Comic Sans Ms", Consolas;}'
+    space: 'body {font-family: "Comic Sans Ms";}'
+problems:
+    generic_font:
+    - success
+    - |+
+        **Correct !**
+
+    multiple_fonts:
+    - success
+    - |+
+        **Correct !**
+
+    space:
+    - success
+    - |+
+        **Correct !**
+
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-05-31 11:46:25.034000
+taskid: font_family
+tests: {}
+text: |4
+
+
+    .. tip::
+        :title: Tips
+
+        Renseigner une police générique qui vous convient le mieux pour remplacer la police par défaut du navigateur et assurer une compatibilité pour l'ensemble des utilisateurs de votre site est une bonne habitude à prendre.
+
+                Ces polices sont généralement renseignées en dernier lieu, afin d'être une solution de dernier recours.
+user_ip: 85.26.68.141
+username:
+- nathan1580

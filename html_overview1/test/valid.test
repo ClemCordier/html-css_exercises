@@ -1,0 +1,38 @@
+_id: 64e3a39e6c4d4b82f97fb402
+archive: 64e3a3a06c4d4b82f97fb403
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '33'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-08-21 19:49:18.402572'
+    '@username': Clem
+    skeleton: |-
+        <!DOCTYPE HTML>
+        <html>
+            <head>
+                <meta charset='utf-8' />
+                <title>Titre affiché au niveau de l'onglet du navigateur</title>
+            </head>
+            <body>
+
+            </body>
+        </html>
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-21 19:49:18.402000
+taskid: html_overview1
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:2c1a:6ca:e5c8:6959
+username:
+- Clem

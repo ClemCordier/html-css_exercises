@@ -1,0 +1,54 @@
+_id: 64eb264673cd444fb6982cd5
+archive: 64eb264a73cd444fb6982cd6
+courseid: html_css_clement
+custom: {}
+grade: 66.67
+input:
+    '@attempts': '24'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-27 12:32:38.160510'
+    '@username': Clem
+    generic_font: |-
+        body {
+            font-family: 'Comic Sans MS', Consolas, sans-serif;
+        }
+    multiple_fonts: |-
+        body {
+            font-family: Consolas, 'Comic Sans MS';
+        }
+    space: |-
+        body {
+            font-family: "Comic Sans MS";
+        }
+problems:
+    generic_font:
+    - success
+    - |+
+        **Correct !**
+
+    multiple_fonts:
+    - failed
+    - |
+        - Ligne 2: La valeur ``Consolas, "Comic Sans MS"`` associée à la propriété ``font-family`` est incorrecte.
+    space:
+    - success
+    - |+
+        **Correct !**
+
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-27 12:32:38.160000
+taskid: font_family
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:655f:1ce3:6ee3:7401
+username:
+- Clem

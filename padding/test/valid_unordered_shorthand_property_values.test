@@ -1,0 +1,48 @@
+_id: 64e8bd9b73cd444fb69824fd
+archive: 64e8bd9f73cd444fb69824fe
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '19'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-25 16:41:31.683422'
+    '@username': Clem
+    length_value: 'h1 {border:solid 4px; padding: 25px 50px;}'
+    percentage_value: h1 {border:4px solid; padding:5% 10%;}
+problems:
+    length_value:
+    - success
+    - |+
+        **Correct !**
+
+    percentage_value:
+    - success
+    - |+
+        **Correct !**
+
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-25 16:41:31.683000
+taskid: padding
+tests: {}
+text: |4
+
+
+    .. tip::
+        :title: Tips
+
+        En règle général, l'ordre des valeurs d'une propriété raccourcie n'a pas d'importance, comme c'est le cas pour la propriété raccourcie ``border`` ici.
+
+                Il y a toutefois des exceptions: lorsque les différentes valeurs sont du même type, alors un ordre précis se doit d'être respecté, comme c'est le cas pour la propriété ``padding`` ici.
+user_ip: 2a02:a03f:b8af:bd00:3515:4687:50f6:7b16
+username:
+- Clem

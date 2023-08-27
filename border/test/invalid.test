@@ -1,0 +1,54 @@
+_id: 64ea0de8f0b7b51c84824a35
+archive: 64ea0decf0b7b51c84824a36
+courseid: html_css_clement
+custom: {}
+grade: 0.0
+input:
+    '@attempts': '21'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-26 16:36:24.212623'
+    '@username': Clem
+    double_value: |-
+        h2 {
+            border-style: dotted dashed;
+        }
+    quad_value: |-
+        h2 {
+            border-style: solid;
+            border-width: 4px 8px 4px 8px;
+        }
+    single_value: |-
+        h1 {
+            border: solid;
+        }
+problems:
+    double_value:
+    - failed
+    - |
+        - Ligne 2: La valeur ``dotted dashed`` associée à la propriété ``border-style`` est incorrecte.
+    quad_value:
+    - failed
+    - |
+        - Ligne 3: La valeur ``4px 8px 4px 8px`` associée à la propriété ``border-width`` est incorrecte.
+    single_value:
+    - failed
+    - |
+        - Ligne 2: Êtes-vous sûr d'avoir besoin de la propriété ``border`` afin de répondre à cette question ?
+        - La propriété suivante est manquante: ``border-style``
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-26 16:36:24.212000
+taskid: border
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:d92f:90a4:aabf:763e
+username:
+- Clem

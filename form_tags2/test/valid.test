@@ -1,0 +1,73 @@
+_id: 64eb481841deff7399d259b0
+archive: 64eb482241deff7399d259b2
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '34'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-27 14:56:56.670375'
+    '@username': Clem
+    checkbox: |-
+        <fieldset>
+            <legend>Via quel(s) vecteur(s) avez-vous entendu parler du jeu pour la première fois ?</legend>
+
+            <input type="checkbox" id="friend" />
+            <label for="friend">un(e) ami(e)</label>
+
+            <input type="checkbox" id="pub" />
+            <label for="pub">des publicités</label>
+
+            <input type="checkbox" id="influencer" />
+            <label for="influencer">des influenceurs (youtube, twitch, ...)</label>
+
+            <input type="checkbox" id="other" />
+            <label for="other">autres</label>
+        </fieldset>
+    date_number: |-
+        <label for="hours-played">Heure(s) de jeu :</label>
+        <input type="number" id="hours-played">
+    step: |-
+        <label for="hours-played">Heure(s) de jeu :</label>
+        <input type="number" id="hours-played" step="0.25" min="0.5">
+problems:
+    checkbox:
+    - success
+    - |+
+        **Correct !**
+
+    date_number:
+    - success
+    - |+
+        **Correct !**
+
+    step:
+    - success
+    - |-
+        **Correct !**
+
+
+
+        .. tip::
+            :title: Tips
+
+            "*Never trust user input*"
+
+                            Dès lors que l'on traite des données utilisateurs, il est bon d'adopter un état d'esprit préventif: imaginer les pires éventualités afin d'anticiper les entrées invalides et les gérer en amont.
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-27 14:56:56.670000
+taskid: form_tags2
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:655f:1ce3:6ee3:7401
+username:
+- Clem

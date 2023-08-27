@@ -1,0 +1,68 @@
+_id: 64ea26ae41deff7399d24f15
+archive: 64ea26ba41deff7399d24f16
+courseid: html_css_clement
+custom: {}
+grade: 75.0
+input:
+    '@attempts': '12'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-26 18:22:06.103257'
+    '@username': Clem
+    audio1: <audio controls src="https://github.com/ClemCordier/html-css_course_resources/blob/main/audio.mp3?raw=true"></audio>
+    audio2: |-
+        <audio controls>
+            <source src="https://github.com/ClemCordier/html-css_course_resources/blob/main/audio.mp3?raw=true" type="audio/mpeg">
+            <source src="https://github.com/ClemCordier/html-css_course_resources/blob/main/audio.wav?raw=true" type="audio/wav">
+        </audio>
+    audio3: |-
+        <audio controls>
+            <source src="https://github.com/ClemCordier/html-css_course_resources/blob/main/audio.mp3?raw=true" type="audio/mpeg">
+            <source src="https://github.com/ClemCordier/html-css_course_resources/blob/main/audio.wav?raw=true" type="audio/wav">
+            <p>Votre navigateur ne prend pas en charge les éléments audio. Voici un <a href="https://github.com/ClemCordier/html-css_course_resources/blob/main/audio.mp3?raw=true">lien de téléchargement direct</a>.</p>
+        </audio>
+    video: <video muted="" autoplay="autoplay" loop src="https://github.com/ClemCordier/html-css_course_resources/blob/main/video.mp4?raw=true"></video>
+problems:
+    audio1:
+    - success
+    - |+
+        **Correct !**
+
+    audio2:
+    - success
+    - |+
+        **Correct !**
+
+    audio3:
+    - success
+    - |
+        **Correct !**
+
+
+                        De nos jours, l'élément ``audio`` est pris en charge par une vaste majorité des navigateurs modernes. On pourrait donc se demander l'intérêt d'inclure du texte alternatif.
+
+                        Il n'en reste pas moins une bonne pratique de toujours anticiper les "scénarios catastrophes" lorsque l'on code.
+    video:
+    - failed
+    - |
+        Voici des pistes qui pourraient vous aider:
+
+        - Le(s) attribut(s) associé(s) à l'élément ``video`` contiennent des erreurs:
+
+            - La valeur "*autoplay*" assignée à l'attribut ``autoplay`` n'est pas celle attendue.
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-26 18:22:06.103000
+taskid: multimedia
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:d92f:90a4:aabf:763e
+username:
+- Clem

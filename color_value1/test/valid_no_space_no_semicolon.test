@@ -1,0 +1,49 @@
+_id: 64e8b896f0b7b51c8482419d
+archive: 64e8b899f0b7b51c8482419e
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '53'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-25 16:20:06.048202'
+    '@username': Clem
+    background_color: 'h1{background-color: papayawhip;}'
+    background_color_global: |-
+        body {
+            background-color: oldlace
+        }
+problems:
+    background_color:
+    - success
+    - |+
+        **Correct !**
+
+    background_color_global:
+    - success
+    - |+
+        **Correct !**
+
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-25 16:20:06.048000
+taskid: color_value1
+tests: {}
+text: |4
+
+
+    .. tip::
+        :title: Tips
+
+        La syntaxe CSS utilise l'anglais **américain** (on écrira donc toujours *color* et non *colour* !)
+user_ip: 2a02:a03f:b8af:bd00:3515:4687:50f6:7b16
+username:
+- Clem

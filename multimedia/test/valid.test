@@ -1,0 +1,71 @@
+_id: 64ea26488c92c88981f74cab
+archive: 64ea26548c92c88981f74cac
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '10'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-26 18:20:24.406179'
+    '@username': Clem
+    audio1: <audio controls src="https://github.com/ClemCordier/html-css_course_resources/blob/main/audio.mp3?raw=true"></audio>
+    audio2: |-
+        <audio controls>
+            <source src="https://github.com/ClemCordier/html-css_course_resources/blob/main/audio.mp3?raw=true" type="audio/mpeg">
+            <source src="https://github.com/ClemCordier/html-css_course_resources/blob/main/audio.wav?raw=true" type="audio/wav">
+        </audio>
+    audio3: |-
+        <audio controls>
+            <source src="https://github.com/ClemCordier/html-css_course_resources/blob/main/audio.mp3?raw=true" type="audio/mpeg">
+            <source src="https://github.com/ClemCordier/html-css_course_resources/blob/main/audio.wav?raw=true" type="audio/wav">
+            <p>Votre navigateur ne prend pas en charge les éléments audio. Voici un <a href="https://github.com/ClemCordier/html-css_course_resources/blob/main/audio.mp3?raw=true">lien de téléchargement direct</a>.</p>
+        </audio>
+    video: <video muted="" autoplay loop src="https://github.com/ClemCordier/html-css_course_resources/blob/main/video.mp4?raw=true"></video>
+problems:
+    audio1:
+    - success
+    - |+
+        **Correct !**
+
+    audio2:
+    - success
+    - |+
+        **Correct !**
+
+    audio3:
+    - success
+    - |
+        **Correct !**
+
+
+                        De nos jours, l'élément ``audio`` est pris en charge par une vaste majorité des navigateurs modernes. On pourrait donc se demander l'intérêt d'inclure du texte alternatif.
+
+                        Il n'en reste pas moins une bonne pratique de toujours anticiper les "scénarios catastrophes" lorsque l'on code.
+    video:
+    - success
+    - |-
+        **Correct !**
+
+
+
+        .. tip::
+            :title: Tips
+
+            Une différence toutefois entre les éléments ``video`` et ``audio``: Ce dernier n'étant pas considéré comme du contenu visuel, il n'accepte pas les attributs de dimension ``width`` & ``height`` (contrairement à ``video``).
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-26 18:20:24.406000
+taskid: multimedia
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:d92f:90a4:aabf:763e
+username:
+- Clem

@@ -1,0 +1,46 @@
+_id: 64e8b68573cd444fb69824f0
+archive: 64e8b68873cd444fb69824f1
+courseid: html_css_clement
+custom: {}
+grade: 0.0
+input:
+    '@attempts': '80'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-25 16:11:17.073511'
+    '@username': Clem
+    h1_border_color: |-
+        h1, h2 {
+            border-color: #f00;
+            border-style: dashed;
+        }
+    precise_border_color: |-
+        h3 {
+            dsf: dashed;
+            border-color: #BEAA33
+        }
+problems:
+    h1_border_color:
+    - failed
+    - |
+        - Ligne 1: Le sélecteur ``h1, h2`` n'est pas celui attendu.
+    precise_border_color:
+    - failed
+    - |
+        - Ligne 2: La propriété ``dsf`` n'existe pas
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-25 16:11:17.073000
+taskid: color_value2
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:3515:4687:50f6:7b16
+username:
+- Clem

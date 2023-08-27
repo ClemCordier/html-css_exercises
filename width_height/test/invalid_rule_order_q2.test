@@ -1,0 +1,48 @@
+_id: 64e9ef73f0b7b51c848249b3
+archive: 64e9ef76f0b7b51c848249b4
+courseid: html_css_clement
+custom: {}
+grade: 50.0
+input:
+    '@attempts': '133'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-26 14:26:27.234458'
+    '@username': Clem
+    percentage: |
+        h1 {
+          width: 75%;
+          border:blue dotted;
+        }
+        header {
+          width: 50%;
+          background-color:red;
+        }
+    width: 'p { width: 400px; }'
+problems:
+    percentage:
+    - failed
+    - |
+        - Ligne 1: Le sélecteur ``h1`` n'est pas celui attendu en position n°1 dans la hiérarchie.
+        - Ligne 5: Le sélecteur ``header`` n'est pas celui attendu en position n°2 dans la hiérarchie.
+    width:
+    - success
+    - |+
+        **Correct !**
+
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-26 14:26:27.234000
+taskid: width_height
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:d92f:90a4:aabf:763e
+username:
+- Clem

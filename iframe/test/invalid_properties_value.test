@@ -1,0 +1,52 @@
+_id: 64ea24a241deff7399d24f07
+archive: 64ea24ac41deff7399d24f08
+courseid: html_css_clement
+custom: {}
+grade: 33.33
+input:
+    '@attempts': '12'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-26 18:13:22.276597'
+    '@username': Clem
+    document: <iframe src="https://example.org"></iframe>
+    map: <iframe src="https://www.openstreetmap.org/export/embed.html" width="500px"
+        height="250px"></iframe>
+    youtube: <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" allowfullscreen></iframe>
+problems:
+    document:
+    - success
+    - |+
+        **Correct !**
+
+    map:
+    - failed
+    - |
+        Il y a des erreurs de syntaxe:
+
+        - Ligne 1 : Bad value ``500px`` for attribute ``width`` on element ``iframe``: Expected a digit but saw ``p`` instead.
+        - Ligne 1 : Bad value ``250px`` for attribute ``height`` on element ``iframe``: Expected a digit but saw ``p`` instead.
+    youtube:
+    - failed
+    - |
+        Voici des pistes qui pourraient vous aider:
+
+        - Le(s) attribut(s) associé(s) à l'élément ``iframe`` contiennent des erreurs:
+
+            - L'attribut ``allowfullscreen`` associé à l'élément ``iframe`` ne fait pas partie du/des attribut(s) attendu(s).
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-26 18:13:22.276000
+taskid: iframe
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:d92f:90a4:aabf:763e
+username:
+- Clem

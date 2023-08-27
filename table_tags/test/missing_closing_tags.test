@@ -1,0 +1,113 @@
+_id: 64eb23e9f0b7b51c84825654
+archive: 64eb23f4f0b7b51c84825656
+courseid: html_css_clement
+custom: {}
+grade: 66.67
+input:
+    '@attempts': '17'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-27 12:22:33.903821'
+    '@username': Clem
+    span: |-
+        <table>
+            <tr>
+                <th colspan="2">Catégorie</th>
+                <th>Jeu</th>
+            </tr>
+            <tr>
+                <th rowspan="2">Jeu de tir</th>
+                <td>FPS</td>
+                <td>Valorant</td>
+            </tr>
+            <tr>
+                <td>Battle Royal</td>
+                <td>Fortnite</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Jeu de sport</th>
+                <td>Automobile</td>
+                <td>Forza Horizon 5</td>
+            </tr>
+            <tr>
+                <td>Football</td>
+                <td>FIFA22</td>
+            </tr>
+        </table>
+    th_tag: |-
+        <table>
+            <tr>
+                <th>Catégorie</th>
+                <th>Jeu</th>
+            </tr>
+            <tr>
+                <td>Jeu de tir (FPS)</td>
+                <td>Valorant</td>
+            </tr>
+            <tr>
+                <td>Jeu de tir (Battle Royal)</td>
+                <td>Fortnite</td>
+            </tr>
+            <tr>
+                <td>Jeu de sport (Automobile)</td>
+                <td>Forza Horizon 5</td>
+            </tr>
+            <tr>
+                <td>Jeu de sport (Football)</td>
+                <td>FIFA22</td>
+            </tr>
+        </table>
+    tr_td_tags: |4-
+
+        <table>
+            <tr>
+                <td>Jeu de tir (FPS)
+                <td>Valorant</td>
+            </tr>
+            <tr>
+                <td>Jeu de tir (Battle Royal)</td>
+                <td>Fortnite
+            </tr>
+            <tr>
+                <td>Jeu de sport (Automobile)
+                <td>Forza Horizon 5
+            </tr>
+            <tr>
+                <td>Jeu de sport (Football)</td>
+                <td>FIFA22</td>
+            </tr>
+        </table>
+problems:
+    span:
+    - success
+    - |+
+        **Correct !**
+
+    th_tag:
+    - success
+    - |+
+        **Correct !**
+
+    tr_td_tags: |
+        Il y a des erreurs de syntaxe:
+
+        - Ligne 4 : l'élément ``td`` en position n°3 dans la hiérarchie ne semble pas être accompagné de sa balise fermante.
+        - Ligne 9 : l'élément ``td`` en position n°7 dans la hiérarchie ne semble pas être accompagné de sa balise fermante.
+        - Ligne 12 : l'élément ``td`` en position n°9 dans la hiérarchie ne semble pas être accompagné de sa balise fermante.
+        - Ligne 13 : l'élément ``td`` en position n°10 dans la hiérarchie ne semble pas être accompagné de sa balise fermante.
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-27 12:22:33.903000
+taskid: table_tags
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:655f:1ce3:6ee3:7401
+username:
+- Clem

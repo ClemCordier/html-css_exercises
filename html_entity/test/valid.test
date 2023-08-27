@@ -1,0 +1,78 @@
+_id: 64eb3ae073cd444fb6982d97
+archive: 64eb3ae273cd444fb6982d98
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '84'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-27 14:00:32.765451'
+    '@username': Clem
+    reserved: '<p>La balise fermante d''un élément html est semblable à la balise
+        ouvrante &lt;h1&gt; auquel on ajoute une barre oblique: &lt;/h1&gt;</p>'
+    symbol: <p>Fourni par INGInious v.x.x.x &copy; 2014-20xx Université catholique
+        de Louvain.</p>
+problems:
+    reserved:
+    - success
+    - |-
+        **Correct !**
+
+
+                        Le problème avec l'exemple fourni est le suivant:
+
+                        Plutôt que d'être écrit telles quelles comme escompté, les balises ``<h1>`` et ``</h1>`` vont être interprétées en tant qu'élément HTML à part entière et non comme simple contenu.
+
+                        Voici le résultat (compromis) présent dans l'énoncé:
+
+
+        .. note::
+            :title: Sans entité:
+
+
+
+            .. raw:: html
+
+                <p>La balise fermante d'un élément html est semblable à la balise ouvrante <h1> auquel on ajoute une barre oblique: </h1></p>
+
+
+        Et voici le résultat (escompté) en se servant des entités:
+
+
+
+        .. note::
+            :title: Avec entité:
+
+
+
+            .. raw:: html
+
+                <p>La balise fermante d'un élément HTML est semblable à la balise ouvrante &lt;h1&gt; auquel on ajoute une barre oblique: &lt;/h1&gt;</p>
+    symbol:
+    - success
+    - |+
+        **Correct !**
+
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-27 14:00:32.765000
+taskid: html_entity
+tests: {}
+text: |4
+
+
+    .. tip::
+        :title: Tips
+
+        Vous retrouverez via le lien suivant une liste exhaustive des entités HTML: https://html.spec.whatwg.org/multipage/named-characters.html
+user_ip: 2a02:a03f:b8af:bd00:655f:1ce3:6ee3:7401
+username:
+- Clem

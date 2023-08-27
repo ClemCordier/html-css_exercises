@@ -1,0 +1,48 @@
+_id: 64e4ee9af0b7b51c84822ab1
+archive: 64e4ee9bf0b7b51c84822ab2
+courseid: html_css_clement
+custom: {}
+grade: 50.0
+input:
+    '@attempts': '46'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-22 19:21:30.072632'
+    '@username': Clem
+    alt: <img alt="Logo du site Inginious" src="../img/inginious_logo"  >
+    path: ../img/inginious_logo
+problems:
+    alt:
+    - failed
+    - |
+        Voici des pistes qui pourraient vous aider:
+
+        - Le(s) attribut(s) associé(s) à l'élément ``img`` contiennent des erreurs:
+
+            - La valeur "*../img/inginious_logo*" assignée à l'attribut ``src`` n'est pas celle attendue.
+    path:
+    - success
+    - |4
+
+                **Bonne réponse!**
+
+                .. warning::
+                    :title: Attention
+
+                    **Bien que l'extension de fichier** (ici, ``.png``) **ne soit en théorie pas obligatoire pour que le chemin soit reconnu, nous tâcherons de le renseigner pour les questions qui suivent (ainsi que pour le restant du cours!)**
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-22 19:21:30.072000
+taskid: img_tags
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:48a6:cf33:893d:72b4
+username:
+- Clem

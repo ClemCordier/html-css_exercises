@@ -1,0 +1,123 @@
+_id: 64e9f72141deff7399d24e4a
+archive: 64e9f72a41deff7399d24e4b
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '38'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-26 14:59:13.610981'
+    '@username': Clem
+    footer: |-
+        <footer>
+            <p><small>Ce document a été rédigé par un étudiant dans le cadre d'un cours d'introduction au langage HTML.</small></p>
+        </footer>
+    header: |-
+        <header>
+        <h1>Recette du jour - Tarte Tatin</h1>
+
+        <figure>
+            <img width="320" height="222" src="images/tarte_tatin.jpg" alt="tarte tatin cuisinée">
+            <footer><small>Par Shani Evenstein, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=56359426">Lien</a></small></footer>
+        </figure>
+        </header>
+    main: |-
+        <main>
+        <h2>Histoire</h2>
+
+        <p>
+        La tarte tatin tiendrait son nom des 2 soeurs hôtelières, Caroline et Stéphanie Tatin. Plusieurs alternatives de l'histoire sont proposées.<br>
+        Une première version raconte qu'une des 2 soeurs aurait oublié de mettre la pâte et l'aurait rajoutée par dessus en cours de cuisson.<br>
+        Une seconde version raconte que la tarte aurait été servie à l'envers, après avoir été ramassé suite à une chute en sortie de four.<br>
+        Elles s'accordent toutefois pour dire que sa création est accidentelle.
+        </p>
+
+        <h2>Ingrédients</h2>
+
+        <ul>
+            <li>2kg de pommes Granny</li>
+            <li>250g de sucre</li>
+            <li>125g de beurre doux</li>
+            <li>50g de beurre salé</li>
+            <li>cannelle</li>
+            <li>pâte feuilletée</li>
+        </ul>
+
+        <h2>Préparation</h2>
+
+        <p>Faire fondre le beurre salé dans un moule et le répartir sur toute la surface.<br>
+        Saupoudrer de sucre et ajouter une pincée de cannelle.</p>
+
+        <p>
+        Eplucher les pommes et les couper en 8.<br>
+        Dans une poêle, faire fondre 25g de beurre doux.<br>
+        Verser ensuite 50g de sucre.<br>
+        Enfin, ajouter les morceaux de pommes afin de les faire blondir.
+        </p>
+
+        <p>
+        Disposer une rangée de pommes dans le moule en les serrant <em>légèrement</em>, dirigées vers le centre.<br>
+        Couvrir de sucre, d'une noisette de beurre et d'une pincée de cannelle.<br>
+        Répétez ces opérations afin d'épuiser votre stock de pommes.
+        </p>
+
+        <p>Enfin, poser votre pâte feuilletée sur le moule. <strong>Bien rentrer les bords</strong>.</p>
+
+        <p>
+        Cuire au four à 210°C pendant 20 minutes. Après ce délai, sortir le plat du four et laisser refroidir 30 minutes.
+        </p>
+        </main>
+problems:
+    footer:
+    - success
+    - |+
+        **Correct !**
+
+    header:
+    - success
+    - |+
+        **Correct !**
+
+    main:
+    - success
+    - |+
+        **Correct !**
+
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-26 14:59:13.610000
+taskid: advanced_structure
+tests: {}
+text: |4
+
+
+    .. tip::
+        :title: Tips
+
+        Vous aurez remarqué que nous avions déjà rencontré ``footer`` précédemment, inclus au sein de l'élément ``figure`` pour accompagner l'image de ses droits d'auteur.
+
+                Ceci est un cas particulier, mais il n'en reste pas moins correct.
+
+                Pour mieux le comprendre, voyons ce que nous dit la MDN pour les éléments `figure <https://developer.mozilla.org/fr/docs/Web/HTML/Element/figure>`_ et `footer <https://developer.mozilla.org/fr/docs/Web/HTML/Element/footer>`_ :
+
+                .. raw:: html
+
+                    <ul>
+                        <li><em><code>figure</code> représente un contenu autonome [...] <code>figure</code> <strong>est une racine de sectionnement</strong>, son contenu est donc exclu du plan général du document.</em></li>
+                        <li><em><code>footer</code> représente le pied de page de la section <strong>ou de la racine de sectionnement la plus proche</strong>.</em></li>
+                    </ul>
+
+
+                | Concrètement, cela implique que l'élément ``figure`` induit une section "à part entière", qui se distingue du plan global document.
+                | Il est donc tout à fait envisageable de lui ajouter des éléments sectionnant (tel qu'un ``header`` ou un ``footer`` comme nous l'avons fait).
+user_ip: 2a02:a03f:b8af:bd00:d92f:90a4:aabf:763e
+username:
+- Clem

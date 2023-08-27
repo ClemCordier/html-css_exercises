@@ -1,0 +1,34 @@
+_id: 64eb289d73cd444fb6982cee
+archive: 64eb289f73cd444fb6982cef
+courseid: html_css_clement
+custom: {}
+grade: 0.0
+input:
+    '@attempts': '262'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-27 12:42:37.369473'
+    '@username': Clem
+    inline_style: '<h1 title="color: blue;">Le titre de votre site est de couleur:</h1>'
+problems:
+    inline_style:
+    - failed
+    - |+
+        Assurez-vous d'utiliser l'attribut ``style`` pour répondre à cette question.
+
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-27 12:42:37.369000
+taskid: inline_style
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:655f:1ce3:6ee3:7401
+username:
+- Clem

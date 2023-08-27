@@ -1,0 +1,92 @@
+_id: 64ea32f841deff7399d24f69
+archive: 64ea32fd41deff7399d24f6a
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '23'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-26 19:14:32.530595'
+    '@username': Clem
+    a: <a href="http://info.cern.ch">The very first website</a>
+    a2: <a target="_blank" href="http://info.cern.ch">The very first website</a>
+    mailto: <a href="mailto:mail@address.com">Contact par mail</a>
+    tel: <a href="tel:+3223456789">Contact par téléphone</a>
+problems:
+    a:
+    - success
+    - |-
+        **Correct !**
+
+
+
+        .. note::
+            :title: Encadré ci-dessous, le résultat de votre soumission:
+
+
+
+            .. raw:: html
+
+                <a href="http://info.cern.ch">The very first website</a>
+    a2:
+    - success
+    - |-
+        **Correct !**
+
+
+
+        .. note::
+            :title: Encadré ci-dessous, le résultat de votre soumission:
+
+
+
+            .. raw:: html
+
+                <a target="_blank" href="http://info.cern.ch">The very first website</a>
+    mailto:
+    - success
+    - |-
+        **Correct !**
+
+
+
+        .. note::
+            :title: Encadré ci-dessous, le résultat de votre soumission:
+
+
+
+            .. raw:: html
+
+                <a href="mailto:mail@address.com">Contact par mail</a>
+    tel:
+    - success
+    - |-
+        **Correct !**
+
+
+
+        .. note::
+            :title: Encadré ci-dessous, le résultat de votre soumission:
+
+
+
+            .. raw:: html
+
+                <a href="tel:+3223456789">Contact par téléphone</a>
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-26 19:14:32.530000
+taskid: link_tags
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:d92f:90a4:aabf:763e
+username:
+- Clem

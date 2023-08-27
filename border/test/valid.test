@@ -1,0 +1,68 @@
+_id: 64ea0d8641deff7399d24eaa
+archive: 64ea0d8a41deff7399d24eab
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '20'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-26 16:34:46.604888'
+    '@username': Clem
+    double_value: |-
+        h2 {
+            border-style: dashed dotted;
+        }
+    quad_value: |-
+        h2 {
+            border-style: solid;
+            border-width: 4px 8px 8px 4px;
+        }
+    single_value: |-
+        h1 {
+            border-style: solid;
+        }
+problems:
+    double_value:
+    - success
+    - |+
+        **Correct !**
+
+    quad_value:
+    - success
+    - |+
+        **Correct !**
+
+    single_value:
+    - success
+    - |+
+        **Correct !**
+
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-26 16:34:46.604000
+taskid: border
+tests: {}
+text: |4
+
+
+    .. tip::
+        :title: Tips
+
+        Notez ici l'importance de l'ordre des valeurs renseignées aux propriétés raccourcies ``border-style`` & ``border-width``. La propriété ``border-style: dotted solid;`` n'aura pas le même effet que ``border-style: solid dotted;``.
+
+                | Des propriétés raccourcies plus générales encore existent: par exemple ``border``. Cette propriété permet de renseigner à la fois style, taille et couleur de vos bordures.
+                | Contrairement aux propriétés vues à travers cet exercice, ses valeurs sont communes aux 4 bordures.
+                |
+
+                L'utilisation de ces propriétés est propre à chacun et se fait au cas par cas; une propriété raccourcie offre un code plus concis/lisible, au détriment d'une certaine rigidité au niveau des possibilités de mise en forme.
+user_ip: 2a02:a03f:b8af:bd00:d92f:90a4:aabf:763e
+username:
+- Clem

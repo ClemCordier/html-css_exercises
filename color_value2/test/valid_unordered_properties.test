@@ -1,0 +1,70 @@
+_id: 64e8b45c41deff7399d248b8
+archive: 64e8b45f41deff7399d248b9
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '77'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-25 16:02:04.682954'
+    '@username': Clem
+    h1_border_color: |-
+        h1 {
+            border-color: #f00;
+            border-style: dashed;
+        }
+    precise_border_color: |-
+        h1 {
+            border-style: dashed;
+            border-color: #BEAA33
+        }
+problems:
+    h1_border_color:
+    - success
+    - |-
+        **Correct !**
+
+
+
+        .. tip::
+            :title: Tips
+
+            Une notation abrégée est ici envisageable, :math:`#F00` est une réponse correcte, au même titre que :math:`#FF0000`.
+    precise_border_color:
+    - success
+    - |-
+        **Correct !**
+
+
+
+        .. tip::
+            :title: Tips
+
+            Notez que la représentation de couleur utilisée ici ne peut pas être réécrite de façon abrégée, étant donné la paire de composante de rouge qui utilise 2 nombres distincts (:math:`B \neq E`).
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-25 16:02:04.682000
+taskid: color_value2
+tests: {}
+text: |4
+
+
+    .. tip::
+        :title: Tips
+
+        Vous aurez certainement remarqué la présence de la propriété ``border-style``.
+
+                Par défaut, sa valeur est définie à ``none``, ce qui correspond à n'afficher aucune bordure.
+
+                Il est donc nécessaire de la redéfinir au préalable afin que notre propriété ``border-color`` soit prise en compte.
+user_ip: 2a02:a03f:b8af:bd00:3515:4687:50f6:7b16
+username:
+- Clem

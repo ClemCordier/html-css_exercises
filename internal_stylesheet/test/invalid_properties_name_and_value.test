@@ -1,0 +1,46 @@
+_id: 64e8945f73cd444fb69824ae
+archive: 64e8946373cd444fb69824af
+courseid: html_css_clement
+custom: {}
+grade: 0.0
+input:
+    '@attempts': '147'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-25 13:45:35.645446'
+    '@username': Clem
+    main_title: |-
+        h1 {
+        text-align: start
+        }
+    subtitles: |-
+        h2 {
+
+            text-align: end;
+        }
+problems:
+    main_title:
+    - failed
+    - |
+        - Ligne 2: La valeur ``start`` associée à la propriété ``text-align`` est incorrecte.
+    subtitles:
+    - failed
+    - |
+        - Ligne 3: Êtes-vous sûr d'avoir besoin de la propriété ``text-align`` afin de répondre à cette question ?
+        - La propriété suivante est manquante: ``text-decoration``
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-25 13:45:35.645000
+taskid: internal_stylesheet
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:3515:4687:50f6:7b16
+username:
+- Clem

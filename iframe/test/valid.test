@@ -1,0 +1,67 @@
+_id: 64ea2378f0b7b51c84824a9b
+archive: 64ea2381f0b7b51c84824a9c
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '11'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-26 18:08:24.630191'
+    '@username': Clem
+    document: <iframe src="https://example.org"></iframe>
+    map: <iframe src="https://www.openstreetmap.org/export/embed.html" width="500"
+        height="250"></iframe>
+    youtube: <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" allow="fullscreen"></iframe>
+problems:
+    document:
+    - success
+    - |+
+        **Correct !**
+
+    map:
+    - success
+    - |+
+        **Correct !**
+
+    youtube:
+    - success
+    - |-
+        **Correct !**
+
+
+
+        .. tip::
+            :title: Tips
+
+            L'attribut booléen ``allowfullscreen`` permet d'obtenir le même résultat que ``allow="fullscreen"``. Son utilisation est toutefois déconseillée (mais reste valide pour des raisons historiques).
+
+                            De même, l'attribut ``frameborder`` permettant de supprimer les bordures par défaut est *déprécié* (autrement dit, son utilisation est déconseillée par la spécification officielle).
+
+                            Ces attributs sont tout de même mentionnés à titre informatif. Bien que dépréciés, vous pourriez être amené à les croiser à l'avenir malgré tout. Cela peut donc s'avérer utile de savoir ce dont il retourne, même si vous ne vous en servez pas dans vos propres projets.
+
+                            Sur chaque page de documentation d'un élément HTML, `une section leur est dédiée <https://developer.mozilla.org/fr/docs/Web/HTML/Element/iframe#attributs_d%C3%A9pr%C3%A9ci%C3%A9s>`_.
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-26 18:08:24.630000
+taskid: iframe
+tests: {}
+text: |4
+
+
+    .. tip::
+        :title: Tips
+
+        Certains sites web proposent des éléments ``iframe`` pré-fait.
+
+                C'est notamment le cas pour les vidéos *YouTube*, accessible via le bouton "Partager" sous le lecteur et en choisissant l'option "Intégrer" dans la fenêtre pop-up.
+user_ip: 2a02:a03f:b8af:bd00:d92f:90a4:aabf:763e
+username:
+- Clem

@@ -1,0 +1,52 @@
+_id: 64eb28f8f0b7b51c848256b4
+archive: 64eb28faf0b7b51c848256b6
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '264'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-27 12:44:08.235795'
+    '@username': Clem
+    inline_style: '<h1 title="color: blue;" style="color: blue;">Le titre de votre
+        site est de couleur:</h1>'
+problems:
+    inline_style:
+    - success
+    - |+
+        **Correct !**
+
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-27 12:44:08.235000
+taskid: inline_style
+tests: {}
+text: |4
+
+
+    .. note::
+        :title: Encadré ci-dessous, le résultat de votre soumission:
+
+
+
+        .. raw:: html
+
+            <h1 style="color: blue;">Le titre de votre site est de couleur: bleue</h1>
+
+    .. tip::
+        :title: Tips
+
+        Cette première façon d'appliquer du CSS à un document HTML pourrait sembler efficace. Finalement, pourquoi s'embêter si l'on peut styliser nos éléments HTML via des attributs directement ?
+
+                Cette façon de faire est en réalité fortement déconseillée, sauf rare exception: https://developer.mozilla.org/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured#styles_en_ligne
+user_ip: 2a02:a03f:b8af:bd00:655f:1ce3:6ee3:7401
+username:
+- Clem

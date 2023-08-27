@@ -1,0 +1,62 @@
+_id: 64ea287973cd444fb698283e
+archive: 64ea287e73cd444fb6982840
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '111'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-26 18:29:45.760534'
+    '@username': Clem
+    lang: <html lang="FR">
+    title: <p>Le <abbr title="HyperText Markup Language">HTML</abbr> est un langage
+        de structure. Il permet de représenter le contenu d'une page web via un ensemble
+        d'éléments sous forme de balises.</p>
+problems:
+    lang:
+    - success
+    - |
+        **Correct!**
+    title:
+    - success
+    - |-
+        **Correct !**
+
+
+
+        .. tip::
+            :title: Tips
+
+            Comme précisé dans l'énoncé de l'exercice, il se peut que l'info-bulle au survol de l'abréviation ne soit pas présent.
+
+                                Les fonctionnalités prises en charge varient d'un navigateur à l'autre (parfois même d'une version à l'autre d'un même navigateur !).
+
+                                Ce genre d'incohérence dans le comportement d'un élément va à l'encontre de l'accessibilité que l'on cherche à optimiser.
+
+                                C'est pourquoi l'utilisation d'un tel attribut doit être fait avec minutie.
+
+        .. note::
+            :title: Encadré ci-dessous, le résultat de votre soumission:
+
+
+
+            .. raw:: html
+
+                <p>Le <abbr title="HyperText Markup Language">HTML</abbr> est un langage de structure. Il permet de représenter le contenu d'une page web via un ensemble d'éléments sous forme de balises.</p>
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-26 18:29:45.760000
+taskid: global_attributes
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:d92f:90a4:aabf:763e
+username:
+- Clem

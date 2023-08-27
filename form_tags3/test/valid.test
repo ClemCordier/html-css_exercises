@@ -1,0 +1,51 @@
+_id: 64e01b68054821c46a6188f2
+archive: 64e01b70054821c46a6188f4
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '13'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-08-19 03:31:20.270883'
+    '@username': Clem
+    overall_rating: ''
+    select: |-
+        <label for="overall-rating">Appréciation globale :</label>
+        <select id="overall-rating">
+            <option hidden selected disabled >-- Sélectionnez une appréciation --</option>
+            <option>Mauvais</option>
+            <option>Moyen</option>
+            <option>Bien</option>
+            <option>très bien</option>
+            <option>Excellent </option>
+        </select>
+    textarea: |-
+        <label for="detailed-review">Critique détaillée :</label>
+        <textarea id="detailed-review" rows="15" cols="80"></textarea>
+problems:
+    select:
+    - success
+    - |+
+        **Correct !**
+
+    textarea:
+    - success
+    - |+
+        **Correct !**
+
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-19 03:31:20.270000
+taskid: form_tags3
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:ec90:19bc:ae28:db0e
+username:
+- Clem

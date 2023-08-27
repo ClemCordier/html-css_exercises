@@ -1,0 +1,57 @@
+_id: 64e88ca741deff7399d24861
+archive: 64e88cab41deff7399d24862
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '144'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-25 13:12:39.636145'
+    '@username': Clem
+    main_title: |-
+        h1 {
+        text-align: center
+        }
+    subtitles: |-
+        h2 {
+
+            text-decoration: underline;
+        }
+problems:
+    main_title:
+    - success
+    - |-
+        **Correct !**
+
+
+
+        .. tip::
+            :title: Tips
+
+            Plutôt que d'utiliser un sélecteur d'élément, nous aurions pu ajouter un attribut ``id`` à notre élément ``h1`` et utiliser le sélecteur d'ID associé.
+
+                            Cependant, nous avons vu dans la section HTML qu'un élément ``h1`` ne devrait (en principe...) être présent qu'une seule fois par page, rendant l'ajout d'un ID sans intérêt.
+
+                            De manière plus général, les sélecteurs d'ID devraient être utilisés avec parcimonie. Favorisez si possible les sélecteurs d'élément ou de classe.
+    subtitles:
+    - success
+    - |+
+        **Correct !**
+
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-25 13:12:39.636000
+taskid: internal_stylesheet
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:3515:4687:50f6:7b16
+username:
+- Clem

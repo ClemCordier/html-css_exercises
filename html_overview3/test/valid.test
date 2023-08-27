@@ -1,0 +1,64 @@
+_id: 64e4e74ef0b7b51c84822a5c
+archive: 64e4e752f0b7b51c84822a5d
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '42'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-22 18:50:22.410253'
+    '@username': Clem
+    recipe: |-
+        <figure>
+            <img width="320" height="222" src="images/tarte_tatin.jpg" alt="tarte tatin cuisinée">
+            <footer><small>Par Shani Evenstein, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=56359426">Lien</a></small></footer>
+        </figure>
+problems:
+    recipe:
+    - success
+    - |-
+        **Correct !**
+
+
+
+        .. note::
+            :title: Encadré ci-dessous, le résultat de votre soumission:
+
+
+
+            .. raw:: html
+
+                <h1>Recette du jour - Tarte Tatin</h1>
+                                <figure>
+                    <img width="320" height="222" src="html_overview3/tarte_tatin.jpg" alt="tarte tatin cuisinée">
+                    <footer><small>Par Shani Evenstein, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=56359426">Lien</a></small></footer>
+                </figure>
+                                <h2>Histoire</h2>
+                                ...
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-22 18:50:22.410000
+taskid: html_overview3
+tests: {}
+text: |4
+
+
+    .. tip::
+        :title: Tips
+
+        Quelques explications avancées sur le choix des éléments utilisés:
+
+                        - L'élément ``figure`` permet de créer une section propre à l'image, qui se détache du flux principal du document.
+                        - L'élément ``footer`` représente le pied de page **de l'élément sectionnant le plus proche** (généralement utilisé en bas de page d'un document, il représente ici le pied de page de l'élément ``figure``).
+                        - L'élément ``small`` est utilisé pour englober du texte correspondant à des copyrights, des mentions légales, etc. En outre, le style par défaut applique une taille de police plus petite à son contenu.
+user_ip: 2a02:a03f:b8af:bd00:48a6:cf33:893d:72b4
+username:
+- Clem

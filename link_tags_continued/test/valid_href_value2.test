@@ -1,0 +1,59 @@
+_id: 64e9f2428c92c88981f74c37
+archive: 64e9f2498c92c88981f74c38
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '13'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-26 14:38:26.291166'
+    '@username': Clem
+    section: |-
+        <nav>
+            <a href="#histoire">Histoire</a>
+            <a href="#ingredients">Ingrédients</a>
+            <a href="#preparation">Préparation</a>
+        </nav>
+    top: <a href="#">Revenir en haut de page</a>
+problems:
+    section:
+    - success
+    - |+
+        **Correct !**
+
+    top:
+    - success
+    - |+
+        **Correct !**
+
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-26 14:38:26.291000
+taskid: link_tags_continued
+tests: {}
+text: |4
+
+
+    .. tip::
+        :title: Tips
+
+        Un site web est souvent composé de multiples pages, chacune correspondant à un document HTML différent.
+
+                L'élément d'ancre permet de naviguer entre ces pages.
+
+                Pour cela, on renseigne le chemin relatif vers la page en question à l'attribut ``href``, tout comme on le ferait avec l'attribut ``src`` pour une image stockée en local.
+
+                .. raw:: html
+
+                    Cliquez sur <a href="link_tags_continued/index.html">le lien suivant</a> afin d'observer cette redirection (interne) entre pages.
+user_ip: 2a02:a03f:b8af:bd00:d92f:90a4:aabf:763e
+username:
+- Clem

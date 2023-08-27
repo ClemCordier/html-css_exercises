@@ -1,0 +1,58 @@
+_id: 64e9eec873cd444fb69827d1
+archive: 64e9eecb73cd444fb69827d2
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '132'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-26 14:23:36.625122'
+    '@username': Clem
+    percentage: |-
+        header {
+          width: 50%;
+          background-color:red;
+        }
+        h1 {
+          width: 75%;
+          border:blue dotted;
+        }
+    width: 'p { width: 400PX; }'
+problems:
+    percentage:
+    - success
+    - |+
+        **Correct !**
+
+    width:
+    - success
+    - |+
+        **Correct !**
+
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-26 14:23:36.625000
+taskid: width_height
+tests: {}
+text: |4
+
+
+    .. tip::
+        :title: Tips
+
+        En pratique, il n'y a pas de différence à appliquer les dimensions ``width`` et ``height`` via les attributs HTML ou via les propriétés CSS.
+
+                Toutefois, la mise en page étant le rôle principal du CSS et non du HTML, il semble plus cohérent de renseigner ces valeurs via des propriétés plutôt que des attributs.
+
+                À noter que si vous renseignez à la fois les attributs HTML **et** les propriétés CSS ``width`` et/ou ``height``, les valeurs de vos propriétés auront la priorité sur vos attributs.
+user_ip: 2a02:a03f:b8af:bd00:d92f:90a4:aabf:763e
+username:
+- Clem

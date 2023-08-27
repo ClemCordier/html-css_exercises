@@ -1,0 +1,43 @@
+_id: 64ea317a41deff7399d24f5d
+archive: 64ea317e41deff7399d24f5e
+courseid: html_css_clement
+custom: {}
+grade: 0.0
+input:
+    '@attempts': '114'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-26 19:08:10.363551'
+    '@username': Clem
+    lang: <html lang="en">
+    title: <p>Le <abbr>HTML</abbr> est un langage de structure. Il permet de représenter
+        le contenu d'une page web via un ensemble d'éléments sous forme de balises.</p>
+problems:
+    lang: |
+        Votre réponse n'est pas celle attendue:
+
+        - ``en`` ne correspond pas à la valeur attendue.
+    title:
+    - failed
+    - |+
+        Voici des pistes qui pourraient vous aider:
+
+        - Le premier élément (``p``) est correct.
+        - Vous n'avez pas renseigné le bon nombre d'attributs à l'élément ``abbr`` en position n°2 dans la hiérarchie: attendu 1 - reçu 0
+
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-26 19:08:10.363000
+taskid: global_attributes
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:d92f:90a4:aabf:763e
+username:
+- Clem

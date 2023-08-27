@@ -1,0 +1,124 @@
+_id: 64eb3b9c41deff7399d25956
+archive: 64eb3ba941deff7399d25958
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '24'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-27 14:03:40.029169'
+    '@username': Clem
+    input_attributes: |-
+        <form>
+          <label for="email-input">Adresse mail:</label>
+          <input id="email-input" type="email" placeholder="mail@address.com">
+          <label for="password-input">Mot de passe:</label>
+          <input id="password-input" type="password" minlength="8" maxlength="16">
+        </form>
+    input_password: |-
+        <form>
+          <label for="email-input">Adresse mail:</label>
+          <input id="email-input" type="email">
+          <label for="password-input">Mot de passe:</label>
+          <input id="password-input" type="password">
+        </form>
+    label_input: |-
+        <form>
+          <label>Adresse mail:</label>
+          <input type="email">
+        </form>
+    label_input_for: |-
+        <form>
+          <label for="email-input">Adresse mail:</label>
+          <input id="email-input" type="email">
+        </form>
+problems:
+    input_attributes:
+    - success
+    - |+
+        **Correct !**
+
+    input_password:
+    - success
+    - |-
+        **Correct !**
+
+
+                        Tapez des caractères dans le champ ci-dessous afin d'observer le comportement par défaut de la saisie de mot de passe.
+
+
+        .. note::
+            :title: Saisissez du texte dans le champ de mot de passe:
+
+
+
+            .. raw:: html
+
+                <form>
+                                    <label for="email-input-q3">Adresse mail:</label>
+                                    <input id="email-input-q3" type="email">
+                                    <label for="password-input-q3">Mot de passe:</label>
+                                    <input id="password-input-q3" type="password">
+                                </form>
+    label_input:
+    - success
+    - |
+        **Correct !**
+
+
+                        Grâce à cette information fournie au navigateur via l'attribut ``type="email"``, les appareils mobiles (tablette/téléphone) peuvent s'adapter en conséquence et proposer un layout de clavier avec la touche "@" par exemple.
+    label_input_for:
+    - success
+    - |-
+        **Correct !**
+
+
+                        Une façon alternative d'effectuer cette liaison est de changer **la relation** entre nos éléments: plutôt que d'avoir des éléments frères/soeurs (autrement dit, de même niveau dans la hiérarchie) nous allons utiliser l'élément ``label`` comme parent de notre élément de formulaire:
+
+                        .. code:: html
+
+                            <label>Adresse mail:
+                                <input type="email">
+                            </label>
+
+                        .. tip::
+                            :title: Tips
+
+                            Nous favoriserons l'utilisation des attributs ``id`` et ``for`` dans le cadre de ce cours, mais il est toujours bon de connaître les notations alternatives afin d'être en mesure de comprendre le code d'une personne tierce !
+
+                        Cette liaison a plusieurs avantages:
+
+                        - Elle permet aux lecteurs d'écran de lire les libellés associés aux différents champs du formulaire, améliorant l'accessibilité aux personnes malvoyantes (tout comme l'attribut ``alt`` d'une image).
+                        - Elle permet un focus sur le champ du formulaire lors d'un clic souris (ou au toucher tactile pour un utilisateur tablette/téléphone) sur le libellé qui lui est associé.
+
+                        Essayez par vous-même ! Observez la différence avec l'exemple minimaliste fourni en introduction sans ces 2 attributs.
+
+
+        .. note::
+            :title: Cliquez sur le libellé ci-dessous:
+
+
+
+            .. raw:: html
+
+                <form>
+                                    <label for="email-input-q2">Adresse mail:</label>
+                                    <input id="email-input-q2" type="email">
+                                </form>
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-27 14:03:40.029000
+taskid: form_tags
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:655f:1ce3:6ee3:7401
+username:
+- Clem
