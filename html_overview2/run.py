@@ -15,6 +15,7 @@ answer_q1 = input.get_input("recipe")
 raw_student_answers = {"recipe": [answer_q1, False]}
 
 validation_errors = nu_checker_validation("template.html", task="recipe", offset=7)
+tag_errors = html_tags_validation(answer_q1)
 
 if validation_errors:
     feedback.set_grade(0.0)
@@ -24,6 +25,11 @@ if validation_errors:
     feedback.set_problem_feedback("Il y a des erreurs de syntaxe:\n\n", "recipe", True)
     for error in validation_errors:
         feedback.set_problem_feedback(f"- Ligne {error.get('line_number')} : {error.get('message')}\n", "recipe", True)
+
+elif tag_errors:
+    feedback.set_problem_feedback("Il y a des erreurs de syntaxe:\n\n", "recipe", True)
+    for error in tag_errors:
+        feedback.set_problem_feedback(f"- Ligne {error.get('line_number')} : l'élément ``{error.get('element')}`` en position n°{error.get('element_number')} dans la hiérarchie ne semble pas être accompagné de sa balise fermante.\n", "recipe", True)
 else:
     parsed_student_answer = parse_html_as_dict(raw_student_answers)
 

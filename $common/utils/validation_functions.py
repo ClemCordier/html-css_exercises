@@ -17,7 +17,7 @@ def is_invalid_opening_tag(tag):
     :rtype: str
     """
 
-    match = re.fullmatch(r"<([a-z]+[0-9]?)(\s{1}[a-z\-_]+\s?=\s?(\"|\'){1}([^\t\n\f \/>\"'=]+\s?)+\3)*>", tag)
+    match = re.fullmatch(r"<([a-z]+[0-9]?)(\s{1}[a-z\-_]+(\s?=\s?(?:\".*?\"|'.*?'|[^'\">\s]+))?)*>", tag)
     if match:
         if match.group(1) in existing_elements:
             return None
@@ -81,7 +81,7 @@ def is_invalid_self_closing_element(element):
     :rtype: str
     """
 
-    match = re.fullmatch(r"<([a-z]+[0-9]?)(\s[a-z\-_]+\s?=\s?(\"|')[^\t\n\f \/>\"'=]+\3)*(\s?\/)?>", element)
+    match = re.fullmatch(r"<([a-z]+[0-9]?)(\s{1}[a-z\-_]+(\s?=\s?(?:\".*?\"|'.*?'|[^'\">\s]+))?)*\s?\/?>", ' '.join(element.split()))
     if match:
         if match.group(1) in existing_elements:
             return None
@@ -113,7 +113,7 @@ def is_invalid_element(element):
     :rtype: str
     """
 
-    match = re.fullmatch(r"<([a-z]+[0-9]?)(\s[a-z\-_]+\s?=\s?(\"|')([^\t\n\f \/>\"'=]+\s?)+\3)*>[^><]*<\/\1>", element)
+    match = re.fullmatch(r"<([a-z]+[0-9]?)(\s{1}[a-z\-_]+(\s?=\s?(?:\".*?\"|'.*?'|[^'\">\s]+))?)*>[^><]*<\/\1>", element)
     if match:
         if match.group(1) in existing_elements:
             return None
@@ -145,7 +145,7 @@ def html_tags_validation(html_code):
     elem_number = 0
     for line_number, line in enumerate(stripped_lines, start=1):
         matched_tags = []
-        for match in re.finditer(r"(<(\/{1})?\w+(\s{1}\w+(\s?=\s?(?:\".*?\"|'.*?'|[^'\">\s]+))?)*>)", line):
+        for match in re.finditer(r"(<\/?\w+(\s{1}[\w-]+(\s?=\s?(?:\".*?\"|'.*?'|[^'\">\s]+))?)*\s*\/?>)", line):
             matched_tags.append(match.group(1))
         if matched_tags:
             for tag in matched_tags:
@@ -161,9 +161,11 @@ def html_tags_validation(html_code):
                     tag_obj = {'tag': tag, 'line_number': line_number, 'element_number': elem_number}
                     if ' ' in tag:
                         tag_obj['element'] = tag[1:tag.index(' ')]
+                    elif '/' in tag:
+                        tag_obj['element'] = tag[1:tag.index('/')]
                     else:
                         tag_obj['element'] = tag[1:len(tag) - 1]
-                    is_self_closing = tag_obj['element'] in void_elements
+                    is_self_closing = tag_obj['element'].casefold() in void_elements
                     if not is_self_closing:
                         stack.append(tag_obj)
     return stack

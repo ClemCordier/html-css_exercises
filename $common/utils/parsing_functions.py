@@ -2,7 +2,7 @@
 
 from inginious_container_api import feedback
 import re
-import tinycss2
+import cssutils, tinycss2
 import lxml.html as lxml_html
 from html_elements import ignored_elements_content, head_elements
 
@@ -41,13 +41,21 @@ def parse_html_as_dict(tasks, skip_head=True, skip_comment=True):
         task_answer = task.pop()
         offset = task.pop() if task else 0
         if is_single_element:
-            element = lxml_html.fragment_fromstring(task_answer, base_url=None, parser=None)
+            try:
+                element = lxml_html.fragment_fromstring(task_answer, base_url=None, parser=None)
+            except:
+                feedback.set_problem_feedback(f"Une erreur est survenue lors de l'analyse syntaxique.\n\n", task_id, True)
+
             elem_data = {"element_name": element.tag, "element_attr": element.attrib, "element_text": re.sub(pattern, " ", element.text_content()).strip()}
             student_answers[task_id].append(elem_data)
             element_line.append(element.sourceline - offset)
 
         else:
-            elements = lxml_html.document_fromstring(task_answer, parser=None)
+            try:
+                elements = lxml_html.document_fromstring(task_answer, parser=None)
+            except:
+                feedback.set_problem_feedback(f"Une erreur est survenue lors de l'analyse syntaxique.\n\n", task_id, True)
+
             for element in elements.iter():
                 # * early check to prevent useless computation if element must be skipped (e.g. elements from template or comments)
                 if (skip_head and isinstance(element, lxml_html.HtmlElement) and (element.tag in head_elements or element.tag == 'html' or element.tag == 'body')) or (skip_comment and isinstance(element, lxml_html.HtmlComment)):
@@ -98,8 +106,33 @@ def retrieve_element_content(element):
     return content
 
 
+def get_specificity(selector_list):
+    specificities = {}
+    for selector in selector_list:
+        specificities[selector.selectorText] = selector.specificity
+    return specificities
 
-def parse_css_as_dict(tasks, skip_comments=True, skip_whitespace=True):
+
+def sort_lines(data, order_structure):
+    order_mapping = {list(item.keys())[0]: list(item.values())[0] for item in order_structure}
+    sorted_data = sorted(data, key=lambda item: custom_sort_key1(item, order_mapping))
+    return sorted_data
+
+def custom_sort_key1(item, order_mapping):
+    key = list(item.keys())[0]
+    return order_mapping[key]
+
+def sort_rules(data, order_structure):
+    order_mapping = {item[0]: list(order.values())[0] for item, order in zip(data, order_structure)}
+    sorted_data = sorted(data, key=lambda item: custom_sort_key2(item, order_mapping))
+    return sorted_data
+
+def custom_sort_key2(item, order_mapping):
+    key = item[0]
+    return order_mapping[key]
+
+
+def parse_css_as_dict(tasks, skip_comments=True, skip_whitespace=True, debug=False):
     """Parse the CSS code submitted by the student task by task and create a dictionary-based structure out of it.
 
     :param tasks: {task_id1: student_answer_q1, task_id2: student_answer_q2, ...}
@@ -127,34 +160,58 @@ def parse_css_as_dict(tasks, skip_comments=True, skip_whitespace=True):
     """
 
     student_answers = {}
+    sorted_student_answers = {}
     task_line = {}
     for task_id, task_answer in tasks.items():
         student_answers[task_id] = []
         task_line[task_id] = []
-        sheet = tinycss2.parse_stylesheet(task_answer, skip_comments=skip_comments, skip_whitespace=skip_whitespace)
+        sorted_student_answers[task_id] = None
+        try:
+            sheet = tinycss2.parse_stylesheet(task_answer, skip_comments=skip_comments, skip_whitespace=skip_whitespace)
+            css = cssutils.parseString(task_answer)
+        except:
+            feedback.set_problem_feedback(f"Une erreur est survenue lors de l'analyse syntaxique.\n\n", task_id, True)
+        rules = []
+        for tiny_rule, utils_rule in zip(sheet, css.cssRules):
+            specs = get_specificity(utils_rule.selectorList)
+            for sel, spec in specs.items():
+                rules.append({sel: spec})
+
         for idx, rule in enumerate(sheet):
             rule_line = {}
-
             if rule.type == "qualified-rule":
-                serialized_selector = tinycss2.serialize(rule.prelude).strip().casefold()
-                # * dirty way to manage grouped selector where the order does not matter for the correctness (e.g. "p, strong" and "strong, p" should both be considered correct)
-                splitted_selector = serialized_selector.split(",")
-                stripped_selector = [elem.strip() for elem in splitted_selector]
-                stripped_selector.sort()
-                selector = ", ".join(stripped_selector)
-                rule_line[selector] = rule.source_line
-                properties = {}
+                is_composed = False
+                previous_token = None
+                for token in rule.prelude:
+                    # feedback.set_problem_feedback(f"- token type: {token.type}\n", task_id, True)
+                    if token.value == ".":
+                        previous_token = token.value
+                        is_composed = True
+                        continue
+                    if token.type != "hash" and token.type != "ident":
+                        continue
+                    if token.type == "hash":
+                        selector = "#"+token.value
+                    if token.type == "ident":
+                        selector = previous_token+token.lower_value if is_composed else token.lower_value
+                    is_composed = False
+                    rule_line[selector] = rule.source_line
+                    properties = {}
+                    for declaration in tinycss2.parse_declaration_list(rule.content):
+                        if declaration.type == "declaration":
+                            rule_line[declaration.name.strip().casefold()] = declaration.source_line
+                            properties[declaration.name.strip().casefold()] = tinycss2.serialize(declaration.value).strip()
+                    student_answers[task_id].append((selector, properties))
+                    task_line[task_id].append({selector: rule_line})
 
-                for declaration in tinycss2.parse_declaration_list(rule.content):
-                    if declaration.type == "declaration":
-                        rule_line[declaration.name.strip().casefold()] = declaration.source_line
-                        properties[declaration.name.strip().casefold()] = tinycss2.serialize(declaration.value).strip().casefold()
-                student_answers[task_id].append((selector, properties))
-                task_line[task_id].append(rule_line)
+        sorted_lines = sort_lines(task_line[task_id], rules)
+        task_line[task_id] = [list(inner_dict.values())[0] for inner_dict in sorted_lines]
+        sorted_rules = sort_rules(student_answers[task_id], rules)
+        task_line[task_id] = [list(inner_dict.values())[0] for inner_dict in sorted_lines]
+        sorted_student_answers[task_id] = sorted_rules
+        sorted_student_answers[task_id].append(task_line)
+    return sorted_student_answers
 
-        student_answers[task_id].append(task_line)
-
-    return student_answers
 
 
 def parse_inline_css_as_dict(tasks):
@@ -163,24 +220,26 @@ def parse_inline_css_as_dict(tasks):
         student_answers[task_id] = []
         try:
             element = lxml_html.fragment_fromstring(task_answer)
-
         except:
-            feedback.set_problem_feedback("Votre élément contient des erreurs.\n\n", task_id, True)
+            feedback.set_problem_feedback(f"Une erreur est survenue lors de l'analyse syntaxique.\n\n", task_id, True)
+
+        style_attr = element.get('style')
+        if style_attr is None:
+            feedback.set_problem_feedback(f"Assurez-vous d'utiliser l'attribut ``style`` pour répondre à cette question.\n\n", task_id, True)
             continue
         try:
-            style_attr = element.get('style')
             style = tinycss2.parse_declaration_list(style_attr)
-
         except:
-            feedback.set_problem_feedback("Votre attribut contient des erreurs.\n\n", task_id, True)
-            continue
+            feedback.set_problem_feedback(f"Une erreur est survenue lors de l'analyse syntaxique.\n\n", task_id, True)
         properties = {}
         for decl in style:
-            properties[decl.name.casefold()] = tinycss2.serialize(decl.value).strip().casefold()
+            try:
+                properties[decl.name.casefold()] = tinycss2.serialize(decl.value).strip().casefold()
+            except:
+                feedback.set_problem_feedback(f"Une erreur est survenue lors de l'analyse syntaxique.\n\n", task_id, True)
             student_answers[task_id] = [(element.tag, properties)]
 
     return student_answers
-
 
 
 if __name__ == "__main__":

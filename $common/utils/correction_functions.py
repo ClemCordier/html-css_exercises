@@ -284,7 +284,7 @@ def check_css_correctness(student_answers, expected_answers, check_line=True):
 
 
                             if student_prop_name in list(properties.keys()):
-                                if (not isinstance(prop_value, set) and student_prop_value != properties[student_prop_name]) or (isinstance(prop_value, set) and student_prop_value not in properties[student_prop_name]):
+                                if (not isinstance(properties[student_prop_name], set) and student_prop_value.casefold() != properties[student_prop_name]) or (isinstance(properties[student_prop_name], set) and student_prop_value.casefold() not in properties[student_prop_name]):
                                     provide_line_info = "" if not check_line else f" Ligne {line_info[student_prop_name]}:"
                                     feedback.set_problem_feedback(f"-{provide_line_info} La valeur ``{student_prop_value}`` associée à la propriété ``{student_prop_name}`` est incorrecte.\n", task, True)
                                 else:

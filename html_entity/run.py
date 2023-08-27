@@ -2,6 +2,7 @@
 
 import sys
 sys.path.append("/course/common/utils")
+import re
 from inginious_container_api import input, feedback, rst
 from feedback_functions import *
 from validation_functions import *
@@ -25,16 +26,20 @@ for task in validation_errors:
         raw_student_answers.pop(task) # removes non valid response
         feedback.set_problem_feedback(validation_errors[task], task, True) # append invalid fb msg
 
+entity_pattern = r'&[A-Za-z0-9]+;'
+entities_q1 = re.findall(entity_pattern, student_answer_q1)
+entities_q2 = re.findall(entity_pattern, student_answer_q2)
 
-if student_answer_q1.strip().casefold() != "<p>la balise fermante d'un élément html est semblable à la balise ouvrante &lt;h1&gt; auquel on ajoute une barre oblique: &lt;/h1&gt;</p>":
-    feedback.set_problem_result("failed", "reserved")
-    raw_student_answers.pop("reserved")
-    feedback.set_problem_feedback("Assurez-vous de répondre à l'aide des codes d'entités et non avec les symboles qu'ils représentent", "reserved", True)
-
-if student_answer_q2.strip().casefold() != "<p>fourni par inginious v.x.x.x &copy; 2014-20xx université catholique de louvain.</p>":
-    feedback.set_problem_result("failed", "symbol")
-    raw_student_answers.pop("symbol")
-    feedback.set_problem_feedback("Assurez-vous de répondre à l'aide du code d'entité et non avec le symbole qu'il représente", "symbol", True)
+if entities_q1 != ['&lt;', '&gt;', '&lt;', '&gt;']:
+    if "reserved" in raw_student_answers:
+        raw_student_answers.pop("reserved")
+    feedback.set_problem_feedback("Vous n'avez pas renseigné toutes les entités attendues.\n\n", "reserved", True)
+    feedback.set_problem_feedback("Assurez-vous de répondre à l'aide des codes d'entités et non avec les symboles qu'ils représentent.\n\n", "reserved", True)
+if entities_q2 != ['&copy;']:
+    if "symbol" in raw_student_answers:
+        raw_student_answers.pop("symbol")
+    feedback.set_problem_feedback("Vous n'avez pas renseigné l'entité attendue.\n\n", "symbol", True)
+    feedback.set_problem_feedback("Assurez-vous de répondre à l'aide des codes d'entités et non avec les symboles qu'ils représentent.\n\n", "symbol", True)
 
 parsed_student_answer = parse_html_as_dict(raw_student_answers)
 
@@ -80,10 +85,10 @@ for task in task_result:
 
 compute_score(2, correct_answers)
 if correct_answers == 2:
-    feedback.set_global_feedback(
+    append_tip_feedback(
         """
         Vous retrouverez via le lien suivant une liste exhaustive des entités HTML: https://html.spec.whatwg.org/multipage/named-characters.html
-        """, True
+        """
     )
     feedback.set_global_result("success")
 else:

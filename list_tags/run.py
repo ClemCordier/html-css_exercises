@@ -25,7 +25,6 @@ student_answer = {"list_items": [student_answer_q2, False]}
 
 
 validation_errors_q2 = nu_checker_validation("template.html",task="list_items", offset=7)
-validation_errors = {"list_items": validation_errors_q2}
 
 tag_errors_q2 = html_tags_validation(student_answer_q2)
 

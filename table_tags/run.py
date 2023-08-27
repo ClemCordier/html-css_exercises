@@ -32,6 +32,13 @@ for task in validation_errors:
         feedback.set_problem_feedback("Il y a des erreurs de syntaxe:\n\n", task, True)
         for error in validation_errors[task]:
             feedback.set_problem_feedback(f"- Ligne {error.get('line_number')} : {error.get('message')}\n", task, True)
+    else:
+        tag_errors = html_tags_validation(input.get_input(task))
+        if tag_errors:
+            raw_student_answers.pop(task)
+            feedback.set_problem_feedback("Il y a des erreurs de syntaxe:\n\n", task, True)
+            for error in tag_errors:
+                feedback.set_problem_feedback(f"- Ligne {error.get('line_number')} : l'élément ``{error.get('element')}`` en position n°{error.get('element_number')} dans la hiérarchie ne semble pas être accompagné de sa balise fermante.\n", task, True)
 
 parsed_answers = parse_html_as_dict(raw_student_answers)
 

@@ -18,7 +18,7 @@ input.parse_template("template_q1.html")
 input.parse_template("template_q2.html")
 input.parse_template("template_q3.html")
 
-raw_student_answers = {"document": [student_answer_q1, False], "youtube": [student_answer_q2, False], "map": [student_answer_q3, False]}
+raw_student_answers = {"document": [student_answer_q1, True], "youtube": [student_answer_q2, True], "map": [student_answer_q3, True]}
 
 validation_errors_q1 = nu_checker_validation("template_q1.html", task="document", offset=7)
 validation_errors_q2 = nu_checker_validation("template_q2.html", task="youtube", offset=7)
@@ -42,7 +42,7 @@ for task in task_result:
         if task == "youtube":
             append_tip_feedback(
                 """
-                L'attribut booléen ``allowfullscreen`` permet d'obtenir le même résultat que ``allow: "fullscreen"``. Son utilisation est toutefois déconseillée (mais reste valide pour des raisons historiques).
+                L'attribut booléen ``allowfullscreen`` permet d'obtenir le même résultat que ``allow="fullscreen"``. Son utilisation est toutefois déconseillée (mais reste valide pour des raisons historiques).
 
                 De même, l'attribut ``frameborder`` permettant de supprimer les bordures par défaut est *déprécié* (autrement dit, son utilisation est déconseillée par la spécification officielle).
 
