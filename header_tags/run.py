@@ -10,8 +10,9 @@ from validation_functions import *
 from parsing_functions import *
 from correction_functions import *
 
-answer_q1 = input.get_input("title").strip()
-answer_q2 = input.get_input("meta").strip()
+
+answer_q1 = input.get_input("title")
+answer_q2 = input.get_input("meta")
 
 correct_answers = 0
 

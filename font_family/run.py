@@ -10,9 +10,9 @@ from parsing_functions import *
 from correction_functions import *
 
 correct_answers = 0
-student_answer_q1 = input.get_input("space").strip()
-student_answer_q2 = input.get_input("multiple_fonts").strip()
-student_answer_q3 = input.get_input("generic_font").strip()
+student_answer_q1 = input.get_input("space")
+student_answer_q2 = input.get_input("multiple_fonts")
+student_answer_q3 = input.get_input("generic_font")
 
 input.parse_template("template_q1.css")
 input.parse_template("template_q2.css")

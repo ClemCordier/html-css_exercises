@@ -10,8 +10,8 @@ from parsing_functions import *
 from correction_functions import *
 
 correct_answers = 0
-student_answer_q1 = input.get_input("h1_border_color").strip()
-student_answer_q2 = input.get_input("precise_border_color").strip()
+student_answer_q1 = input.get_input("h1_border_color")
+student_answer_q2 = input.get_input("precise_border_color")
 
 input.parse_template("template_q1.css")
 input.parse_template("template_q2.css")
@@ -37,6 +37,12 @@ task_result = check_css_correctness(parsed_answers, expected_answers)
 for task in task_result:
     if task_result.get(task):
         correct_answers += 1
+        if task == "h1_border_color":
+            append_tip_feedback(
+                r"""
+                Une notation abrégée est ici envisageable, :math:`#F00` est une réponse correcte, au même titre que :math:`#FF0000`.
+                """, task
+            )
         if task == "precise_border_color":
             append_tip_feedback(
                 r"""

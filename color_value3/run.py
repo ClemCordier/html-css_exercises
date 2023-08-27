@@ -10,8 +10,8 @@ from parsing_functions import *
 from correction_functions import *
 
 correct_answers = 0
-student_answer_q1 = input.get_input("percentage").strip()
-student_answer_q2 = input.get_input("alpha").strip()
+student_answer_q1 = input.get_input("percentage")
+student_answer_q2 = input.get_input("alpha")
 
 input.parse_template("template_q1.css") # for validation
 input.parse_template("template_q2.css") # for validation

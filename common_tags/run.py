@@ -11,7 +11,7 @@ from correction_functions import *
 from answer import expected_answer
 
 
-student_answer_q1 = input.get_input("h1_tag").strip()
+student_answer_q1 = input.get_input("h1_tag")
 student_answer_q2 = input.get_input("p_tags")
 input.parse_template("template.html")
 

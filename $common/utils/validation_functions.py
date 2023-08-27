@@ -26,7 +26,7 @@ def is_invalid_opening_tag(tag):
                    L'élément {match.group(1)} renseigné ne semble pas correspondre à un élément HTML existant.
                    """
     return  f"""
-            Votre réponse ``{tag}`` ne semble pas correspondre à une balise ouvrante valide.
+            Votre réponse ``{tag.strip()}`` ne semble pas correspondre à une balise ouvrante valide.
 
             Assurez-vous de respecter la syntaxe de base ainsi que l'écriture conventionnelle d'une balise ouvrante, c'est-à-dire:
 
@@ -58,7 +58,7 @@ def is_invalid_closing_tag(tag):
                    L'élément {match.group(1)} renseigné ne semble pas correspondre à un élément HTML existant.
                    """
     return  f"""
-            Votre réponse ``{tag}`` ne semble pas correspondre à une balise fermante valide.
+            Votre réponse ``{tag.strip()}`` ne semble pas correspondre à une balise fermante valide.
 
             Assurez-vous de respecter la syntaxe de base ainsi que l'écriture conventionnelle d'une balise fermante, c'est-à-dire:
 
@@ -90,7 +90,7 @@ def is_invalid_self_closing_element(element):
                    L'élément ``{match.group(1)}`` renseigné ne semble pas correspondre à un élément HTML existant.
                    """
     return  f"""
-            Votre réponse ``{element}`` ne semble pas correspondre à un élément vide valide.
+            Votre réponse ``{element.strip()}`` ne semble pas correspondre à un élément vide valide.
 
             Assurez-vous de respecter la syntaxe de base ainsi que l'écriture conventionnelle d'un élément vide, c'est-à-dire:
 
@@ -122,7 +122,7 @@ def is_invalid_element(element):
                    L'élément ``{match.group(1)}`` renseigné ne semble pas correspondre à un élément HTML existant.
                    """
     return  f"""
-            Votre réponse ``{element}`` ne semble pas correspondre à un élément HTML valide.
+            Votre réponse ``{element.strip()}`` ne semble pas correspondre à un élément HTML valide.
 
             Assurez-vous de respecter la syntaxe de base ainsi que l'écriture conventionnelle d'un élément, c'est-à-dire:
 

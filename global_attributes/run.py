@@ -10,8 +10,8 @@ from correction_functions import *
 from answer import expected_answers
 
 correct_answers = 0
-student_answer_q1 = input.get_input("lang").strip()
-student_answer_q2 = input.get_input("title").strip()
+student_answer_q1 = input.get_input("lang")
+student_answer_q2 = input.get_input("title")
 
 input.parse_template("template_q2.html") # for validation
 

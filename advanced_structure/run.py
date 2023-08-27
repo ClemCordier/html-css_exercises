@@ -11,9 +11,9 @@ from parsing_functions import *
 from correction_functions import *
 
 correct_answers = 0
-student_answer_q1 = input.get_input("header").strip()
-student_answer_q2 = input.get_input("main").strip()
-student_answer_q3 = input.get_input("footer").strip()
+student_answer_q1 = input.get_input("header")
+student_answer_q2 = input.get_input("main")
+student_answer_q3 = input.get_input("footer")
 
 raw_student_answers = {"header": [student_answer_q1, False], "main": [student_answer_q2, False], "footer": [student_answer_q3, False]}
 
@@ -45,7 +45,7 @@ if correct_answers == 3:
 
         Ceci est un cas particulier, mais il n'en reste pas moins correct.
 
-        Pour mieux le comprendre, voyons ce que nous dit la MDN:
+        Pour mieux le comprendre, voyons ce que nous dit la MDN pour les éléments `figure <https://developer.mozilla.org/fr/docs/Web/HTML/Element/figure>`_ et `footer <https://developer.mozilla.org/fr/docs/Web/HTML/Element/footer>`_ :
 
         .. raw:: html
 

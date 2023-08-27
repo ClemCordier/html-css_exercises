@@ -10,8 +10,8 @@ from parsing_functions import *
 from correction_functions import *
 
 correct_answers = 0
-student_answer_q1 = input.get_input("length_value").strip()
-student_answer_q2 = input.get_input("percentage_value").strip()
+student_answer_q1 = input.get_input("length_value")
+student_answer_q2 = input.get_input("percentage_value")
 
 input.parse_template("template_q1.css")
 input.parse_template("template_q2.css")
@@ -38,7 +38,15 @@ for task in task_result:
     if task_result.get(task):
         correct_answers += 1
 
+
 if correct_answers == 2:
+    append_tip_feedback(
+        """
+        En règle général, l'ordre des valeurs d'une propriété raccourcie n'a pas d'importance, comme c'est le cas pour la propriété raccourcie ``border`` ici.
+
+        Il y a toutefois des exceptions: lorsque les différentes valeurs sont du même type, alors un ordre précis se doit d'être respecté, comme c'est le cas pour la propriété ``padding`` ici.
+        """
+    )
     feedback.set_global_result("success")
 else:
     feedback.set_global_result("failed")

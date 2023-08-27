@@ -10,8 +10,12 @@ from parsing_functions import *
 from correction_functions import *
 
 
-student_answer_q1 = input.get_input("em").strip()
-student_answer_q2 = input.get_input("strong").strip()
+student_answer_q1 = input.get_input("em")
+student_answer_q2 = input.get_input("strong")
+
+input.parse_template("template_q1.html")
+input.parse_template("template_q2.html")
+
 correct_answers = 0
 
 raw_student_answers = {"em": [student_answer_q1, False], "strong": [student_answer_q2, False]}

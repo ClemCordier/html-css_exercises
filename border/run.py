@@ -10,9 +10,9 @@ from parsing_functions import *
 from correction_functions import *
 
 correct_answers = 0
-student_answer_q1 = input.get_input("single_value").strip()
-student_answer_q2 = input.get_input("double_value").strip()
-student_answer_q3 = input.get_input("quad_value").strip()
+student_answer_q1 = input.get_input("single_value")
+student_answer_q2 = input.get_input("double_value")
+student_answer_q3 = input.get_input("quad_value")
 
 input.parse_template("template_q1.css")
 input.parse_template("template_q2.css")
@@ -43,11 +43,17 @@ for task in task_result:
 
 
 if correct_answers == 3:
-    # append_tip_feedback(
-    #     """
-    #     TODO mentionner propriétés raccourcies
-    #     """
-    # )
+    append_tip_feedback(
+        """
+        Notez ici l'importance de l'ordre des valeurs renseignées aux propriétés raccourcies ``border-style`` & ``border-width``. La propriété ``border-style: dotted solid;`` n'aura pas le même effet que ``border-style: solid dotted;``.
+
+        | Des propriétés raccourcies plus générales encore existent: par exemple ``border``. Cette propriété permet de renseigner à la fois style, taille et couleur de vos bordures.
+        | Contrairement aux propriétés vues à travers cet exercice, ses valeurs sont communes aux 4 bordures.
+        |
+
+        L'utilisation de ces propriétés est propre à chacun et se fait au cas par cas; une propriété raccourcie offre un code plus concis/lisible, au détriment d'une certaine rigidité au niveau des possibilités de mise en forme.
+        """
+    )
     feedback.set_global_result("success")
 
 else:

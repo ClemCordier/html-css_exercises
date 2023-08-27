@@ -10,8 +10,8 @@ from parsing_functions import *
 from correction_functions import *
 
 correct_answers = 0
-student_answer_q1 = input.get_input("background_color").strip()
-student_answer_q2 = input.get_input("background_color_global").strip()
+student_answer_q1 = input.get_input("background_color")
+student_answer_q2 = input.get_input("background_color_global")
 input.parse_template("template_q1.css")
 input.parse_template("template_q2.css")
 

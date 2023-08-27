@@ -11,7 +11,7 @@ from correction_functions import *
 
 correct_answers = 0
 student_answer_q1 = input.get_input("path").strip()
-student_answer_q2 = input.get_input("alt").strip()
+student_answer_q2 = input.get_input("alt")
 
 
 if student_answer_q1 == "../img/inginious_logo" or student_answer_q1 == "../img/inginious_logo.png":
@@ -21,8 +21,8 @@ if student_answer_q1 == "../img/inginious_logo" or student_answer_q1 == "../img/
         """
         **Bonne réponse!**
 
-        .. tip::
-            :title: Tips
+        .. warning::
+            :title: Attention
 
             **Bien que l'extension de fichier** (ici, ``.png``) **ne soit en théorie pas obligatoire pour que le chemin soit reconnu, nous tâcherons de le renseigner pour les questions qui suivent (ainsi que pour le restant du cours!)**
         """, "path", True)
