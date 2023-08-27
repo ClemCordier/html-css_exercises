@@ -44,7 +44,7 @@ expected_answers = {
     ],
     "footer": [
         {'element_name': 'footer', 'element_attr': {}, 'element_text': ""},
-        {'element_name': 'p', 'element_attr': {}, 'element_text': "ce document a été rédigé par un étudiant dans le cadre d'un cours d'introduction au langage html."}
-
+        {'element_name': 'p', 'element_attr': {}, 'element_text': "ce document a été rédigé par un étudiant dans le cadre d'un cours d'introduction au langage html."},
+        {'element_name': 'small', 'element_attr': {}, 'element_text': "ce document a été rédigé par un étudiant dans le cadre d'un cours d'introduction au langage html."}
     ]
 }

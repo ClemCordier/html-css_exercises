@@ -6,6 +6,6 @@ expected_answers = {
     "percentage":
         [
             ("header", {"background-color": "red", "width": "50%"}),
-            ("h1", {"border": "dotted blue", "width": "75%"})
+            ("h1", {"border": {"dotted blue", "blue dotted"}, "width": "75%"})
         ]
 }
