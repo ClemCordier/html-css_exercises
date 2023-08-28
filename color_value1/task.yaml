@@ -45,7 +45,7 @@ environment_parameters:
 environment_type: docker
 file: ''
 input_random: 0
-name: 5. Couleur nommée
+name: 6. Couleur nommée
 network_grading: false
 problems:
     background_color:

@@ -177,7 +177,7 @@ context: |-
     | .. image:: theory_cascade-specificity/combined_selector.png  |
     +--------------------------------------------------------------+
 
-    Il existe des types de sélecteurs autres que les sélecteurs d'élément, de classe et d'ID mentionnés jusqu'à maintenant, certains seront abordés plus tard dans le cours.
+    Il existe des types de sélecteurs autres que les sélecteurs d'élément, de classe et d'ID mentionnés jusqu'à maintenant.
 
     L'essentiel ici est de s'être familiarisé avec les concepts fondamentaux du CSS, à savoir la *cascade* et la *spécificité*.
 
@@ -191,7 +191,7 @@ environment_parameters: {}
 environment_type: mcq
 file: ''
 input_random: 0
-name: 14. [Théorie] Cascade & spécificité
+name: 18. [Théorie] Cascade & spécificité
 network_grading: false
 problems:
     validation_check:

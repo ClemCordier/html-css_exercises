@@ -29,7 +29,7 @@ environment_parameters:
 environment_type: docker
 file: ''
 input_random: 0
-name: 8. Éléments de mise en évidence
+name: 7. Éléments de mise en évidence
 network_grading: false
 problems:
     em:

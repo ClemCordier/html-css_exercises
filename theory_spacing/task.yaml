@@ -61,12 +61,12 @@ environment_parameters: {}
 environment_type: mcq
 file: ''
 input_random: 0
-name: 9. [Théorie] Gestion des espaces
+name: 8. [Théorie] Gestion des espaces
 network_grading: false
 problems:
     validation_check:
         type: multiple_choice
-        name: ''
+        name: Lecture complétée
         header: ''
         limit: 0
         choices:

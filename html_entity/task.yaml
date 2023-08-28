@@ -20,7 +20,7 @@ environment_parameters:
 environment_type: docker
 file: ''
 input_random: 0
-name: 7. Entités HTML
+name: 11. Entités HTML
 network_grading: false
 problems:
     reserved:

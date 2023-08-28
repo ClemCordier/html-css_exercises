@@ -94,7 +94,7 @@ environment_parameters: {}
 environment_type: mcq
 file: ''
 input_random: 0
-name: 6. [Théorie + Quiz] Notation hexadécimale
+name: 7. [Théorie + Quiz] Notation hexadécimale
 network_grading: false
 problems:
     q1:

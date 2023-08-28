@@ -66,7 +66,7 @@ environment_parameters:
 environment_type: docker
 file: ''
 input_random: 0
-name: 11. Éléments de liste
+name: 10. Éléments de liste
 network_grading: false
 problems:
     list_tags:
