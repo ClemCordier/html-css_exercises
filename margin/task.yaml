@@ -1,0 +1,40 @@
+author: ''
+contact_url: ''
+context: |-
+    En plus de l'espacement séparant le contenu de ses bordures, nous pouvons aussi modifier l'espacement qui sépare les différents éléments entre eux.
+
+    Pour cela, on utilise la propriété ``margin``.
+
+    | Notez que des marges sont déjà présentes entre nos éléments. Cela est due au style par défaut appliqué par les navigateurs, appliquant des marges non-nulles pour certains éléments.
+    | Ces valeurs par défaut ne sont d'ailleurs pas les mêmes d'un élément à un autre (observez les différents espaces séparant le titre principal ``h1``, les titres secondaires ``h2`` et les paragraphes ``p``).
+    |
+
+    .. raw:: html
+
+        <p class="codepen" data-height="600" data-default-tab="css,result" data-slug-hash="GRXVdNM" data-editable="true" data-user="clem09" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '300'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: 15. Marges (extérieures)
+network_grading: false
+problems:
+    reset:
+        type: code
+        name: Sélecteur universel
+        header: |-
+            Un moyen pour éviter de devoir faire face à ce comportement par défaut est de réinitialiser les marges extérieures de tous nos éléments à 0.
+
+            Pour cela, on utilise le sélecteur ``*``, appelé sélecteur *universel*. Celui-ci correpsond à n'importe quel type d'élément et va donc s'appliquer à tous les éléments de votre document, sans exception.
+
+            Renseignez une règle CSS utilisant ce sélecteur universel, et ajoutez-y la propriété ``margin`` à 0.
+        language: css
+        default: ''

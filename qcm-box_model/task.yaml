@@ -1,0 +1,72 @@
+author: ''
+contact_url: ''
+context: ''
+environment_id: htmlcss
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '200'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: 17. [QCM+exercice] Modèle de boîte
+network_grading: false
+problems:
+    size_standard_model:
+        type: multiple_choice
+        name: ''
+        header: |-
+            Sur base du modèle de boîte standard et en supposant la règle suivante d'application:
+
+            .. code:: css
+
+                p {
+                    width: 420px;
+                    height: 100px;
+                    padding: 10px;
+                    border: 5px;
+                    margin: 10px;
+                }
+
+            Quels sont les dimensions en pixel (longueur x hauteur) de la boîte ?
+        limit: 0
+        choices:
+        -   text: 470x150
+        -   text: 445x125
+        -   text: 450x130
+            valid: true
+        -   text: 420x100
+    shorthand_properties:
+        type: code
+        name: ''
+        header: |-
+            Les propriétés ``padding``, ``border`` et ``margin`` permettent de renseigner une valeur qui s'applique aux 4 extrémités de la boîte.
+
+            Il est toutefois possible de renseigner des valeurs pour chaque côté de la boîte individuellement, avec les propriétés ``padding-top``, ``padding-right``, ``padding-bottom`` et ``padding-left`` (ainsi que leur équivalent pour ``border`` et ``margin``).
+
+            Renseignez la règle CSS appliquée à vos paragraphes contenant les déclarations suivantes:
+
+            - longueur et largeur du contenu équivalent à ``300x150px``
+            - ``padding`` aux côtés droit et bas de ``10px``
+            - ``border`` au côté gauche de ``5px``
+            - ``margin`` aux côtés gauche et haut de ``5px`` et ``10px`` respectivement
+
+            .. raw:: html
+
+                <p class="codepen" data-height="400" data-default-tab="css,result" data-slug-hash="NWOPREy" data-editable="true" data-user="clem09" style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            |
+        language: css
+        default: ''
+    size_standard_model2:
+        type: match
+        name: ''
+        header: |-
+            Sur base de la règle CSS à la question précédente, renseignez les dimensions de la boîte, toujours selon le modèle standard.
+
+            le format de réponse attendue est le suivant ``[longueur]x[largeur]``. Si vous pensez que la réponse est ``400px`` de long et ``200px`` de large, le format de votre réponse sera "400x200".
+        answer: 315x160

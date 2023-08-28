@@ -1,0 +1,55 @@
+_id: 64ec8e00f0b7b51c84826557
+archive: 64ec8e03f0b7b51c84826558
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '15'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-28 14:07:28.541649'
+    '@username': Clem
+    reset: '* { margin: 0;}'
+problems:
+    reset:
+    - success
+    - |-
+        **Correct !**
+
+
+
+        .. tip::
+            :title: Tips
+
+            Cette pratique est plutôt courante et porte le nom de *reset CSS*.
+
+                            L'objectif de cette technique est d'éviter les styles par défaut appliqués en amont par le navigateur (qui pour rappel, peuvent varier de l'un à l'autre), afin de ne pas avoir à s'en préoccuper.
+
+
+                            Est-ce une bonne chose d'annuler des styles par défaut ? Il y a des avantages comme des inconvénients liés à ce genre de pratique.
+
+                            Une façon moins radicale de procéder serait de remplacer le sélecteur universel par les éléments dont vous désirez explicitement réinitialiser les propriétés.
+
+                            Dans notre cas, nous aurions pu utiliser la règle suivante à la place:
+
+                            .. code:: css
+
+                                body, h1, h2, p, ul {
+                                    margin: 0;
+                                }
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-28 14:07:28.541000
+taskid: margin
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:9d57:236e:42fe:2569
+username:
+- Clem

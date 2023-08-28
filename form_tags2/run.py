@@ -39,13 +39,7 @@ task_result = check_html_correctness(parsed_answers, expected_answers)
 for task in task_result:
     if task_result.get(task):
         correct_answers += 1
-        if task == "date_number":
-            feedback.set_problem_feedback(
-                """
-                Malgré l'attrait que l'on pourrait avoir, l'utilisation de l'élément ``input`` de type "date" n'est pas toujours la meilleure solution à cause du manque de prise en charge des versions plus anciennes de certains navigateurs.
-                """, task, True
-            )
-        elif task == "step":
+        if task == "step":
             append_tip_feedback(
                 """
                 "*Never trust user input*"
@@ -53,8 +47,6 @@ for task in task_result:
                 Dès lors que l'on traite des données utilisateurs, il est bon d'adopter un état d'esprit préventif: imaginer les pires éventualités afin d'anticiper les entrées invalides et les gérer en amont.
                 """, task
             )
-        elif task == "checkbox":
-            pass
 
 
 if correct_answers == 3:

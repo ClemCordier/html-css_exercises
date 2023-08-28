@@ -1,0 +1,107 @@
+author: ''
+contact_url: ''
+context: |
+    | Cette troisième et dernière option pour appliquer du CSS à un document HTML est la méthode la plus commune. Elle consiste à ajouter l'élément d'en-tête ``link`` à notre/nos fichier(s) HTML afin de les lier.
+    |
+    | L'avantage de cette solution, c'est qu'elle va notamment nous permettre d'appliquer une même feuille de style à plusieurs pages, ce qui n'est pas le cas du style en ligne (qui cible un élément spécifique) ou des feuilles de style interne (qui cible une page spécifique).
+
+    ----
+
+    Afin de prendre la main avec cette méthode conventionnelle, suivez les consignes qui suivent afin de reprodruire le résultat attendu:
+
+    1. Créez un fichier ``index.html`` avec le contenu suivant:
+
+        .. code:: html
+
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <meta charset="utf-8">
+                </head>
+                <body>
+                    <h1>Ma première page web</h1>
+                    <h2>Introduction</h2>
+                    <div>...</div>
+                    <h2>Présentation</h2>
+                    <div>...</div>
+                </body>
+            </html>
+
+    2. Ouvrez votre document HTML dans le navigateur de votre choix afin de visualiser le rendu.
+
+    3. Dans le même dossier que votre document HTML, créez le fichier ``style.css``.
+
+    4. Ouvrez-le dans un éditeur de texte, et ajoutez-y les règles CSS suivantes:
+
+        .. code:: css
+
+            h1 {
+                color: red;
+                text-align: center;
+            }
+
+            h2 {
+                text-decoration: underline;
+            }
+
+    5. Afin de faire la liaison entre notre document ``index.html`` et la feuille de style ``style.css``, ajoutez l'élément suivant au sein de l'élément ``head``:
+
+        .. code:: html
+
+            <link rel="stylesheet" href="style.css">
+
+    6. Rafraichissez l'onglet de votre page ouvert précédemment.
+
+    Vous devriez maintenant observer le résultat du CSS appliqué à votre document HTML, similaire à ceci:
+
+    ----
+
+        .. raw:: html
+
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <meta charset="utf-8">
+                </head>
+                <style>
+                    #h1-header {
+                        color: red;
+                        text-align: center;
+                    }
+
+                    .h2-header {
+                        text-decoration: underline;
+                    }
+                </style>
+                <body>
+                    <h1 id="h1-header">Ma première page web</h1>
+                    <h2 class="h2-header">Introduction</h2>
+                    <div>...</div>
+                    <h2 class="h2-header">Présentation</h2>
+                    <div>...</div>
+                </body>
+            </html>
+
+    ----
+
+    |
+
+    Si tel est le cas: Félicitations, vous êtes parvenus à lier vos fichier HTML et CSS ensemble !
+
+    |
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+file: ''
+input_random: 0
+name: 5. Feuille de style externe
+network_grading: false
+problems:
+    validation_check:
+        type: multiple_choice
+        name: Étapes complétées
+        header: ''
+        limit: 0
+        choices:
+        -   text: Je confirme avoir effectué les étapes décrites ci-dessus.
+            valid: true

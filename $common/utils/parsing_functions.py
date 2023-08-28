@@ -183,16 +183,17 @@ def parse_css_as_dict(tasks, skip_comments=True, skip_whitespace=True, debug=Fal
                 is_composed = False
                 previous_token = None
                 for token in rule.prelude:
-                    # feedback.set_problem_feedback(f"- token type: {token.type}\n", task_id, True)
                     if token.value == ".":
                         previous_token = token.value
                         is_composed = True
                         continue
-                    if token.type != "hash" and token.type != "ident":
+                    elif token.value == "*":
+                        selector = token.value
+                    elif token.type != "hash" and token.type != "ident":
                         continue
-                    if token.type == "hash":
+                    elif token.type == "hash":
                         selector = "#"+token.value
-                    if token.type == "ident":
+                    elif token.type == "ident":
                         selector = previous_token+token.lower_value if is_composed else token.lower_value
                     is_composed = False
                     rule_line[selector] = rule.source_line

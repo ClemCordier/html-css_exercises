@@ -1,0 +1,55 @@
+_id: 64ec93de8c92c88981f75b13
+archive: 64ec93e18c92c88981f75b14
+courseid: html_css_clement
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '16'
+    '@email': clement.cordier@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-08-28 14:32:30.505974'
+    '@username': Clem
+    shorthand_properties: |-
+        p {
+            border-left: 5px;
+            margin-left: 5px;
+            margin-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            width: 300px;
+            height: 150px;
+        }
+    size_standard_model: '2'
+    size_standard_model2: 315x160
+problems:
+    shorthand_properties:
+    - success
+    - |+
+        **Correct !**
+
+    size_standard_model:
+    - success
+    - |+
+        **Correct !**
+
+    size_standard_model2:
+    - success
+    - |+
+        **Correct !**
+
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: ''
+submitted_on: 2023-08-28 14:32:30.505000
+taskid: qcm-box_model
+tests: {}
+text: ''
+user_ip: 2a02:a03f:b8af:bd00:9d57:236e:42fe:2569
+username:
+- Clem

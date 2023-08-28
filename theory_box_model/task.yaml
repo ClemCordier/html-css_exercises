@@ -1,0 +1,70 @@
+author: ''
+contact_url: ''
+context: |
+    Un autre concept fondamental à assimiler pour comprendre et maitriser la mise en page CSS: **le modèle de boîte** (plus connu sous le nom anglais "*box model*")
+
+    **En CSS, tous les éléments sans exception sont inclus dans une boîte.**
+
+    .. image:: theory_box_model/box_model.png
+
+    |
+
+    Les 4 composantes de ce modèle sont les suivantes, de la couche la plus imbriquée à la moins imbriquée:
+
+    1) | **La zone de contenu:** zone où réside(nt) le(s) élément(s) contenu dans la boîte.
+       | Les propriétés ``width`` et ``height`` peuvent y être appliquées pour spécifier ses dimensions.
+       |
+    2) | **La zone de remplissage:** zone vide qui sert d'espacement *intérieur* à la boîte.
+       | La propriété ``padding`` et ses variantes peuvent y être appliquées pour définir la taille de cet escapement.
+       |
+    3) | **La zone de bordure:** zone de bordure qui englobe nos zones de contenu et de remplissage.
+       | Bien qu'absente par défaut, les bordures peuvent être rendues visibles et personnalisées à l'aide de la propriété ``border`` et ses variantes.
+       |
+    4) | **La zone de marge:** zone vide comme la boîte de remplissage.
+       | Toutefois, son espacement n'est plus propre à un élément mais *extérieur* à celui-ci; il sert à espacer l'élément courant des autres éléments qui constituent la page.
+       | La propriété ``margin`` et ses variantes peuvent y être appliquées pour définir la taille de cet escapement.
+
+    |
+
+    Pour mesurer l'espace occupé par une boîte, il faut donc additionner ses différentes composantes.
+
+    La zone de marge étant extérieure à la boîte, celle-ci ne rentre pas en compte dans le calcul.
+
+    .. code:: css
+
+        h1 {
+            width: 200px;
+            height: 100px;
+            padding: 15px;
+            border: 5px;
+            margin: 10px;
+        }
+
+    Avec cette règle CSS, les dimensions de l'élément ``h1`` sont:
+
+    - En largeur: :math:`200 + 15 + 15 + 5 + 5 = 240px`
+    - En hauteur: :math:`100 + 15 + 15 + 5 + 5 = 140px`
+
+    Étant donné que les propriétés ``margin``/``border``/``padding`` s'appliquent aux 4 extrémités, leur valeur doit être pris en compte 2 fois (en largeur pour les extrémités gauche et droite, en hauteur pour les extrémités haut et bas).
+
+    Ce modèle est directement liés aux éléments de type "bloc" (``p``, ``h1-h6``, ...) et de type "en ligne" (``strong``, ``em``, ...) mentionnés précédemment dans la section HTML du cours.
+
+    Nous savons déjà que les éléments "bloc" prennent l'ensemble de l'espace qui leur est disponible en largeur et induisent un retour à la ligne.
+
+    A l'inverse, les éléments "en ligne" se contentent d'une largeur minimum pour accueillir leur contenu et n'induisent pas de retour à la ligne.
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+file: ''
+input_random: 0
+name: 16. [Théorie] Le modèle de boîte
+network_grading: false
+problems:
+    validation_check:
+        type: multiple_choice
+        name: Lecture complétée
+        header: Une fois la théorie parcourue, validez pour passer à la suite du cours.
+        limit: 0
+        choices:
+        -   text: Je confirme avoir parcouru la théorie
+            valid: true
