@@ -30,7 +30,7 @@ tag_errors_q2 = html_tags_validation(student_answer_q2)
 
 if validation_errors_q2:
     feedback.set_problem_feedback("Il y a des erreurs de syntaxe:\n\n", "list_items", True)
-    for error in tag_errors_q2:
+    for error in validation_errors_q2:
         feedback.set_problem_feedback(f"- Ligne {error.get('line_number')} : {error.get('message')}\n", "list_items", True)
 
 elif tag_errors_q2:
